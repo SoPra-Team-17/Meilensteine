@@ -13,6 +13,31 @@ Todo: Wer übernimmt diese Aufgabe?
 Möglichst heute, als Basis für Rest des Dokuments  
 Todo: festlegen der Begriffe, wer ist für das ausformulieren verantwortlich?
 
+* benutzer
+* spieler
+* lobby
+* spielpartien
+* Benutzer-client
+* server
+* ki client
+* NPC
+* editor
+* Zuschauer
+* level config (überbegriff zu szenario,charbeschreibung,etc)
+* charakter
+* Szenario
+* Partieconfig
+* char-Beschreibung
+* item
+* gadget
+* aktion
+* (alles mögliche an spielfelder namen)
+* Bewegungsphase
+* aktionsphase
+* Intelligence Points
+* Sichtlinie
+* Geheimnis
+* Beim FA schreiben hinzufügen von weiteren Fachbegriffen, welche benötigt werden
 * Dominik A
 
 ## Aufgabe 3: Domänenmodell
@@ -98,4 +123,5 @@ Todo: festlegen der Titel, wer formuliert was aus?
 * alle, continous integration für code und merge requests
 * alle, ease of use (erlernbar innerhalb x-facher benutzung)
 * alle, UX --> sinnvolles maß (alle teammitglieder zufrieden)
+* alle, Doxygen dokumentation
 * verantwortlich Marco
