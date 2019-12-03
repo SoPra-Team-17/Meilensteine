@@ -1,0 +1,148 @@
+\documentclass{uulm-assignment}
+
+\usepackage{import}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{todonotes}
+\usepackage{graphicx}
+
+\setboolean{showsolutions}{false}
+
+\ifthenelse{\boolean{showsolutions}}{
+\newcommand\mitloesung{1}%
+}{
+\newcommand\mitloesung{0}%
+}
+
+
+% Für Korrektur-Kommentare in roten Boxen:
+\newcommand{\flo}[1]{
+    \fcolorbox{purple}{pink}{\sffamily\scriptsize\bfseries\textcolor{black}{Flo:}} {\sffamily\bfseries\textcolor{purple}{#1}}
+}
+
+
+
+\hypersetup{colorlinks=false,urlcolor=uulm-in}
+
+\faculty{Institut für Softwaretechnik und Programmiersprachen\hspace{0.05cm}}
+\course{Softwaregrundprojekt}
+\semester{\hspace{0.05cm}WiSe 2019/20}
+\supervisor{\textbf{} \hspace{7.9cm} Prof. Dr. Matthias Tichy, Florian Ege, Dennis Jehle}
+ 
+%\assignmentdeadline{}         % Abgabedatum: XYZ
+%\assignmentduration{15 Minuten} % Bearbeitungsdauer: XYZ
+% \studentdata                      % Name & Matrikelnummer Feld
+
+\assignmenttype{}
+\assignmentno{}
+\title{Pflichtenheft Team 17}
+
+\begin{document}
+
+\maketitle
+
+\listoftodos
+
+\section{Kontextanalyse}
+\todo[inline]{Marco}
+Der Zweck dieses Dokuments ist es, eine detaillierte Beschreibung der Anforderungen, sowie der
+Benutzerschnittstelle für die Anwendung \textbf{No time to spy} bereitzustellen. Es wird abgegrenzt, welche
+Anforderungen erfüllt werden müssen, damit die entwickelte Anwendung vom Kunden akzeptiert
+wird.
+
+\subsection{Anwendungsbereich}
+
+Das Spiel \textbf{No time to spy} ist eine C++-Anwendung, die es dem Benutzer ermöglicht, ein 2D-Spiel zu spielen.
+
+
+\section{Fachwissen}
+\input{chapter/Fachwissen.tex}
+
+\todo[inline]{Hier nur als example zum copy pasten}
+\begin{tabularx}{16cm}{l|X}
+\textbf{Begriff} & \textbf{Definition} \\
+\hline
+Benutzer & \\ 
+\hline
+Spieler & \\ 
+\hline
+Lobby & \\ 
+\hline
+Spielpartie & \\ 
+\hline
+Client & \\ 
+\hline
+Server & \\ 
+\end{tabularx}
+
+
+\section{Domänenmodell}
+\todo[inline]{Domänenmodell Jonas}
+\input{chapter/Domain.tex}
+
+
+
+
+
+
+\section{Spezifische Anforderungen}
+Dieser Abschnitt enthält alle spezifischen Anforderungen des Systems. Er bietet eine detaillierte
+Beschreibung des Systems und seiner Funktionen.
+
+
+\subsection{Akteure}
+\todo[inline]{Akteure Caro}
+\input{chapter/Akteure.tex}
+
+
+\subsection{Funktionale Anforderungen}
+
+Dieser Abschnitt enthält alle Anforderungen, die die grundlegenden Aktionen des Softwaresystems
+spezifizieren.
+
+\subsubsection{Sever}
+
+\todo[inline]{hier noch ein beispiel, dass man sich copy pasten kann}
+\input{chapter/serverFA.tex}
+
+\begin{tabularx}{16cm}{l|X}
+\textbf{ID} & \textbf{FA1} \\
+\hline
+TITEL: & Hauptmenü \\
+\hline
+BESCHREIBUNG: & Nach dem Anwendungsstart wird dem Benutzer das Hauptmenü angezeigt. Der Benutzer kann folgende Aktionen im Hauptmenü ausführen: 
+\begin{itemize}
+\item Die Verbindung zu einem Server herstellen
+\item Die Verbindung zu einem Server trennen
+\item Zur Lobby Übersicht wechseln, insofern eine Serververbindung besteht.
+\item Die Anwendung beenden
+\end{itemize}
+\\
+\hline
+BEGRÜNDUNG: & Um eine Spielpartie zu erstellen oder einer solchen beizutreten, muss eine Verbindung zu einem Server aufgebaut werden. Dies muss initial vom Benutzer durchgeführt werden. Hierfür soll das Hauptmenü verwendet werden.\\
+\hline
+ABHÄNGIGKEITEN: & F2\\
+\end{tabularx}
+
+\subsubsection{Client}
+\input{chapter/clientFA.tex}
+\subsubsection{KI-Client}
+\input{chapter/kiFA.tex}
+\subsubsection{Editor}
+\input{chapter/editorFA.tex}
+\subsubsection{Allgemeine funktionale Anforderungen}
+\input{chapter/genFA.tex}
+
+\subsection{Nichtfunktionale Anforderungen}
+\input{chapter/nfa.tex}
+
+\begin{tabularx}{16cm}{l|X}
+\textbf{ID} & \textbf{QA1} \\
+\hline
+TITEL: & Robustheit \\
+\hline
+BESCHREIBUNG: & Die Anwendung darf nicht abstürzen. Bei 100 Spielen darf maximal 1 Spiel
+aufgrund eines Fehlers abgebrochen werden. \\
+\end{tabularx}
+
+\end{document}
