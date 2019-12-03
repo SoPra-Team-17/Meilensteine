@@ -89,14 +89,13 @@ FA-GXX für general FA
 Todo: festlegen der Titel, wer formuliert was aus?
 
 * server cli docker
-* ki, cli docker 
+* ki, cli docker
 * client, responsive (frame rate 144fps  und input delay 50ms)
 * server, antwortzeit 100ms 
 * alle, bei absturz logs ablegen
 * alle, testcoverage 50% (unit und monkey-testing)
-* alle, Codeanalyse:Verwendung von Sonarqube zur Qualitätsicherung 
+* alle, Codeanalyse:Verwendung von Sonarqube zur Qualitätsicherung
 * alle, continous integration für code und merge requests
 * alle, ease of use (erlernbar innerhalb x-facher benutzung)
 * alle, UX --> sinnvolles maß (alle teammitglieder zufrieden)
-
 * verantwortlich Marco
