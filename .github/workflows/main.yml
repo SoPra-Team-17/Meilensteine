@@ -1,0 +1,19 @@
+name: LaTex build + GH Pages deploy
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v1
+    - name: Compile and Deploy LaTeX to PDF
+      uses: ottojo/uberblatt-action@master
+    - name: GitHub Pages Deploy
+      uses: maxheld83/ghpages@v0.2.1
+      env:
+        BUILD_DIR: "build/"
+        GH_PAT: ${{ secrets.GH_PAT }}
+
