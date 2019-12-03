@@ -124,4 +124,5 @@ Todo: festlegen der Titel, wer formuliert was aus?
 * alle, ease of use (erlernbar innerhalb x-facher benutzung)
 * alle, UX --> sinnvolles maß (alle teammitglieder zufrieden)
 * alle, Doxygen dokumentation
+* alle, 4.8 im handbuch anschauen (Dolumentation
 * verantwortlich Marco
