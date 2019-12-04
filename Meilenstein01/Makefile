@@ -1,6 +1,7 @@
 all: Pflichtenheft.pdf
 	$(info ARTIFACTS:Pflichtenheft.pdf)
 
+.PHONY: Pflichtenheft.pdf
 Pflichtenheft.pdf: Pflichtenheft.tex
 	latexmk -pdf Pflichtenheft.tex
 
