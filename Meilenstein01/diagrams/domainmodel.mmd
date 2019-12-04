@@ -1,0 +1,44 @@
+classDiagram
+  class Spiel
+  
+  class Spieler
+  Spieler --> Fraktion : kontrolliert
+
+  class Spielbrett
+  class Feld
+  Feld "n" --* "1" Spielbrett
+  Spielbrett "1" --* "1" Spiel
+  Spieler "2" --o "1" Spiel
+  Kamin --|> Feld
+  Sitzplatz --|> Feld
+  BarTisch --|> Feld
+  Tresor --|> Feld
+  RouletteTisch --|> Feld
+  Wand  --|> Feld
+  FreiesFeld  --|> Feld
+
+
+  class Fraktion
+  class Person
+  Person --> Feld : steht auf
+  class Agent {
+    -Bewegungspunkte
+    -Aktionspunkte
+    -Health Points
+    -Intelligence Points
+    -Spielchips
+  }
+  Agent "1..n" --o "1" Fraktion
+  Agent --|> Person
+  class NPC
+  NPC --|> Person
+
+  class Eigenschaft
+  Eigenschaft "n" --o "1" Agent
+  class Gadget
+  Gadget "1.." --o "1" Agent
+  class Cocktail {
+    +vergiftet
+  }
+  Cocktail "0..1" --o "1" Agent
+
