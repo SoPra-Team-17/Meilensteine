@@ -64,9 +64,9 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Client Timeout \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Der Server muss die Verbindung mit Clients, die nicht innerhalb einer in der Partiekonfiguration festgelegten Zeit antworten, trennen. Im Falle eines aktiven Spielers wird dieser disqualifiziert und verliert somit das Spiel. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Abbau von Verbindungen mit fehlerhaften und unresponsiven Clients\\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -76,7 +76,7 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Verspätete Nachrichten \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Der Server muss Nachrichten empfangen, die zum aktuellen Zeitpunkt ungültig sind, in einer vorherigen Phase aber korrekt waren. Diese Nachrichten werden verworfen und nicht als Protokollverletzung gewertet. \\
 \hline
 BEGRÜNDUNG: & \\
 \hline
@@ -100,7 +100,7 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Spielpause \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Auf Anfrage eines (Nicht-KI-)Clients muss der Server das Spiel pausieren. \\
 \hline
 BEGRÜNDUNG: & \\
 \hline
@@ -112,9 +112,10 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Erkennung von Regelverstößen \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Während der Durchführung des Spiels muss der Server die Aktionen jedes Clients auf Regelkonformität prüfen.
+Ungültige Aktionen werden vom Server abgelehnt. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Um korrekten Spielablauf zu gewährleisten. \\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -124,9 +125,9 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Senden des Spielzustands \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Nachdem ein Spieler seinen Zug beendet hat, muss der Server den aktuellen Spielzustand an alle aktiven Spieler und Zuschauer senden. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Notwendig für die Darstellung des Spielfelds beim Spieler. \\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -136,7 +137,8 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Gewinner Erkennung \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Nach jeder Aktion muss der Server überprüfen, ob eine der Bedingungen um das Spiel zu gewinnen erfüllt ist.
+Wenn ein Spieler das Spiel gewinnt, wird dieses sofort beendet. \\
 \hline
 BEGRÜNDUNG: & \\
 \hline
@@ -160,9 +162,9 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & JSON Encoding \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, Nachrichten, die Aktionen und Spielzustände darstellen, im JSON Format zu encodieren. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -172,9 +174,9 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & JSON Decoding \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, Nachrichten, die Aktionen und Spielzustände darstellen, aus dem JSON Format zu decodieren. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -184,9 +186,9 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Websockets \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, JSON encodierte Nachrichten über eine Websockets Verbindung mit mehreren Clients auszutauschen.\\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
