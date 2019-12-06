@@ -1,0 +1,15 @@
+name: Combine Repos
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: SoPra-Team-17/repomerge-action@master
+      with:
+        org: "SoPra-Team-17"
+        destination: "github.com/ottojo/combined-test.git"
+        pat: ${{ secrets.GH_PAT }}
