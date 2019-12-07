@@ -1,3 +1,105 @@
 %Hier kommen die Akteure rein
-Akteure
-Hier ist ein Test Text
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Server} \\
+	\hline
+	Rolle & Zentrale Software-Einheit zur Kommunikation mit den Clients.\\ 
+	\hline
+	Aufgabe & Der Server ist Vermittler in der Kommunikation zwischen den Clients. Er geht auf Anfrage Verbindungen mit Clients ein und kann diese auch wieder beenden. Während ein Client mit dem Server verbunden ist, bearbeitet und validiert der Server alle Anfragen des Clients und sorgt dafür, dass der Client alle notwendigen Informationen zum aktuellen Stand erhält.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Client} \\
+	\hline
+	Rolle & Lokale Software-Einheit zur Kommunikation mit dem Server \\ 
+	\hline
+	Aufgabe & Da Clients nicht direkt miteinander kommunizieren können, kommuniziert der Client mit einem Server. Der Client kann eine Verbindung zum Server auf- und auch wieder abbauen. Ein verbundener Client kann Informationen weitergeben, anfragen und erhalten.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Benutzer-Client} \\
+	\hline
+	Rolle & Client, der von einem Menschen bedient wird.\\ 
+	\hline
+	Aufgabe & Der Benutzer-Client stellt eine graphische Oberfläche zur Bedienung zur Verfügung. Er ermöglicht die Bedienung des Editors und die Teilnahme an einer Spielpartie.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{KI-Client} \\
+	\hline
+	Rolle & Client, der von einem Computer gesteuert wird.\\ 
+	\hline
+	Aufgabe & Der KI-Client kann von einem Benutzer-Client als Spieler zur Spielpartie hinzugefügt werden und benutzt keine graphische Oberfläche.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Teilnehmer} \\
+	\hline
+	Rolle & Alle Akteure, die an einer Spielpartie teilnehmen.\\ 
+	\hline
+	Aufgabe & Teilnehmer erhalten Informationen zur Spielpartie vom Server und können die Spielpartie jederzeit wieder verlassen.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Zuschauer} \\
+	\hline
+	Rolle & Benutzer-Client, der passiv an einer Spielpartie teilnimmt.\\ 
+	\hline
+	Aufgabe & Über die graphische Oberfläche des Benutzer-Clients, kann der Benutzer das laufende Spiel beobachten, aber nicht eingreifen. \\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Spieler} \\
+	\hline
+	Rolle & Client, der aktiv an einer Spielpartei teilnimmt.\\ 
+	\hline
+	Aufgabe & Wenn ein Spieler an der Reihe ist, führt er durch Steuerung seiner Charaktere valide Spielzüge aus und informiert den Server über seine Aktionen. Ziel des Spielers ist es, die Spielpartie zu gewinnen.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Benutzer-Spieler} \\
+	\hline
+	Rolle & Spieler, der ein Benutzer-Client ist.\\ 
+	\hline
+	Aufgabe & Ein Benutzer-Spieler spielt die Spielpartie über die graphische Oberfläche.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{KI-Spieler} \\
+	\hline
+	Rolle & Spieler, der ein KI-Client ist.\\ 
+	\hline
+	Aufgabe & Ein KI-Spieler spielt die Spielpartie unter Verwendung von künstlicher Intelligenz.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{NPC} \\
+	\hline
+	Rolle & Charakter in einer Spielpartie, der von keinem Spieler gesteuert werden kann.\\ 
+	\hline
+	Aufgabe & NPCs sind Charaktere, die vom Server gesteuert werden. Der Server informiert die Teilnehmer über die Spielzüge der NPCs.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Auftraggeber} \\
+	\hline
+	Rolle & Florian Ege, stellvertretend für das Institut für Softwaretechnik und Programmiersprachen\\ 
+	\hline
+	Aufgabe & Gibt die Anforderungen für \glqq No Time To Spy\grqq vor und nimmt das fertige Produkt ab.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\textbf{Akteur} & \textbf{Vertreter des Auftraggebers} \\
+	\hline
+	Rolle & Tutor Ismail Temel\\ 
+	\hline
+	Aufgabe & Dient als Vermittler zwischen Entwicklern und Auftraggeber.\\ 
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\textbf{Akteur} & \textbf{Entwickler} \\
+\hline
+Rolle & SoPra-Team-17: Dominik Authaler, Lukas Bleile, Marco Deuscher, Jonas Otto, Carolin Schindler, Dominik Tabib Khoie\\ 
+\hline
+Aufgabe & Agile Entwicklung von \glqq No Time To Spy\grqq nach den Anforderungen des Auftraggebers.\\ 
+\end{tabularx}
