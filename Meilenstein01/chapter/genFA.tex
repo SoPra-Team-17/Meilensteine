@@ -1,41 +1,366 @@
 %Hier kommen die generellen FA rein
-
+%Caro: gen, 2.2 in FA übersetzen with Appendix A
+%Caro: gen, 2.3 in FA übersetzen
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{title3}
+	\refstepcounter{table}\label{Charakter}
 	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
 	\hline
-	TITEL: & title3 \\
+	TITEL: & Charakter \\
 	\hline
-	BESCHREIBUNG: & XXX\\
+	BESCHREIBUNG: & Ein Charakter besitzt folgende Werte, die normalerweise für die gegnerische Fraktion nicht sichtbar sind: 
+	\begin{itemize}
+		\item Beschreibung
+		\item Bewegungspunkte (BP) und Aktionspunkte (AP)
+		\item Health Points (HP)
+		\item Intelligence Points (IP)
+		\item Eigenschaften
+		\item Inventar
+		\item hält Cocktail
+		\item Spielchips
+	\end{itemize}
+	\\
 	\hline
-	BEGRÜNDUNG: & XXX\\
+	BEGRÜNDUNG: & Jeder Charakter soll individuell sein und sich über das Spiel hinweg verändern können.\\
 	\hline
-	ABHÄNGIGKEITEN: & XXX\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Charakter-Beschreibung}, FA-G\ref{BP und AP}, FA-G\ref{HP}, FA-G\ref{IP}, FA-G\ref{Eigenschaften}, FA-G\ref{Inventar}, FA-G\ref{haelt Cocktail}, FA-G\ref{Spielchips} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{title1}
+	\refstepcounter{table}\label{Charakter-Beschreibung}
 	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
 	\hline
-	TITEL: & title1 \\
+	TITEL: & Charakter-Beschreibung \\
 	\hline
-	BESCHREIBUNG: & XXX\\
+	BESCHREIBUNG: & Die Charakter-Beschreibung beschreibt den Charakter aus \glqq James Bond\grqq in wenigen Sätzen.\\
 	\hline
-	BEGRÜNDUNG: & XXX\\
+	BEGRÜNDUNG: & Zusätzliche Informationen für den Spieler. \\
 	\hline
-	ABHÄNGIGKEITEN: & XXX\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{title2}
+	\refstepcounter{table}\label{BP und AP}
 	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
 	\hline
-	TITEL: & title2 \\
+	TITEL: & Bewegungspunkte (BP) und Aktionspunkte (AP) \\
 	\hline
-	BESCHREIBUNG: & XXX\\
+	BESCHREIBUNG: & Während eine Charakter am Zug ist, kann er BP für Bewegungen auf dem Spielfeld und AP für Aktionen einsetzen.
+	Zu Beginn eines Zuges erhält er jeweils Punkte. Nach Beenden eines Zuges verfallen übrig gebliebene Punkte. BP und AP können nicht negativ sein.\\
+	\hline
+	BEGRÜNDUNG: & Hält fest, wie viele Bewegungen und Aktionen der Charakter in diesem Spielzug noch ausführen kann. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Flinkheit}, FA-G\ref{Schwerfaelligkeit}, FA-G\ref{Behaendigkeit}, FA-G\ref{Behaebigkeit}, FA-G\ref{Agilitaet} \todo[inline]{2.10.1 Züge, 2.5 Bewegung, 2.6 Aktionen}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{HP}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Health Points (HP) \\
+	\hline
+	BESCHREIBUNG: & HP geben Auskunft über den Gesundheitszustand des Charakters. Zu Spielbeginn werden die HP auf 100 gesetzt. Während des Spiels sorgen verschiedene Aktionen dafür, dass HP hinzugefügt oder abgezogen werden. Werden HP abgezogen, spricht man von Schaden. Die Punkte nehmen Werte zwischen 0 und 100 an.\\
+	\hline
+	BEGRÜNDUNG: & Zeigt Auswirkung verschiedener Aktionen auf den Charakter. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Robuster Magen}, FA-G\ref{Zaehigkeit} \todo[inline]{2.6 Aktionen, 2.4 Gadgets}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Exfiltratation}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Exfiltration \\
+	\hline
+	BESCHREIBUNG: & Sinken die HP eines Charakter auf 0, so wird eine Exfiltration durchgeführt. Dabei wird der Charakter auf ein zufällig gewähltes freies Sitzplatz-Feld versetzt und seine HP auf 1 gesetzt. Ist kein freier Sitzplatz vorhanden, so wird ein Sitzplatz zufällig ausgewählt und die Person, die dort saß, wird auf ein zufälliges freies Nachbarfeld des Sitzplatzes platziert.\\
 	\hline
 	BEGRÜNDUNG: & XXX\\
 	\hline
-	ABHÄNGIGKEITEN: & XXX\\
+	ABHÄNGIGKEITEN: & FA-G\ref{HP} \todo[inline]{2.12 Zufall und Alternativen}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Eigenschaften}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Eigenschaften \\
+	\hline
+	BESCHREIBUNG: & Sind entweder dauerhafte Fähigkeiten eines Charakters oder vorübergehende Zustände. Fähigkeiten kommen passiv zum Tragen oder ermöglichen dem Charakter bestimmte Aktionen. Zustände werden durch Aktionen erworben oder verloren.\\
+	\hline
+	BEGRÜNDUNG: & Fähigkeiten sorgen für individuelle Charaktere und Eigenschaften halten den aktuellen Zustand des Charakters fest. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Flinkheit}, FA-G\ref{Schwerfaelligkeit}, FA-G\ref{Behaendigkeit}, FA-G\ref{Behaebigkeit}, FA-G\ref{Agilitaet}, FA-G\ref{Glueckspilz}, FA-G\ref{Pechvogel}, FA-G\ref{Klamme Klamotten}, FA-G\ref{Konstant Klamme Klamotten}, FA-G\ref{Robuster Magen}, FA-G\ref{Zaehigkeit}, FA-G\ref{Babysitter}, FA-G\ref{Honey Trap}, FA-G\ref{Bang and Burn}, FA-G\ref{Flaps and Seals}, FA-G\ref{Tradecraft}, FA-G\ref{Observation} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Inventar}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Inventar \\
+	\hline
+	BESCHREIBUNG: & Im Inventar sind alle Gadgets aufgelistet, die der Charakter aktuell bei sich trägt.\\
+	\hline
+	BEGRÜNDUNG: & Hält fest, welche Gadgets der Charakter nutzen kann.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.4 Gadgets}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{haelt Cocktail}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & hält Cocktail \\
+	\hline
+	BESCHREIBUNG: & Gibt an, ob der Charakter einen Cocktail in seiner Hand hält oder nicht. Ein Charakter kann maximal einen Cocktail in der Hand halten. Wird ein Cocktail in der Hand gehalten, so sind Aktionen mit diesem möglich. \\
+	\hline
+	BEGRÜNDUNG: & Hält fest, ob Interaktion mit einem Cocktail möglich ist oder nicht.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.6 Cocktail}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Spielchips}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Spielchips \\
+	\hline
+	BESCHREIBUNG: & Zu Beginn des Spiels besitzt jeder Charakter 10 Spielchips. Mit diesen kann er an Roulette-Tischen spielen und dadurch seine Anzahl an Spielchips erhöhen oder verringern.\\
+	\hline
+	BEGRÜNDUNG: & Werden benötigt, um Roulette zu spielen.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.6 Roulette}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Flinkheit}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Flinkheit \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Flinkheit, so erhält er in jeder Runde drei Bewegungspunkte.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Schwerfaelligkeit}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Schwerfälligkeit \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Schwerfälligkeit, so erhält er in jeder Runde einen Bewegungspunkt.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Behaendigkeit}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Behändigkeit \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Behändigkeit, so erhält er in jeder Runde zwei Aktionspunkte.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Behaebigkeit}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Behäbigkeit \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Behäbigkeit, so wird ihm zu Beginn jeder Runde zufällig entweder ein Bewegungspunkt oder einer Aktionspunkt abgezogen.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Agilitaet}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Agilität \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Agilität, so wird ihm zu Beginn jeder Runde zufällig entweder ein Bewegungspunkt oder einer Aktionspunkt hinzugefügt.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Glueckspilz}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Glückspilz \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Glückspilz, so beträgt seine Gewinnchance beim Roulette $\frac{23}{37}$.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Gewinnchancen beim Roulette je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall, Abhängigkeit von 2.6 Roulette}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Pechvogel}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Pechvogel \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Pechvogel, so beträgt seine Gewinnchance beim Roulette $\frac{13}{37}$.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Gewinnchancen beim Roulette je nach Charakter. \\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall, Abhängigkeit von 2.6 Roulette}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Klamme Klamotten}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Klamme Klamotten \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter den Zustand Klamme Klamotten, so halbiert sich seine Erfolgswahrscheinlichkeit bei einer Wahrscheinlichkeitsprobe. \\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Erfolgswahrscheinlichkeiten je nach Zustand des Charakters.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Konstant Klamme Klamotten} \todo[inline]{2.1 Kamin-Feld, 2.4 Föhn, 2.6 Cocktail, 2.12 Zufall}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Konstant Klamme Klamotten}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Konstant Klamme Klamotten \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Konstant Klamme Klamotten, so hat er dauerhaft den Zustand Klamme Klamotten.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Erfolgswahrscheinlichkeiten je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Robuster Magen}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Robuster Magen \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Robuster Magen, so erhält er die doppelte Anzahl Cocktail-HP und nur den halben Gift-Cocktail-Schaden durch vergiftete Cocktails.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Health Points je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{Cocktail-HP, Gift-Cocktail-Schaden}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Zaehigkeit}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Zähigkeit \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Zähigkeit, so wird jeder Schaden, der nicht durch vergiftete Cocktails entsteht, um die Hälfte reduziert.\\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Health Points je nach Charakter.\\
+	\hline
+	ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Babysitter}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Babysitter \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Babysitter, so wehrt er Angriffe auf benachbarte Charaktere der eigenen Fraktion mit der vorgegebenen Babysitter-Wahrscheinlichkeit ab. Bei einem Angriff wird zuerst die Wahrscheinlichkeitsprobe durch den Angreifer gemacht und wenn diese erfolgreich ist wird die Babysitter Fähigkeit eingesetzt. Ist der Charakter mit der Fähigkeit Babysitter erfolgreich, so misslingt der Angriff, ohne dass die gegnerische Fraktion etwas von der Fähigkeit erfährt, ansonsten wird der Angriff durchgeführt.\\
+	\hline
+	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{Babysitter-Wahrscheinlichkeit, Wahrscheinlichkeitsprobe, Abhängigkeit von 2.6 Aktion, 2.4 Gadgets}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Honey Trap}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Honey Trap \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Honey Trap, so werden mit der vorgegebenen Honey-Trap-Wahrscheinlichkeit Angriffe anstatt auf diesen Charakter auf einen zufälligen anderen Charakter ausgeübt, insofern dieser andere Charakter ebenfalls Ziel der Aktion hätte sein können.\\
+	\hline
+	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{Honey-Trap-Wahrscheinlichkeit}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Bang and Burn}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Bang and Burn \\
+	\hline
+	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Bang and Burn, so kann er einen benachbarten Roulette-Tisch unbrauchbar machen. Auf diesem kann dann nicht mehr gespielt werden.\\
+	\hline
+	BEGRÜNDUNG: & Verhindert das Sammeln von Spielchips, die später über den Sieg mitentscheiden.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{Abhängigkeit von 2.1 Roulette-Tisch}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{Flaps and Seals}
+\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+\hline
+TITEL: & Flaps and Seals \\
+\hline
+BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Flaps and Seals, so kann er in einen Tresor spicken, der zwei Felder von ihm entfernt und somit nicht auf einem Nachbarfeld steht.\\
+\hline
+BEGRÜNDUNG: & Weniger Bewegungspunkte notwendig, um zu Tresor zu gelangen.\\
+\hline
+ABHÄNGIGKEITEN: & \todo[inline]{2.4 Maulwürfel, Abhängigkeit von 2.6 Tresor-Spicken}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{Tradecraft}
+\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+\hline
+TITEL: & Tradecraft \\
+\hline
+BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Tradecraft, so wiederholt er eine fehlgeschlagene Wahrscheinlichkeitsprobe einer Aktion einmal.\\
+\hline
+BEGRÜNDUNG: & Höhere Chance für eine erfolgreiche Aktion.\\
+\hline
+ABHÄNGIGKEITEN: & \todo[inline]{Wahrscheinlichkeitsprobe, 2.4 Maulwürfel}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{Observation}
+\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+\hline
+TITEL: & Observation \\
+\hline
+BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Observation, so kann er diese als Aktion gegen einen anderen Charakter in Sichtlinie ausführen. Dabei wird mit der vorgegebenen Observation-Erfolg-Wahrscheinlichkeit aufgedeckt, ob der Charakter zur gegnerischen Fraktion gehört oder nicht. Die Aktion bleibt vom observierten Charakter unbemerkt. \\
+\hline
+BEGRÜNDUNG: & Möglichkeit um herauszufinden, welche Charaktere zur gegnerischen Fraktion gehören und welche NPCs sind.\\
+\hline
+ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maulwürfel}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Charakter Liste}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Charakter Liste \\
+	\hline
+	BESCHREIBUNG: & Eine Liste, die alle spielbaren Charaktere mit ihren Fähigkeiten beinhaltet. Die Charaktere, die im Lastenheft unter \glqq A Einige Vorschläge für Charaktere\grqq aufgeführt sind, sollen mindestens in der Liste enthalten sein.\\
+	\hline
+	BEGRÜNDUNG: & Aus dieser Liste können Charaktere zum Spielen gewählt werden.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Charakter} \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
