@@ -1,1 +1,90 @@
-ki
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-session}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Websocket Verbindung \\
+\hline 
+BESCHREIBUNG: & Der KI-Client muss eine Websocket Verbindung zum Server aufbauen können. Darüber können JSON encodierte Nachrichten geschickt werden. \\
+\hline
+BEGRÜNDUNG: & Kommunikation mit dem Server \\
+\hline
+ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-register}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Registrieren als KI \\
+\hline 
+BESCHREIBUNG: & Der KI-Client muss sich nach der Verbindung mit dem Server als KI identifizieren. \\
+\hline
+BEGRÜNDUNG: & Anzeige für den Spielers, ob er gegen eine KI oder einen menschlichen Gegner spielt. \\
+\hline
+ABHÄNGIGKEITEN: & FA-KI \ref{ki-session} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-cli}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Commandline Argumente \\
+\hline 
+BESCHREIBUNG: & Der KI-Client muss Kommandozeilen Argumente unterstützen um Parameter zu setzen. Die Argumente sind vom Standardisierungskomitee definiert. \\
+\hline
+BEGRÜNDUNG: & Nicht-interaktive Benutzung, Konfiguration des Clients. \\
+\hline
+ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-config}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Konfigurationsdatei \\
+\hline 
+BESCHREIBUNG: & Die Parameter des Commandline Interface müssen auch über eine Konfigurationsdatei konfigurierbar sein. \\
+\hline
+BEGRÜNDUNG: & Persistentes Speichern der Parameter \\
+\hline
+ABHÄNGIGKEITEN: & FA-KI \ref{ki-cli}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-intelligenz}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Intelligenzstufen \\
+\hline 
+BESCHREIBUNG: & Der KI-Client muss die Möglichkeit besitzen, zwischen mehreren Strategien zu wechseln abhängig von der eingestellten Intelligenzstufe. Die Intelligenzstufe kann durch ein Commandline Argument oder in der Konfigurationsdatei festgelegt werden. \\
+\hline
+BEGRÜNDUNG: & Unterschiedlicher Schwierigkeitsgrad für Anfänger vs. fortgeschrittene Spieler \\
+\hline
+ABHÄNGIGKEITEN: & FA-KI \ref{ki-cli}, \ref{ki-config}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-actions}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Aktionen \\
+\hline 
+BESCHREIBUNG: & Die KI muss in jeder Runde regelkonforme und sinnvolle Aktionen bestimmen, und diese dem Server senden. \\
+\hline
+BEGRÜNDUNG: & Grundlegende Funktionalität der KI \\
+\hline
+ABHÄNGIGKEITEN: & FA-KI \ref{ki-session}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{ki-api}
+\textbf{ID} & \textbf{FA-KI \arabic{table}} \\
+\hline
+TITEL: & Optional: API \\
+\hline 
+BESCHREIBUNG: & Die KI soll eine Programmierschnittstelle zur Anbindung an den Benutzer Client besitzen. \\
+\hline
+BEGRÜNDUNG: & Verwenden der KI zum Vorschlagen von Aktionen für den Spieler \\
+\hline
+ABHÄNGIGKEITEN: & FA-KI \ref{ki-actions}\\
+\end{tabularx}
