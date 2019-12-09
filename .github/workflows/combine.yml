@@ -11,5 +11,5 @@ jobs:
       uses: SoPra-Team-17/repomerge-action@master
       with:
         org: "SoPra-Team-17"
-        destination: "github.com/ottojo/combined-test.git"
-        pat: ${{ secrets.GH_PAT }}
+        destination: "gitlab.informatik.uni-ulm.de/sopra/ws19-no-time-to-spy/teams/team0017.git"
+        pat: ${{ secrets.GITLAB_PAT_OTTOJO }}
