@@ -1,0 +1,70 @@
+digraph G {
+    // General Layout
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+
+    node [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        shape = "record"
+    ]
+
+    edge [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        arrowhead = "onormal"
+        labeldistance = 1.5
+    ]
+
+    // Classes
+    Spieler
+    Spielfeld
+    Feld
+    Agent
+    Gadget
+    Fähigkeit
+    Fraktion
+
+    // Inheritance
+
+    // Aggregations
+    edge [
+        arrowhead = "odiamond"
+    ]
+    Gadget -> Agent [
+        taillabel = "0..n"
+        headlabel = "1"
+    ]
+    Gadget -> Feld
+
+    // Compositions
+    edge [
+        arrowhead = "diamond"
+    ]
+    Feld -> Spielfeld [
+        headlabel = "1"
+        taillabel = "n"
+    ]
+    Agent -> Fraktion [
+        taillabel = "1..n"
+        headlabel = "1"
+    ]
+    Fähigkeit -> Agent [
+        taillabel = "0..n"
+        headlabel = "1"
+    ]
+
+    // Normal Arrows
+    edge [
+        arrowhead = "vee"
+    ]
+    Agent -> Spielfeld [
+        label = "steht auf"
+    ]
+
+    Spieler -> Fraktion [
+        label = "steuert"
+        taillabel = "1"
+        headlabel = "1"
+    ]
+}

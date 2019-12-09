@@ -2,8 +2,11 @@ all: Pflichtenheft.pdf
 	$(info ARTIFACTS:Pflichtenheft.pdf)
 
 .PHONY: Pflichtenheft.pdf
-Pflichtenheft.pdf: Pflichtenheft.tex
+Pflichtenheft.pdf: Pflichtenheft.tex domainmodel.pdf
 	latexmk -pdf Pflichtenheft.tex
+
+domainmodel.pdf: diagrams/domainmodel.dot
+	dot -T pdf -o $@ diagrams/domainmodel.dot
 
 .PHONY: clean
 clean:
