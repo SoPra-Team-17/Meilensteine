@@ -50,6 +50,8 @@ digraph G {
     Gadget -> Agent [
         taillabel = "0..n"
         headlabel = "1"
+	labeldistance=1.5
+	labelangle=-30
     ]
     Gadget -> Feld [
         taillabel = "0..n"
@@ -58,6 +60,7 @@ digraph G {
     Eigenschaft -> Charakter [
         taillabel = "0..n"
         headlabel = "1"
+	labelangle=-35
     ]
     Cocktail -> Charakter [
         taillabel = "0..1"
@@ -75,10 +78,13 @@ digraph G {
     Agent -> Fraktion [
         taillabel = "1..n"
         headlabel = "1"
+	labelangle=35
     ]
     Fähigkeit -> Agent [
         taillabel = "0..n"
         headlabel = "1"
+	labeldistance=1
+	labelangle=-55
     ]
 
     // Normal Arrows

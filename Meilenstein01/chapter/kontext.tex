@@ -1,7 +1,28 @@
-Der Zweck dieses Dokuments ist es, eine detaillierte Beschreibung der Anforderungen, sowie der Benutzerschnittstelle
-für die Anwendung No time to spy bereitzustellen. Es wird abgegrenzt, welche Anforderungen erfüllt werden müssen,
-damit die entwickelte Anwendung vom Kunden akzeptiert wird.
+\subsection{Einleitung}
+In diesem Projekt soll ein rundenbasiertes Taktik-Multiplayer-Spiel für maximal zwei Spieler entwickelt werden. Das Spiel handelt im James Bond Universum. 
+Der Schauplatz des Spiels ist ein Casino. In diesem Casiono befinden sich zwielichtige Gestalten verschiedenster Herkunft, zwei Spionage-Teams und vor allem die weiße Katze des Bösewichts Ernst Stavro Blofeld. Die Katze hat ihr Diamanthalsband verloren und versucht dieses wiederzufinden.
+Die Spione hoffen, wenn sie das Diamanthalsband finden, die Gunst des Kätzchens und damit die Gunst der zwielichtigen Organisation, welcher das Kätzchen angehört, zu gewinnen.
+Die Spieler kontrollieren jeweils ein Team von Agenten. Am Ende gewinnt derjenige, der es schafft das Diamanthalsband aufzuspüren.
 
 
-\subsection{Anwendungsbereiche}
-Das Spiel No time to spy ist eine C++-Anwendung, die es dem Benutzer ermöglicht, ein 2D-Spiel zu spielen.
+\subsection{Motivation}
+Am 3.April 2020 wird der 25. von \textit{Eon Productions} produzierte James Bond Film mit dem Titel \textit{No Time to Die} veröffentlicht. Um dieses Jubiläum zu feiern, soll ein Spiel im James Bond Universum entwickelt werden.
+Das Spiel soll den Spirit von James Bond wiederspiegeln mit abgefahrenen Bösewichten, spannenden Geschichten und vor allem jeder Menge Spionage!\\
+Die Entscheidung für das Medium Videospiel fiel, da dieses vor allem bei jungen Menschen beliebter denn je ist. Das Spiel soll sich vor allem an eine junge Zielgruppe richten und diesen ein cooles Spielerlebnis bieten.\\
+
+Der Auftraggeber erhält hierbei die Rechte an einem Spiel in einem der größten Filmuniversen. Dadurch wird eine große Zielgruppe angesprochen und da es sich bei dem Spiel um ein Mehrspieler-Spiel handelt, verbreitet sich dieses schnell.
+
+
+\subsection{Vision}
+\textit{No Time to Spy} soll ein ein 2D-Spiel werden. Die verschiedenen Charaktere im Spiel erhalten jeweils ein individuelles Aussehen. Das Spiel soll also nicht nur durch spannendes Spieldesign sondern auch gutes Aussehen glänzen. Der Spieler soll die Möglichkeit haben viele der Aktionen, welche ihm selbst einfallen, im Spiel umzusetzen. Dazu gehört im Casino spielen zu können, einen Cocktail zu trinken, um andere Spieler abzulenken, diese mit einem Cocktail zu übergießen und vieles mehr.\\
+Das Spiel soll zudem viele verschiedene Charaktere, Eigenschaften und Gadgets enthalten und so eine Tiefe bieten, dass auch bei häufigen Spielen keine Langeweile entsteht. Das Spiel wird mehr als 10 verschiedene Eigenschaften, beinahe 20 verschiedene Gadgets und mehr als 25 verschiedene Charaktere aus dem James Bond Universum enthalten. \\
+Trotz der Komplexität des Spiels soll auch Anfängern oder Neulingen in James Bond Universum ein gutes Spielerlebnis geboten werden. Ermöglicht wird dies durch ausführliche Beschreibungen der Eigenschaften und Charaktere und einer sinnvollen Hilfsfunktion im Spiel.\\
+Um auch alleine Spielen zu können, wird das Spiel einen KI-Gegner beinhalten. Dieser kann auf verschiedene Schwierigkeiten eingestellt werden, so dass jeder Spieler ein für sich angenehmes Spielerlebnis geboten bekommt.\\
+Um zu einem abwechslungsreichen Spielerlebnis beizutragen, enthält das Spiel einen Charakter- und Leveleditor. In diesem kann das Spielfeld und die eigene Gruppe an Agenten bearbeitet werden. 
+
+\subsection{Projektkontext}
+Das Spiel \textit{No Time to Spy} wird zunächst im Rahmen des Software-Grundprojekts an der Universität Ulm im Wintersemester 2019/2020 und Sommersemester 2020 entwickelt.
+Eine mögliche Weiterentwicklung nach dem Software-Grundprojekt ist nicht ausgeschlossen. Insbesondere wird das Spiel nach Abschluss des Projekts unter einer Open-Source-Lizenz zur Verfügung gestellt, so dass auch dritte daran weiterentwickeln können.\\
+
+Im Rahmen der Entwicklung wird ein Client entstehen. Dieser bietet eine graphische Benutzeroberfläche mit welcher der Spieler interagiert. Außerdem kann der Benutzer einen Charakter- und Leveleditor verwenden, dieser ist ebenfalls teil des Projekts und bietet dem Benutzer eine graphische Oberfläche.\\
+Es wird ein Server implementiert der verschiedene Spielpartien verwaltet, auf Regelverstöße achtet und den Ablauf des Spiels kontrolliert. Außerdem wird eine KI entwickelt die am Spiel teilnehmen kann.
