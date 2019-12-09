@@ -17,17 +17,27 @@ digraph G {
     ]
 
     // Classes
-    Spieler
-    Spielfeld
-    Feld
-    Charakter
+    Spieler [
+        label = "{Spieler|+ Name: string\l}"
+    ]
+    Spielfeld [
+        label = "{Spielfeld|+ Höhe: ℕ\l+ Breite: ℕ\l}"
+    ]
+    Feld [
+        label = "{Feld|+ Typ: Feldtyp\l}"
+    ]
+    Charakter [
+        label = "{Charakter|+ BP: ℕ\l+ AP: ℕ\l+ HP: ℕ\l+ IP: ℕ\l+ Chips: ℕ\l}"
+    ]
     Agent
     NPC
     Gadget
     Fähigkeit
     Fraktion
     Eigenschaft
-    Cocktail
+    Cocktail [
+        label = "{Cocktail|+ vergiftet: bool\l}"
+    ]
 
     // Inheritance
     Agent -> Charakter
@@ -41,7 +51,10 @@ digraph G {
         taillabel = "0..n"
         headlabel = "1"
     ]
-    Gadget -> Feld
+    Gadget -> Feld [
+        taillabel = "0..n"
+        headlabel = "1"
+    ]
     Eigenschaft -> Charakter [
         taillabel = "0..n"
         headlabel = "1"
@@ -57,7 +70,7 @@ digraph G {
     ]
     Feld -> Spielfeld [
         headlabel = "1"
-        taillabel = "n"
+        taillabel = "bxh"
     ]
     Agent -> Fraktion [
         taillabel = "1..n"
