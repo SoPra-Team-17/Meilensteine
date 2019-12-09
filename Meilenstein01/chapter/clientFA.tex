@@ -1,5 +1,6 @@
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-intro}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Optional: Intro \\
 \hline 
@@ -11,7 +12,8 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-menu}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Hauptmenü \\
 \hline 
@@ -23,7 +25,8 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-join}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Beitreten als Mitspieler \\
 \hline 
@@ -31,11 +34,12 @@ BESCHREIBUNG: & Nach Verbinden mit dem Server kann der Spieler die Rolle als akt
 \hline
 BEGRÜNDUNG: & Es muss zwischen aktiven Spielern und passiven Zuschauern unterschieden werden. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-session}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-join-spectator}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Beitreten als Zuschauer \\
 \hline 
@@ -43,11 +47,12 @@ BESCHREIBUNG: & Nach Verbinden mit dem Server kann der Spieler die Rolle als pas
 \hline
 BEGRÜNDUNG: & Es muss zwischen aktiven Spielern und passiven Zuschauern unterschieden werden. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-join}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-join-human}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Registrieren als menschlicher Spieler \\
 \hline 
@@ -55,11 +60,12 @@ BESCHREIBUNG: & Beim Verbinden mit dem Server muss diesem mitgeteilt werden, das
 \hline
 BEGRÜNDUNG: & Es muss zwischen menschlichen Spielern und KI Spielern unterschieden werden. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-join}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-username}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Nutzername \\
 \hline 
@@ -67,11 +73,12 @@ BESCHREIBUNG: & Der Client muss es dem Nutzer ermöglichen einen Nutzernamen zu 
 \hline
 BEGRÜNDUNG: & Beide Mitspieler werden durch Nutzernamen identifiziert. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-join}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-gui}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Spiel Anzeige \\
 \hline 
@@ -89,7 +96,8 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-interaction}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Interaktion mit dem Spiel \\
 \hline 
@@ -97,11 +105,12 @@ BESCHREIBUNG: & Der Client muss dem Spieler ermöglichen, Aktionen auf dem Spiel
 \hline
 BEGRÜNDUNG: & Integraler Bestandteil des Spiels \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-gui}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-help}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Optional: Hilfefunktion \\
 \hline 
@@ -113,7 +122,8 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-hotkeys}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Optional: Hotkeys \\
 \hline 
@@ -121,11 +131,12 @@ BESCHREIBUNG: & Die Aktionen während dem Spiel sollen durch Hotkeys ausführbar
 \hline
 BEGRÜNDUNG: & Dies dient einer komfortableren Bedienung des Spiels. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-gui}, \ref{c-interaction}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-animation}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Animation der Aktionen \\
 \hline 
@@ -133,15 +144,16 @@ BESCHREIBUNG: & Die Aktionen einer Runde sollen animiert dargestellt werden. \\
 \hline
 BEGRÜNDUNG: & Einfacheres Nachvollziehen der eigenen und gegnerischen Aktionen \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-gui}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-pause}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Wunsch auf Pausieren \\
 \hline 
-BESCHREIBUNG: & Der Client ermöglicht es dem Spieler, ein Pausieren der Runde zu beantragen. \\
+BESCHREIBUNG: & Der Client ermöglicht es dem Spieler, ein Pausieren der Runde zu beantragen. Diese Anfrage wird zum Server gesendet. \\
 \hline
 BEGRÜNDUNG: & Für bessere Immersion kann der Benutzer während dem Spielen selbst Cocktails trinken, was eventuelle Pausen fürs Nachfüllen bedingt. \\
 \hline
@@ -149,7 +161,8 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-unpause}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Wunsch auf Wiederaufnahme des Spiels \\
 \hline 
@@ -161,7 +174,21 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-session}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
+\hline
+TITEL: & Websocket Verbindung \\
+\hline 
+BESCHREIBUNG: & Der Client muss eine Websocket Verbindung zum Server aufbauen können. Darüber können JSON encodierte Nachrichten geschickt werden. \\
+\hline
+BEGRÜNDUNG: & Mehrspieler Funktionalität\\
+\hline
+ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{c-persistentsession}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Persistente Session \\
 \hline 
@@ -169,11 +196,25 @@ BESCHREIBUNG: & Ein Abbruch der Verbindung zum Server darf nicht zum Beenden des
 \hline
 BEGRÜNDUNG: & Mit Verbindungsabbrüchen ist z.B bei der Verwendung von WiFi zu rechnen, es soll trotzdem möglich sein zu spielen. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-session}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-actions-send}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
+\hline
+TITEL: & Aktionen Senden \\
+\hline 
+BESCHREIBUNG: & Vom Spieler durchgeführte Aktionen werden zum Server gesendet. \\
+\hline
+BEGRÜNDUNG: & Mehrspieler Funktionalität\\
+\hline
+ABHÄNGIGKEITEN: & FA-C \ref{c-session}, \ref{c-interaction}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{c-winnerdisplay}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Gewinneranzeige \\
 \hline 
@@ -185,7 +226,8 @@ ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-stats}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Optional: Statistik \\
 \hline 
@@ -193,11 +235,12 @@ BESCHREIBUNG: & Neben der Anzeige des Gewinners sollen zusätzlich Statistiken z
 \hline
 BEGRÜNDUNG: & Information des Spielers \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-winnerdisplay}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\textbf{ID} & \textbf{FA-C} \\
+\refstepcounter{table}\label{c-replay}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
 \hline
 TITEL: & Optional: Replay \\
 \hline 
@@ -205,5 +248,5 @@ BESCHREIBUNG: & Der Client kann statt eines aktiven Spiels auch eine vom Server 
 \hline
 BEGRÜNDUNG: & Erneutes Anschauen besonders interessanter Partien \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-replay}\\
 \end{tabularx}
