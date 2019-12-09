@@ -1,1 +1,77 @@
-editor
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{e-json-encoding}
+\textbf{ID} & \textbf{FA-E \arabic{table}} \\
+\hline
+TITEL: & JSON Encoding \\
+\hline
+BESCHREIBUNG: & Der Editor muss die Funktionalität besitzen, Konfigurationsdateien für Szenarios, Partien und Charaktere im JSON Format zu encodieren. \\
+\hline
+BEGRÜNDUNG: & Notwendig zum Speichern der Konfiguration. \\
+\hline
+ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{e-json-decoding}
+\textbf{ID} & \textbf{FA-E \arabic{table}} \\
+\hline
+TITEL: & JSON Decoding \\
+\hline
+BESCHREIBUNG: & Der Editor muss die Funktionalität besitzen, Konfigurationsdateien für Szenarios, Partien und Charaktere aus dem JSON Format zu decodieren. \\
+\hline
+BEGRÜNDUNG: & Notwendig zum laden der Konfiguration. \\
+\hline
+ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{e-gui}
+\textbf{ID} & \textbf{FA-E \arabic{table}} \\
+\hline
+TITEL: & GUI \\
+\hline
+BESCHREIBUNG: & Der Editor muss über eine grafische Benutzeroberfläche zum Editieren der Konfiguration besitzen. \\
+\hline
+BEGRÜNDUNG: & Grundlegende Funktionalität \\
+\hline
+ABHÄNGIGKEITEN: & \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{e-szenarioedit}
+\textbf{ID} & \textbf{FA-E \arabic{table}} \\
+\hline
+TITEL: & Szenario Editor \\
+\hline
+BESCHREIBUNG: & Benutzeroberfläche zum Editieren des Szenarios mit Darstellung äquivalent zum Benutzer Client des Spiels \\
+\hline
+BEGRÜNDUNG: & Grundlegende Funktionalität \\
+\hline
+ABHÄNGIGKEITEN: & FA-E \ref{e-gui}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{e-partieedit}
+\textbf{ID} & \textbf{FA-E \arabic{table}} \\
+\hline
+TITEL: & Partie Editor \\
+\hline
+BESCHREIBUNG: & Im Partie Editor werden die Partie Konfigurationen (z.B. Zeit für einzelne Phasen) in tabellarischer Form editiert. \\
+\hline
+BEGRÜNDUNG: & Grundlegende Funktionalität \\
+\hline
+ABHÄNGIGKEITEN: & FA-E \ref{e-gui}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{e-charedit}
+\textbf{ID} & \textbf{FA-E \arabic{table}} \\
+\hline
+TITEL: & Charakter Editor \\
+\hline
+BESCHREIBUNG: & Der Charakter Editor zeigt die existierenden Charaktere in der Konfiguration an und erlaubt es, bestehende und neue Charaktere zu editieren. \\
+\hline
+BEGRÜNDUNG: & Grundlegende Funktionalität \\
+\hline
+ABHÄNGIGKEITEN: & FA-E \ref{e-gui}\\
+\end{tabularx}
