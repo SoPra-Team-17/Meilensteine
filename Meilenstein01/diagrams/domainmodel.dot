@@ -20,12 +20,18 @@ digraph G {
     Spieler
     Spielfeld
     Feld
+    Charakter
     Agent
+    NPC
     Gadget
     Fähigkeit
     Fraktion
+    Eigenschaft
+    Cocktail
 
     // Inheritance
+    Agent -> Charakter
+    NPC -> Charakter
 
     // Aggregations
     edge [
@@ -36,6 +42,14 @@ digraph G {
         headlabel = "1"
     ]
     Gadget -> Feld
+    Eigenschaft -> Charakter [
+        taillabel = "0..n"
+        headlabel = "1"
+    ]
+    Cocktail -> Charakter [
+        taillabel = "0..1"
+        headlabel = "1"
+    ]
 
     // Compositions
     edge [
