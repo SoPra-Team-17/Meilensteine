@@ -8,7 +8,7 @@ BESCHREIBUNG: & Der Server muss beim Start die Partie Konfiguration aus einer Da
 \hline
 BEGRÜNDUNG: & Die Konfiguration soll für das Balancing des Spiels einfach angepasst werden können. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -19,9 +19,9 @@ TITEL: & Szenario Konfiguration \\
 \hline
 BESCHREIBUNG: & Der Server muss beim Start die Szenario Konfiguration (Spielfeld) aus einer Datei lesen. \\
 \hline
-BEGRÜNDUNG: & Das Spielfeld soll veräderbar sein. \\
+BEGRÜNDUNG: & Das Spielfeld soll veränderbar sein. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -32,9 +32,9 @@ TITEL: & Charakter Konfiguration \\
 \hline
 BESCHREIBUNG: & Der Server muss beim Start die Konfiguration der Charaktere aus einer Datei lesen. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Notwendig für Balancing des Spiels\\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -59,9 +59,9 @@ TITEL: & Zuschauer \\
 \hline
 BESCHREIBUNG: & Ein Client kann sich als Zuschauer verbinden, bekommt also Updates über den Spielzustand, kann aber nicht aktiv am Spiel teilnehmen. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Ermöglicht anderen das Spiel zu beobachten.\\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -85,9 +85,9 @@ TITEL: & Verspätete Nachrichten \\
 \hline
 BESCHREIBUNG: & Der Server muss Nachrichten empfangen, die zum aktuellen Zeitpunkt ungültig sind, in einer vorherigen Phase aber korrekt waren. Diese Nachrichten werden verworfen und nicht als Protokollverletzung gewertet. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Client ist nicht verantwortlich für verspätet eintreffende Pakete (z.B. aufgrund von Netzwerkproblemen)\\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}, \ref{s-websockets}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -96,11 +96,11 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Spiel Durchführung \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Nach Starten eines Spiels muss der Server abwechselnd Spielzüge der Spieler akzeptieren und durchführen.\\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}, \ref{s-websockets}, \ref{s-regeln}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -111,13 +111,13 @@ TITEL: & Spielpause \\
 \hline
 BESCHREIBUNG: & Auf Anfrage eines (Nicht-KI-)Clients muss der Server das Spiel pausieren. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Integrale Funktionalität des Spiels\\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-\refstepcounter{table}\label{s-unpause}
+\refstepcounter{table}\label{s-regeln}
 \textbf{ID} & \textbf{FA-S \arabic{table}} \\
 \hline
 TITEL: & Erkennung von Regelverstößen \\
@@ -140,7 +140,7 @@ BESCHREIBUNG: & Nachdem ein Spieler seinen Zug beendet hat, muss der Server den 
 \hline
 BEGRÜNDUNG: & Notwendig für die Darstellung des Spielfelds beim Spieler. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-websockets}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -152,9 +152,9 @@ TITEL: & Gewinner Erkennung \\
 BESCHREIBUNG: & Nach jeder Aktion muss der Server überprüfen, ob eine der Bedingungen um das Spiel zu gewinnen erfüllt ist.
 Wenn ein Spieler das Spiel gewinnt, wird dieses sofort beendet. \\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-spiel}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -163,9 +163,9 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Erstellen von Replay Files \\
 \hline
-BESCHREIBUNG: & \\
+BESCHREIBUNG: & Der Server soll den Spielablauf in einer Log-Datei speichern, sodass dieser zu späterem Zeitpunkt vom Client angezeigt/abgespielt werden kann.\\
 \hline
-BEGRÜNDUNG: & \\
+BEGRÜNDUNG: & Ermöglicht spätere Analyse von Spielabläufen\\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -189,7 +189,7 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & JSON Decoding \\
 \hline
-BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, Nachrichten, die Aktionen und Spielzustände darstellen, aus dem JSON Format zu decodieren. \\
+BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, Nachrichten, die Aktionen und Spielzustände darstellen, und Konfigurationsdateien aus dem JSON Format zu decodieren. \\
 \hline
 BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
@@ -206,6 +206,6 @@ BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, JSON encodierte Na
 \hline
 BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}, \ref{s-json-encoding} \\
 \end{tabularx}
 
