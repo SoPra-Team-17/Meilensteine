@@ -21,6 +21,55 @@
     \fcolorbox{purple}{pink}{\sffamily\scriptsize\bfseries\textcolor{black}{Flo:}} {\sffamily\bfseries\textcolor{purple}{#1}}
 }
 
+% Entnommen und angepasst von https://github.com/SoPra-Team-10
+\newcommand{\Fachwissen}[7] {
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|p{2,25cm}|p{12cm}|}
+			\hline
+			\textbf{Begriff} & \textbf{#1} \\
+			\hline
+			\textbf{Beschreibung} & #2 \\ 
+			\hline
+			\textbf{Ist-ein} & #3 \\
+			\hline
+			\textbf{Kann-sein} & #4 \\ 
+			\hline
+			\textbf{Aspekt} & #5 \\ 
+			\hline
+			\textbf{Bemerkung} & #6 \\ 
+			\hline
+			\textbf{Beispiel} & #7 \\
+			\hline
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand{\FachwissenSyn}[8] {
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|p{2,25cm}|p{12cm}|}
+			\hline
+			\textbf{Begriff} & \textbf{#1} \\
+			\hline
+			\textbf{Beschreibung} & #2 \\ 
+			\hline
+			\textbf{Ist-ein} & #3 \\
+			\hline
+			\textbf{Kann-sein} & #4 \\ 
+			\hline
+			\textbf{Aspekt} & #5 \\ 
+			\hline
+			\textbf{Bemerkung} & #6 \\ 
+			\hline
+			\textbf{Beispiel} & #7 \\
+			\hline
+			\textbf{Synonym} & #8 \\
+			\hline
+		\end{tabular}
+	\end{table}
+}
+
 
 
 \hypersetup{colorlinks=false,urlcolor=uulm-in}
@@ -55,37 +104,16 @@ wird.
 
 Das Spiel \textbf{No time to spy} ist eine C++-Anwendung, die es dem Benutzer ermöglicht, ein 2D-Spiel zu spielen.
 
-
+\clearpage
 \section{Fachwissen}
 \input{chapter/Fachwissen.tex}
 
-\todo[inline]{Hier nur als example zum copy pasten}
-\begin{tabularx}{16cm}{l|X}
-\textbf{Begriff} & \textbf{Definition} \\
-\hline
-Benutzer & \\ 
-\hline
-Spieler & \\ 
-\hline
-Lobby & \\ 
-\hline
-Spielpartie & \\ 
-\hline
-Client & \\ 
-\hline
-Server & \\ 
-\end{tabularx}
-
-
+\clearpage
 \section{Domänenmodell}
 \todo[inline]{Domänenmodell Jonas}
 \input{chapter/Domain.tex}
 
-
-
-
-
-
+\clearpage
 \section{Spezifische Anforderungen}
 Dieser Abschnitt enthält alle spezifischen Anforderungen des Systems. Er bietet eine detaillierte
 Beschreibung des Systems und seiner Funktionen.
