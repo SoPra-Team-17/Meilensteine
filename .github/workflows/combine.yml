@@ -12,4 +12,4 @@ jobs:
       with:
         org: "SoPra-Team-17"
         destination: "gitlab.informatik.uni-ulm.de/sopra/ws19-no-time-to-spy/teams/team0017.git"
-        pat: ${{ secrets.GITLAB_PAT_OTTOJO }}
+        pat: oauth2:${{ secrets.GITLAB_PAT_OTTOJO }}
