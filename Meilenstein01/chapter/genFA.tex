@@ -616,14 +616,14 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Bewegung durchführen}
+	\refstepcounter{table}\label{Bewegung durchfuehren}
 	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
 	\hline
 	TITEL: & Bewegung durchführen \\
 	\hline
-	BESCHREIBUNG: & Innerhalb eines Zuges kann ein Charakter, der noch mehr als einen Bewegungspunkt besitzt, eine Bewegung durchführen. Das bedeutet, dass der Charakter sich von dem Spielfeld seiner aktuellen Position auf ein angrenzendes betretbares Spielfeld bewegen kann. \\
-	Jedes Spielfeld, welches mit einer Seite oder einer Ecke das Spielfeld der aktuellen Position berührt, ist ein angrenzendes Spielfeld. Dementsprechend sind Bewegungen in horizontaler, vertikaler und diagonaler Linie möglich. \\
-	Wenn der Client die Anweisung gibt, den Charakter auf ein angrenzendes Feld zu bewegen, welches nicht betretbar ist, so darf der Charakter sich danach nicht auf diesem Feld befinden, sondern muss auf dem Spielfeld der aktuellen Position bleiben. In diesem Fall wurde die  Bewegung nicht erfolgreich durchgeführt. In der graphischen Darstellung kann dem Benutzer mit einer Animation angezeigt werden, dass die Bewegung nicht erfolgreich war bzw. dass es nicht möglich ist, das gewählte Spielfeld zu betreten. \\
+	BESCHREIBUNG: & Innerhalb eines Zuges kann ein Charakter, der noch mehr als einen Bewegungspunkt besitzt, eine Bewegung durchführen. Das bedeutet, dass der Charakter sich von dem Spielfeld seiner aktuellen Position auf ein angrenzendes betretbares Spielfeld bewegen kann.
+	Jedes Spielfeld, welches mit einer Seite oder einer Ecke das Spielfeld der aktuellen Position berührt, ist ein angrenzendes Spielfeld. Dementsprechend sind Bewegungen in horizontaler, vertikaler und diagonaler Linie möglich.
+	Wenn der Client die Anweisung gibt, den Charakter auf ein angrenzendes Feld zu bewegen, welches nicht betretbar ist, so darf der Charakter sich danach nicht auf diesem Feld befinden, sondern muss auf dem Spielfeld der aktuellen Position bleiben. In diesem Fall wurde die  Bewegung nicht erfolgreich durchgeführt. In der graphischen Darstellung kann dem Benutzer mit einer Animation angezeigt werden, dass die Bewegung nicht erfolgreich war bzw. dass es nicht möglich ist, das gewählte Spielfeld zu betreten.
  Bei erfolgreicher Durchführung einer Bewegung muss dem Charakter am Zug die Anzahl der Bewegungspunkte um 1 reduziert werden. Bei nicht erfolgreicher Durchführung darf sich die Anzahl der Bewegungspunkte  nicht verändern.\\
 	\hline
 	BEGRÜNDUNG: & Die Bedingungen für das Bewegen eines Charakters müssen eindeutig definiert sein.\\
@@ -632,7 +632,7 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Drängeln}
+	\refstepcounter{table}\label{Draengeln}
 	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
 	\hline
 	TITEL: & Drängeln \\
@@ -641,22 +641,22 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 	\hline
 	BEGRÜNDUNG: & Um das Verhalten im Fall der Bewegung auf ein Spielfeld, welches mit einem anderen 			Charakter besetzt ist, eindeutig zu definieren.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchführen} \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchfuehren} \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Aktion durchführen}
+	\refstepcounter{table}\label{Aktion durchfuehren}
 	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
 	\hline
 	TITEL: & Aktion durchführen \\
 	\hline
-	BESCHREIBUNG: & Innerhalb eines Zuges kann ein Charakter, der noch mehr als einen Aktionspunkt hat und die Ausführungsbedingungen einer spezifischen Aktion erfüllt, diese spezifische Aktion ausführen. \\
-	 Wenn der Client eine gültigen Aktionsbefehl eingibt, so gilt die Ausführung der Aktion als erfolgreich. Bei der Eingabe eines ungültigen Aktionsbefehls gilt die Ausführung der Aktions als nicht erfolgreich. \\
+	BESCHREIBUNG: & Innerhalb eines Zuges kann ein Charakter, der noch mehr als einen Aktionspunkt hat und die Ausführungsbedingungen einer spezifischen Aktion erfüllt, diese spezifische Aktion ausführen.
+	 Wenn der Client eine gültigen Aktionsbefehl eingibt, so gilt die Ausführung der Aktion als erfolgreich. Bei der Eingabe eines ungültigen Aktionsbefehls gilt die Ausführung der Aktions als nicht erfolgreich.
 	 Bei erfolgreicher Ausführung der Aktion muss dem Charakter am Zug die Anzahl der Aktionspunkte um 1 reduziert werden und die Konsequenzen der spezifischen Aktion müssen den Zustand des Spiels entsprechend ändern. Bei nicht erfolgreicher Ausführung darf sich die Anzahl der Aktionspunkte und der Zustand des Spiels nicht ändern.  \\
 	\hline
 	BEGRÜNDUNG: & Es muss genau definiert sein, unter welchen Bedingungen das Ausführen einer Aktion möglich ist und welche Konsequenzen die Aktion hat.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchführen} \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchfuehren} \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
 
 
@@ -671,7 +671,7 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 	\hline
 	BEGRÜNDUNG: & Das Verwenden von Gadgets stellt eine Aktion dar.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchführen}  \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}  \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -685,7 +685,7 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist Roulette spielen eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchführen} \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren} \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -699,5 +699,5 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Aufnehmen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchführen}  \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}  \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
