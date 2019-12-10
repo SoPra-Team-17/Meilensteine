@@ -364,3 +364,90 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Charakter} \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Bewegung durchführen}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Bewegung durchführen \\
+	\hline
+	BESCHREIBUNG: & Innerhalb eines Zuges kann ein Charakter, der noch mehr als einen Bewegungspunkt besitzt, eine Bewegung durchführen. Das bedeutet, dass der Charakter sich von dem Spielfeld seiner aktuellen Position auf ein angrenzendes betretbares Spielfeld bewegen kann. \\
+	Jedes Spielfeld, welches mit einer Seite oder einer Ecke das Spielfeld der aktuellen Position berührt, ist ein angrenzendes Spielfeld. Dementsprechend sind Bewegungen in horizontaler, vertikaler und diagonaler Linie möglich. \\
+	Wenn der Client die Anweisung gibt, den Charakter auf ein angrenzendes Feld zu bewegen, welches nicht betretbar ist, so darf der Charakter sich danach nicht auf diesem Feld befinden, sondern muss auf dem Spielfeld der aktuellen Position bleiben. In diesem Fall wurde die  Bewegung nicht erfolgreich durchgeführt. In der graphischen Darstellung kann dem Benutzer mit einer Animation angezeigt werden, dass die Bewegung nicht erfolgreich war bzw. dass es nicht möglich ist, das gewählte Spielfeld zu betreten. \\
+ Bei erfolgreicher Durchführung einer Bewegung muss dem Charakter am Zug die Anzahl der Bewegungspunkte um 1 reduziert werden. Bei nicht erfolgreicher Durchführung darf sich die Anzahl der Bewegungspunkte  nicht verändern.\\
+	\hline
+	BEGRÜNDUNG: & Die Bedingungen für das Bewegen eines Charakters müssen eindeutig definiert sein.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Charakter} \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Drängeln}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Drängeln \\
+	\hline
+	BESCHREIBUNG: & Wenn ein Charakter sich auf ein Feld bewegt, auf dem bereits ein anderer Charakter 		befindet, so tauschen die beiden Charaktere Plätze. Das heißt, der Charakter der die Bewegung durchgeführt hat steht auf dem Feld, auf das er sich bewegen wollte. Dies ist das Feld, auf dem der andere Charakter vor der Bewegung stand. Der andere Charakter befindet sich, nach dem Durchführen der Bewegung, auf dem Feld, auf dem der aktive Charakter ursprünglich stand. \\
+	\hline
+	BEGRÜNDUNG: & Um das Verhalten im Fall der Bewegung auf ein Spielfeld, welches mit einem anderen 			Charakter besetzt ist, eindeutig zu definieren.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchführen} \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Aktion durchführen}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Aktion durchführen \\
+	\hline
+	BESCHREIBUNG: & Innerhalb eines Zuges kann ein Charakter, der noch mehr als einen Aktionspunkt hat und die Ausführungsbedingungen einer spezifischen Aktion erfüllt, diese spezifische Aktion ausführen. \\
+	 Wenn der Client eine gültigen Aktionsbefehl eingibt, so gilt die Ausführung der Aktion als erfolgreich. Bei der Eingabe eines ungültigen Aktionsbefehls gilt die Ausführung der Aktions als nicht erfolgreich. \\
+	 Bei erfolgreicher Ausführung der Aktion muss dem Charakter am Zug die Anzahl der Aktionspunkte um 1 reduziert werden und die Konsequenzen der spezifischen Aktion müssen den Zustand des Spiels entsprechend ändern. Bei nicht erfolgreicher Ausführung darf sich die Anzahl der Aktionspunkte und der Zustand des Spiels nicht ändern.  \\
+	\hline
+	BEGRÜNDUNG: & Es muss genau definiert sein, unter welchen Bedingungen das Ausführen einer Aktion möglich ist und welche Konsequenzen die Aktion hat.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchführen} \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
+
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Gadget verwenden}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Gadget verwenden \\
+	\hline
+	BESCHREIBUNG: & Wenn sich ein verwendbares Gadget im Inventar eines Charakters befindet, dieser Charakter am Zug ist und die Ausführungsbedingungen des Gadgets für diesen Charakter erfüllt sind, so kann der Charakter als Aktion das Gadget verwenden. \\
+	 
+	\hline
+	BEGRÜNDUNG: & Das Verwenden von Gadgets stellt eine Aktion dar.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchführen}  \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Roulette spielen}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Roulette spielen \\
+	\hline
+	BESCHREIBUNG: & Ein Charakter, der sich innerhalb eines Zuges auf einem Feld befindet, welches an ein Feld mit Roulette-Tisch angrenzt, der kann als Aktion einmal Roulette spielen. Der Client muss dazu einen Betrag an Spielchips eingeben. Dieser Betrag hat den Mindestwert 1 und einen Höchstwert. Der Höchstwert ist der kleinere der beiden folgenden Werte: die Anzahl der Spielchips, welche der Charakter im Moment besitzt; die Anzahl der Spielchips, die am Tisch verfügbar sind. Die eingegebene Betrag stellt den Einsatz des Charakters dar. Wenn der Charakter gewinnt, dann wird der Spielchips-Wert des Charakters um den Einsatz-Wert erhöht und der Spielchips-Wert des Roulette-Tisches um den Einsatz-Wert verringert. Wenn der Charakter verliert, dann wird der Spielchips-Wert des Charakters um den Einsatz-Wert reduziert und der Spielchipswert des Roulette-Tisches um den Einsatz-Wert erhöht. Ob ein Charakter gewinnt wird durch die Roulette-Gewinn-Wahrscheinlichkeit bestimmt.\\
+	 
+	\hline
+	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist Roulette spielen eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchführen} \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Cocktail aufnehmen}
+	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\hline
+	TITEL: & Cocktail aufnehmen \\
+	\hline
+	BESCHREIBUNG: & Wenn ein Charakter am Zug ist, noch mehr als 0 Aktionpunkte hat, sich auf einem Feld befindet, welches an einen Bar-Tisch angrenzt, sich auf diesem Bartisch zu diesem Zeitpunkt ein Cocktail befindet und er selbst im Moment keinen Cocktail in der Hand hält, so kann der Charakter als Aktion diesen Cocktail aufnehmen. Danach befindet sich der Cocktail in der Hand des Charakters. Diese Information muss für alle Clients sichtbar sein.\\
+	 
+	\hline
+	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Aufnehmen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchführen}  \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
