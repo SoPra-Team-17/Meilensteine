@@ -1,6 +1,162 @@
 %Hier kommen die generellen FA rein
 
 \begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Felder}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Felder \\
+	\hline
+	BESCHREIBUNG: & Die schachbrettartigen Felder, aus denen das Spielbrett aufgebaut ist, können freier Raum sein, oder mit Hindernissen oder Objekten besetzt sein. \\
+	\hline
+	BEGRÜNDUNG: & Unterschiedliche Arten von Feldern erlauben den Charakteren das Fortbewegen und interagieren auf dem Spielbrett. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Spielbrett} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Spielbrett}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Spielbrett \\
+	\hline
+	BESCHREIBUNG: & Das Spiel findet auf einem Spielbrett statt, welches aus den Feldern eines kartesischen Gitters aufgebaut ist. \\
+	\hline
+	BEGRÜNDUNG: & Der Aufbau aus Feldern in einem kartesischen Gitter ermöglicht die Fortbewegung der Charaktere durch Bewegungspunkte. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Entfernung}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Entfernung \\
+	\hline
+	BESCHREIBUNG: & Die Entfernung zwischen zwei Feldern A und B ist die minimale Anzahl an Schritten auf Nachbarfelder (in alle acht Richtungen), die benötigt wird um von A nach B zu gelangen. \\
+	\hline
+	BEGRÜNDUNG: & Mit der Entfernung zwischen zwei Feldern A und B wird berechnet, wieviele Bewegungspunkte ein Charakter benötigt, um von Feld A zu Feld B zu gelangen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Spielbrett} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Sichtlinie}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Sichtlinie \\
+	\hline
+	BESCHREIBUNG: & Es existiert eine Sichtlinie zwischen zwei Feldern A und B, wenn gilt: Betrachtet man die Verbindungslinie vom Mittelpunkt von A zum Mittelpunkt von B, so müssen alle Felder, die von dieser Verbindunglinie geschnitten werden Felder sein, die die Sichtlinie nicht blockieren. Dann ist B von A aus sichtbar. Felder, die von dieser Verbindungslinie nur tangiert werden blockieren die Sicht nicht. \\
+	\hline
+	BEGRÜNDUNG: & Dadurch wird festgestellt, ob ein Feld B von einem Feld A aus sichtbar ist, also ob ein Charakter auf Feld A sehen kann, was sich auf Feld B befindet. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Spielbrett} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Freies Feld}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Freies Feld \\
+	\hline
+	BESCHREIBUNG: & Charaktere können auf einem Freien Feld stehen oder darüber hinweglaufen. Es blockiert die Sichtlinie nicht. \\
+	\hline
+	BEGRÜNDUNG: & Freie Felder dienen der Fortbewegung der Charaktere. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Wand}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Wand \\
+	\hline
+	BESCHREIBUNG: & Ein Feld, auf welchem sich eine Wand befindet ist nicht betretbar und es blockiert die Sichtlinie. \\
+	\hline
+	BEGRÜNDUNG: & Durch Wände können große Räume getrennt werden oder neue Räume entstehen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Kamin-Feld}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Kamin-Feld \\
+	\hline
+	BESCHREIBUNG: & Kamin-Felder sind nicht betretbar und sie blockieren die Sichtlinie. Befindet sich ein Charakter mit klammen Klamotten am Anfang einer Runde auf einem Nachbarfeld eines Kamin-Feldes, so wird die Klamme Klamotten-Eigenschaft am Ende der Runde entfernt. \\
+	\hline
+	BEGRÜNDUNG: & Der Kamin trocknet die klammen Klamotten, dadurch kann ein Charakter diese Eigenschaft los werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Sitzplatz}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Sitzplatz \\
+	\hline
+	BESCHREIBUNG: & Auf einem solchen Feld befindet sich eine Sitzgelegenheit, bspw. ein Sessel, Barhocker, etc. Das Feld ist betretbar und blockiert die Sichtlinie nicht. Befindet sich ein Charakter am Anfang einer Runde auf einem Sitzplatz-Feld, so werden seine Health Points am Ende der Runde auf den Maximalwert aufgefüllt. \\
+	\hline
+	BEGRÜNDUNG: & Dadurch können Charaktere mit wenigen Health Points diese wieder füllen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Spielchips}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Spielchips \\
+	\hline
+	BESCHREIBUNG: & Charaktere haben die Möglichkeit an Roulette-Tischen Spielchips zu gewinnen. Alle gesammelten Spielchips einer Fraktion werden am Ende einer Partie in Intelligence Points umgerechnet. \\
+	\hline
+	BEGRÜNDUNG: & Dadurch wird das Spiel spannender, da die Spielchips den Spielausgang beeinflussen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Roulette-Tisch} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Roulette-Tisch}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Roulette-Tisch \\
+	\hline
+	BESCHREIBUNG: & Ein Feld, auf welchem ein Roulette-Tisch steht ist nicht betretbar und es blockiert die Sichtlinie nicht. Wenn ein Charakter auf einem Nachbarfeld eines Roulette-Tisches steht, kann er als Aktion einmal Roulette spielen. Jeder Roulette-Tisch verfügt zu Beginn einer Partie über eine im Szenario festgelegte individuelle Anzahl an Chips. \\
+	\hline
+	BEGRÜNDUNG: & An Roulette-Tischen haben Charaktere die Chance Chips zu gewinnen bzw. zu verlieren. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Bar-Tisch}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Bar-Tisch \\
+	\hline
+	BESCHREIBUNG: & Felder, auf denen sich ein Bar-Tisch befindet sind nicht betretbar und sie blockieren die Sichtlinie nicht. Zu Beginn jeder Runde erscheint auf jedem leeren Bar-Tisch ein Cocktail. \\
+	\hline
+	BEGRÜNDUNG: & An Bar-Tischen können die Charaktere Cocktails aufnehmen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Cocktail aufnehmen}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Tresor}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Tresor \\
+	\hline
+	BESCHREIBUNG: & Felder, auf denen sich ein Tresor befindet, sind nicht betretbar und sie blockieren die Sichtlinie nicht. Tresore können Geheiminformationen oder Gadgets enthalten. Die Tresore sind eindeutig und sichtbar durchnummeriert (1, 2, ...). \\
+	\hline
+	BEGRÜNDUNG: & An Tresoren können Charaktere Geheimnisse oder Gadgets erhalten. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie},  \todo[inline]{2.4 Gadgets, 2.7 Geheimnisse} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Charakter}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
@@ -367,6 +523,7 @@ BEGRÜNDUNG: & Weniger Bewegungspunkte notwendig, um zu Tresor zu gelangen.\\
 ABHÄNGIGKEITEN: & \todo[inline]{2.4 Maulwürfel, Abhängigkeit von 2.6 Tresor-Spicken}\\
 \end{tabularx}
 
+
 \begin{tabularx}{16cm}{l|X}
 \refstepcounter{table}\label{Tradecraft}
 \textbf{ID} & \textbf{FA-G \arabic{table}} \\
@@ -391,6 +548,58 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Observation, so kann er die
 BEGRÜNDUNG: & Möglichkeit um herauszufinden, welche Charaktere zur gegnerischen Fraktion gehören und welche NPCs sind.\\
 \hline
 ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maulwürfel}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Gadgets}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Gadgets \\
+	\hline
+	BESCHREIBUNG: & Charaktere können Gadgets in ihrem Inventar bei sich tragen. Sie verschaffen ihrem Besitzer bestimmte Eigenschaften oder ermöglichen bestimmte Aktionen. Jedes Gadget kommt höchstens einmal im Spiel vor und kann, falls nicht anders festgelegt, mehrmals verwendet werden. \\
+	\hline
+	BEGRÜNDUNG: & Dadurch wird das Spiel spannender, denn die Gadgets beeinflussen den Spielverlauf. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter}, FA-G \ref{Inventar}, FA-G \ref{Eigenschaften}, FA-G \ref{Aktion durchführen} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Akku-Föhn}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Akku-Föhn \\
+	\hline
+	BESCHREIBUNG: & Wird der Akku-Föhn von einem Charakter als Aktion an sich selbst oder einem benachbarten Charakter angewendet, so verliert dieser Ziel-Charakter die Klamme Klamotten-Eigenschaft. Der Akku-Föhn kann beliebig oft eingesetzt werden. \\
+	\hline
+	BEGRÜNDUNG: & Das ermöglicht es den Charakteren die Klamme Klamotten-Eigenschaft loszuwerden.  \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Charakter}, FA-G \ref{Aktion durchführen} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Maulwürfel}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Maulwürfel \\
+	\hline
+	BESCHREIBUNG: & Hat ein Charakter den Maulwürfel im Inventar, so werden die Eigenschaften Tradecraft, Flaps and Seals und Observation deaktiviert, falls er sie hat. Er verliert diese Eigenschaften vorübergehend und bekommt sie wieder, wenn er den Maulwürfel losgeworden ist. Mit einer Aktion kann ein Charakter den Maulwürfel auf ein beliebiges Nicht-Wand-Feld in Sichtweite und Maulwürfel-Wurfweite werfen. Befindet sich auf diesem Zielfeld ein Charakter, nimmt dieser den Maulwürfel in sein Inventar auf. Ansonsten prallt der Maulwürfel von dem Zielfeld ab und landet im Inventar des sich am nächsten befindenden Charakters. Falls der Maulwürfel im Inventar eines NPC ist, macht dieser bei seinem nächsten Zug einen Maulwürfelwurf auf ein zufälliges Zielfeld. \\
+	\hline
+	BEGRÜNDUNG: &  Der Maulwürfel deaktiviert bei dem Charakter, der ihn im Inventar hat positive Eigenschaften und bringt dadurch Spannung in das Spiel. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Charakter}, FA-G \ref{Inventar},FA-G \ref{Eigenschaften}, \todo[inline]{Maulwürfel-Wurfweite} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Technicolor-Prisma}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Technicolor-Prisma \\
+	\hline
+	BESCHREIBUNG: & Durch eine Aktion kann das Technicolor-Prisma an einem Roulette-Tisch installiert werden und vertauscht dann die Farben rot und schwarz. Dadurch wird das Resultat beim Roulette-Spielen negiert, d.h. ein Charakter verliert, wenn er normalerweise gewonnen hätte und umgekehrt. Damit sind die Erfolgswahrscheinlichkeiten für Glückspilze und Pechvögel beim Roulette-Spielen vertauscht. Ein Technicolor-Prisma kann nur einmal verwendet werden. \\
+	\hline
+	BEGRÜNDUNG: &  Durch das Technicolor-Prisma wird das Roulette-Spielen beeinflusst. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Roulette spielen}, \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
