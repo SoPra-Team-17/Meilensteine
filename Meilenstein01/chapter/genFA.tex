@@ -1,16 +1,17 @@
 %Hier kommen die generellen FA rein
-%Caro: gen, 2.2 in FA übersetzen with Appendix A
-%Caro: gen, 2.3 in FA übersetzen
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Charakter}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Charakter \\
 	\hline
 	BESCHREIBUNG: & Ein Charakter besitzt folgende Werte, die normalerweise für die gegnerische Fraktion nicht sichtbar sind: 
 	\begin{itemize}
+		\item Name
 		\item Beschreibung
+		\item Position
+		\item Fraktion
 		\item Bewegungspunkte (BP) und Aktionspunkte (AP)
 		\item Health Points (HP)
 		\item Intelligence Points (IP)
@@ -23,16 +24,16 @@
 	\hline
 	BEGRÜNDUNG: & Jeder Charakter soll individuell sein und sich über das Spiel hinweg verändern können.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Charakter-Beschreibung}, FA-G\ref{BP und AP}, FA-G\ref{HP}, FA-G\ref{IP}, FA-G\ref{Eigenschaften}, FA-G\ref{Inventar}, FA-G\ref{haelt Cocktail}, FA-G\ref{Spielchips} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter-NameBeschreibung}, FA-G \ref{Charakter-Position}, FA-G \ref{Charakter-Fraktion},  FA-G \ref{BP und AP}, FA-G \ref{HP}, FA-G \ref{IP}, FA-G \ref{Eigenschaften}, FA-G \ref{Inventar}, FA-G \ref{haelt Cocktail}, FA-G \ref{Spielchips} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Charakter-Beschreibung}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\refstepcounter{table}\label{Charakter-NameBeschreibung}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
-	TITEL: & Charakter-Beschreibung \\
+	TITEL: & Charakter-Name und -Beschreibung \\
 	\hline
-	BESCHREIBUNG: & Die Charakter-Beschreibung beschreibt den Charakter aus \glqq James Bond\grqq in wenigen Sätzen.\\
+	BESCHREIBUNG: & Jeder Charakter hat einen eindeutigen Namen und die Charakter-Beschreibung beschreibt den Charakter aus \glqq James Bond\grqq in wenigen Sätzen.\\
 	\hline
 	BEGRÜNDUNG: & Zusätzliche Informationen für den Spieler. \\
 	\hline
@@ -40,8 +41,34 @@
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Charakter-Position}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Charakter-Position \\
+	\hline
+	BESCHREIBUNG: & Gibt die Position des Charakters auf dem Spielfeld in x- und y-Koordinaten an.\\
+	\hline
+	BEGRÜNDUNG: & Hält fest, wo sich der Charakter auf dem Spielfeld befindet.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltratation},  \todo[inline]{Spielfeld, 2.9. Beginn der Partie, 2.5 Bewegung, }\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Charakter-Fraktion}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Charakter-Fraktion \\
+	\hline
+	BESCHREIBUNG: & Gibt an, zu welcher Fraktion der Charakter gehört. Mögliche Fraktionen sind Spieler1, Spieler2 oder NPC.\\
+	\hline
+	BEGRÜNDUNG: & Hält fest, von wem der Charakter zu steuern ist.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.8.1 Wahlphase}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{BP und AP}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Bewegungspunkte (BP) und Aktionspunkte (AP) \\
 	\hline
@@ -50,12 +77,12 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, wie viele Bewegungen und Aktionen der Charakter in diesem Spielzug noch ausführen kann. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Flinkheit}, FA-G\ref{Schwerfaelligkeit}, FA-G\ref{Behaendigkeit}, FA-G\ref{Behaebigkeit}, FA-G\ref{Agilitaet} \todo[inline]{2.10.1 Züge, 2.5 Bewegung, 2.6 Aktionen}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet} \todo[inline]{2.10.1 Züge, 2.5 Bewegung, 2.6 Aktionen}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{HP}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Health Points (HP) \\
 	\hline
@@ -63,25 +90,39 @@
 	\hline
 	BEGRÜNDUNG: & Zeigt Auswirkung verschiedener Aktionen auf den Charakter. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Robuster Magen}, FA-G\ref{Zaehigkeit} \todo[inline]{2.6 Aktionen, 2.4 Gadgets}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit} \todo[inline]{2.6 Aktionen, 2.4 Gadgets}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Exfiltratation}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Exfiltration \\
 	\hline
 	BESCHREIBUNG: & Sinken die HP eines Charakter auf 0, so wird eine Exfiltration durchgeführt. Dabei wird der Charakter auf ein zufällig gewähltes freies Sitzplatz-Feld versetzt und seine HP auf 1 gesetzt. Ist kein freier Sitzplatz vorhanden, so wird ein Sitzplatz zufällig ausgewählt und die Person, die dort saß, wird auf ein zufälliges freies Nachbarfeld des Sitzplatzes platziert.\\
 	\hline
-	BEGRÜNDUNG: & XXX\\
+	BEGRÜNDUNG: & HP sollen nicht 0 sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{HP} \todo[inline]{2.12 Zufall und Alternativen}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{HP} \todo[inline]{2.12 Zufall und Alternativen}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{IP}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Intelligence Points (IP) \\
+	\hline
+	BESCHREIBUNG: & IP geben Auskunft, über die Spionagefähigkeiten des Charakter. Zu Beginn besitzen die IP den Wert 0.\\
+	\hline
+	BEGRÜNDUNG: & Punkte, die später für Sieg relevant sind.\\
+	\hline
+	ABHÄNGIGKEITEN: & \todo[inline]{2.4. Gaspatronen-Lippenstift, 2.4 Wanze und Ohrstöpsel, 2.4. Chicken Feed, 2.6 Roulette?, 2.7 Geheimnisse, Abhängigkeit von 2.11}\\
+\end{tabularx}
+
+
+\begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Eigenschaften}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Eigenschaften \\
 	\hline
@@ -89,12 +130,12 @@
 	\hline
 	BEGRÜNDUNG: & Fähigkeiten sorgen für individuelle Charaktere und Eigenschaften halten den aktuellen Zustand des Charakters fest. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Flinkheit}, FA-G\ref{Schwerfaelligkeit}, FA-G\ref{Behaendigkeit}, FA-G\ref{Behaebigkeit}, FA-G\ref{Agilitaet}, FA-G\ref{Glueckspilz}, FA-G\ref{Pechvogel}, FA-G\ref{Klamme Klamotten}, FA-G\ref{Konstant Klamme Klamotten}, FA-G\ref{Robuster Magen}, FA-G\ref{Zaehigkeit}, FA-G\ref{Babysitter}, FA-G\ref{Honey Trap}, FA-G\ref{Bang and Burn}, FA-G\ref{Flaps and Seals}, FA-G\ref{Tradecraft}, FA-G\ref{Observation} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet}, FA-G \ref{Glueckspilz}, FA-G \ref{Pechvogel}, FA-G \ref{Klamme Klamotten}, FA-G \ref{Konstant Klamme Klamotten}, FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit}, FA-G \ref{Babysitter}, FA-G \ref{Honey Trap}, FA-G \ref{Bang and Burn}, FA-G \ref{Flaps and Seals}, FA-G \ref{Tradecraft}, FA-G \ref{Observation} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Inventar}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Inventar \\
 	\hline
@@ -107,7 +148,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{haelt Cocktail}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & hält Cocktail \\
 	\hline
@@ -120,7 +161,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Spielchips}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Spielchips \\
 	\hline
@@ -133,7 +174,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Flinkheit}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Flinkheit \\
 	\hline
@@ -146,7 +187,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Schwerfaelligkeit}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Schwerfälligkeit \\
 	\hline
@@ -159,7 +200,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Behaendigkeit}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Behändigkeit \\
 	\hline
@@ -172,7 +213,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Behaebigkeit}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Behäbigkeit \\
 	\hline
@@ -185,7 +226,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Agilitaet}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Agilität \\
 	\hline
@@ -198,7 +239,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Glueckspilz}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Glückspilz \\
 	\hline
@@ -211,7 +252,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Pechvogel}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Pechvogel \\
 	\hline
@@ -224,7 +265,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Klamme Klamotten}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Klamme Klamotten \\
 	\hline
@@ -232,12 +273,12 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Erfolgswahrscheinlichkeiten je nach Zustand des Charakters.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Konstant Klamme Klamotten} \todo[inline]{2.1 Kamin-Feld, 2.4 Föhn, 2.6 Cocktail, 2.12 Zufall}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Konstant Klamme Klamotten} \todo[inline]{2.1 Kamin-Feld, 2.4 Föhn, 2.6 Cocktail, 2.12 Zufall}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Konstant Klamme Klamotten}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Konstant Klamme Klamotten \\
 	\hline
@@ -250,7 +291,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Robuster Magen}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Robuster Magen \\
 	\hline
@@ -263,7 +304,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Zaehigkeit}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Zähigkeit \\
 	\hline
@@ -276,7 +317,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Babysitter}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Babysitter \\
 	\hline
@@ -289,7 +330,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Honey Trap}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Honey Trap \\
 	\hline
@@ -302,7 +343,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Bang and Burn}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Bang and Burn \\
 	\hline
@@ -315,7 +356,7 @@
 
 \begin{tabularx}{16cm}{l|X}
 \refstepcounter{table}\label{Flaps and Seals}
-\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 \hline
 TITEL: & Flaps and Seals \\
 \hline
@@ -328,7 +369,7 @@ ABHÄNGIGKEITEN: & \todo[inline]{2.4 Maulwürfel, Abhängigkeit von 2.6 Tresor-S
 
 \begin{tabularx}{16cm}{l|X}
 \refstepcounter{table}\label{Tradecraft}
-\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 \hline
 TITEL: & Tradecraft \\
 \hline
@@ -341,7 +382,7 @@ ABHÄNGIGKEITEN: & \todo[inline]{Wahrscheinlichkeitsprobe, 2.4 Maulwürfel}\\
 
 \begin{tabularx}{16cm}{l|X}
 \refstepcounter{table}\label{Observation}
-\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 \hline
 TITEL: & Observation \\
 \hline
@@ -354,7 +395,7 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Charakter Liste}
-	\textbf{ID} & \textbf{FA-G\arabic{table}} \\
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Charakter Liste \\
 	\hline
@@ -362,5 +403,5 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 	\hline
 	BEGRÜNDUNG: & Aus dieser Liste können Charaktere zum Spielen gewählt werden.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Charakter} \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter} \todo[inline]{2.8.1 Wahlphase}\\
 \end{tabularx}
