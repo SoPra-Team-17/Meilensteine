@@ -180,7 +180,7 @@
 	\hline
 	BEGRÜNDUNG: & Jeder Charakter soll individuell sein und sich über das Spiel hinweg verändern können.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Charakter-NameBeschreibung}, FA-G \ref{Charakter-Position}, FA-G \ref{Charakter-Fraktion},  FA-G \ref{BP und AP}, FA-G \ref{HP}, FA-G \ref{IP}, FA-G \ref{Eigenschaften}, FA-G \ref{Inventar}, FA-G \ref{haelt Cocktail}, FA-G \ref{Spielchips} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter-NameBeschreibung}, FA-G \ref{Charakter-Position}, FA-G \ref{Charakter-Fraktion},  FA-G \ref{BP und AP}, FA-G \ref{HP}, FA-G \ref{IP}, FA-G \ref{Eigenschaften}, FA-G \ref{Inventar}, FA-G \ref{haelt Cocktail}, FA-G \ref{Charakter-Spielchips} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -206,7 +206,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, wo sich der Charakter auf dem Spielfeld befindet.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltratation},  \todo[inline]{Spielfeld, 2.9. Beginn der Partie, 2.5 Bewegung, }\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltratation}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Spielbrett} \todo[inline]{2.9. Beginn der Partie}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -233,7 +233,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, wie viele Bewegungen und Aktionen der Charakter in diesem Spielzug noch ausführen kann. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet} \todo[inline]{2.10.1 Züge, 2.5 Bewegung, 2.6 Aktionen}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Aktion durchfuehren} \todo[inline]{2.10.1 Züge}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -246,7 +246,7 @@
 	\hline
 	BEGRÜNDUNG: & Zeigt Auswirkung verschiedener Aktionen auf den Charakter. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit} \todo[inline]{2.6 Aktionen, 2.4 Gadgets}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit}, FA-G \ref{Aktion durchfuehren}, FA-G \ref{Gadgets}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -259,7 +259,7 @@
 	\hline
 	BEGRÜNDUNG: & HP sollen nicht 0 sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{HP} \todo[inline]{2.12 Zufall und Alternativen}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{HP} \todo[inline]{2.12 Alternativen}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -272,7 +272,7 @@
 	\hline
 	BEGRÜNDUNG: & Punkte, die später für Sieg relevant sind.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.4. Gaspatronen-Lippenstift, 2.4 Wanze und Ohrstöpsel, 2.4. Chicken Feed, 2.6 Roulette?, 2.7 Geheimnisse, Abhängigkeit von 2.11}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Gaspatronen-Lippenstift}, FA-G \ref{Wanze und Ohrstoepsel}, FA-G \ref{Chicken Feed}, FA-G \ref{Gehei} \todo[inline]{2.6 Roulette?, 2.7 Geheimnisse}\\
 \end{tabularx}
 
 
@@ -299,7 +299,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, welche Gadgets der Charakter nutzen kann.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.4 Gadgets}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -312,20 +312,20 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, ob Interaktion mit einem Cocktail möglich ist oder nicht.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.6 Cocktail}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Cocktail aufnehmen}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Spielchips}
+	\refstepcounter{table}\label{Charakter-Spielchips}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
-	TITEL: & Spielchips \\
+	TITEL: & Charakter-Spielchips \\
 	\hline
 	BESCHREIBUNG: & Zu Beginn des Spiels besitzt jeder Charakter 10 Spielchips. Mit diesen kann er an Roulette-Tischen spielen und dadurch seine Anzahl an Spielchips erhöhen oder verringern.\\
 	\hline
 	BEGRÜNDUNG: & Werden benötigt, um Roulette zu spielen.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.6 Roulette}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Roulette spielen}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -377,7 +377,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall}\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -390,7 +390,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall}\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -403,7 +403,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Gewinnchancen beim Roulette je nach Charakter.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall, Abhängigkeit von 2.6 Roulette}\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -416,7 +416,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Gewinnchancen beim Roulette je nach Charakter. \\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.12 Zufall, Abhängigkeit von 2.6 Roulette}\\
+	ABHÄNGIGKEITEN: &\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -429,7 +429,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Erfolgswahrscheinlichkeiten je nach Zustand des Charakters.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Konstant Klamme Klamotten} \todo[inline]{2.1 Kamin-Feld, 2.4 Föhn, 2.6 Cocktail, 2.12 Zufall}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Konstant Klamme Klamotten}, FA-G \ref{Kamin-Feld}, FA-G \ref{Akku-Foehn},  \todo[inline]{2.6 Cocktail verschütten}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -481,7 +481,7 @@
 	\hline
 	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{Babysitter-Wahrscheinlichkeit, Wahrscheinlichkeitsprobe, Abhängigkeit von 2.6 Aktion, 2.4 Gadgets}\\
+	ABHÄNGIGKEITEN: & \todo[inline]{Babysitter-Wahrscheinlichkeit, Wahrscheinlichkeitsprobe}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -507,7 +507,7 @@
 	\hline
 	BEGRÜNDUNG: & Verhindert das Sammeln von Spielchips, die später über den Sieg mitentscheiden.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{Abhängigkeit von 2.1 Roulette-Tisch}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter-Position}, FA-G \ref{Roulette-Tisch}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -520,7 +520,7 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Flaps and Seals, so kann er
 \hline
 BEGRÜNDUNG: & Weniger Bewegungspunkte notwendig, um zu Tresor zu gelangen.\\
 \hline
-ABHÄNGIGKEITEN: & \todo[inline]{2.4 Maulwürfel, Abhängigkeit von 2.6 Tresor-Spicken}\\
+ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 \end{tabularx}
 
 
@@ -534,7 +534,7 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Tradecraft, so wiederholt e
 \hline
 BEGRÜNDUNG: & Höhere Chance für eine erfolgreiche Aktion.\\
 \hline
-ABHÄNGIGKEITEN: & \todo[inline]{Wahrscheinlichkeitsprobe, 2.4 Maulwuerfel}\\
+ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Wahrscheinlichkeitsprobe}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -547,7 +547,7 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Observation, so kann er die
 \hline
 BEGRÜNDUNG: & Möglichkeit um herauszufinden, welche Charaktere zur gegnerischen Fraktion gehören und welche NPCs sind.\\
 \hline
-ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maulwuerfel}\\
+ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
