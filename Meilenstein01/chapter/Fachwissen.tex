@@ -2,21 +2,53 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 
 \todo[inline] {Fachwissen vervollständigen}
 
+\Fachwissen{Aktion}
+{}
+{Elementarer Spielbestandteil.}
+{Benutzung eines Gadgets, Roulette spielen, Spionieren, in einen Tresor spicken, einen Cocktail schlürfen oder über einen anderen Charakter schütten.}
+{-}
+{-}
+{Der Charakter \glqq Eve Moneypenny\grqq führt eine Aktion aus und spielt Roulette.}
+
+\Fachwissen{Aktionspunkt (AP)}
+{Aktionspunkte werden zu Beginn eines jeden Zuges vom Server an die Charaktere entsprechend ihrer Eigenschaften vergeben. Für jeden Aktionspunkt kann der Charakter eine Aktion ausführen.}
+{Elementarer Spielbestandteil.}
+{-}
+{Nicht genutzte Aktionspunkte verfallen am Ende eines Zuges.}
+{-}
+{Der Charakter \glqq Jaws\grqq nutzt einen seiner verfügbaren Aktionspunkte um sich selbst mit einem \glqq Akku-Föhn\grqq trocken zu föhnen.}
+
 \Fachwissen{Angriff}
-{TODO}
+{Unter einem Angriff versteht man den Einsatz eines Gadgets gegen einen anderen Charakter, mit dem Ziel, diesem Schaden zuzufügen.}
+{Aktion.}
 {-}
 {-}
 {-}
+{Der Charakter \glqq James Bond\grqq setzt den \glqq Klingenhut\grqq gegen den Charakter \glqq Quarrel\grqq ein und fügt diesem dadurch Schaden zu.}
+
+\Fachwissen{Ausrüstungsphase}
+{Die Ausrüstungsphase wird nach der Wahlphase durchlaufen. Dabei entscheidet der Spieler nun, welcher Agent seiner Fraktion welche Gadgets erhalten soll. }
+{Elementarer Bestandteil der Spielvorbereitung.}
 {-}
 {-}
+{-}
+{Der Spieler \glqq Max Mustermann\grqq rüstet seinen Agenten \glqq James Bond\grqq mit dem Gadget \glqq Klingen-Hut\grqq aus.}
 
 \Fachwissen{Balancing}
 {Unter Balancing versteht man das Verändern von Spielparametern mit dem Ziel mehr Chancengleichheit zwischen den Spielern herzustellen.}
 {Instrument der Spielgestaltung.}
-{Stärken bzw. Schwächen von Spielfiguren und Items.}
+{Stärken bzw. Schwächen von Charakteren und Items.}
 {Die Veränderung der Spielparameter erfolgt über den Editor.}
 {-}
 {Erhöhung der Health-Points des Charakters \glqq James Bond \grqq.}
+
+\Fachwissen{Bewegungspunkt (BP)}
+{Bewegungspunkte werden zu Beginn eines jedes Zuges vom Server an die Charaktere entsprechend ihrer Eigenschaften vergeben. Für jeden Bewegungspunkt kann sich der Spieler ein Feld weiter bewegen, sofern dieses nicht blockiert ist.}
+{Elementarer Spielbestandteil.}
+{-}
+{Nicht genutzte Bewegungspunkte verfallen am Ende eines Zuges.}
+{-}
+{Der Charakter \glqq Q\grqq nutzt zwei seiner fünf verfügbaren Bewegungspunkte um sich auf ein Kamin-Feld zu bewegen.}
 
 \FachwissenSyn{Charakter}
 {Eine Figur aus den James-Bond Filmen oder Romanen, die durch eine Einheit auf dem Raster der Spielfelder repräsentiert wird.}
@@ -60,25 +92,41 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Die Serverkomponente des Spiels wird in einem Docker-Container realisiert um plattformunabhängiger entwickeln zu können.}
 {-}
 
+\Fachwissen{Drafting Phase}
+{Bevor eine Partie startet wird die Zusammensetzung der Fraktionen der jeweiligen Spieler in der Drafting-Phase ermittelt. Diese ist dabei in Wahl- und Ausrüstungsphase unterteilt. }
+{Elementarer Spielbestandteil.}
+{-}
+{-}
+{-}
+{Der Spieler \glqq Max Mustermann \grqq hat sich in der Drafting Phase für die Agenten \glqq James Bond\grqq und \glqq Le Chiffre\grqq sowie die Gadgets \glqq Akku-Föhn\grqq und \glqq Maulwürfel \grqq entschieden.}
+
 \FachwissenSyn{Editor}
-{Stellt dem Nutzer eine grafische Oberfläche bereit, mit welcher die Spielkonfiguration angepasst werden kann. }
+{Stellt dem Nutzer eine grafische Oberfläche bereit, mit welcher die Spielkonfiguration, Szenarien und Charakterkonfigurationen verändert werden können.}
 {-}
 {-}
-{Ermöglicht dem Nutzer eigene Level zu erstellen.}
+{Ermöglicht dem Nutzer bestimmte Elemente des Spiels nach seinen eigenen Vorstellungen zu konfigurieren.}
 {-}
-{-}
-{Konfigurator, Level-Editor}
+{Um das Spiel zu balancen erhöht der Nutzer \glqq Max Mustermann\grqq die Health-Points des Charakters \glqq James Bond\grqq im Editor.}
+{Konfigurator}
 
 \Fachwissen{Fraktion}
-{TODO}
+{Der Begriff Fraktion beschreibt ein Team aus Agenten, welches sich die Spieler zu Beginn einer Partie zusammenstellen. }
 {-}
 {-}
+{Da sich die Eigenschaften der Charaktere unterscheiden kann die Wahl der Fraktion einen großen Einfluss auf das Spielergebnis haben.}
 {-}
+{Spieler 1 besitzt nach der Wahlphase in seiner Fraktion die Agenten \glqq James Bond\grqq, \glqq Vesper Lynd\grqq und \glqq Wai Lin\grqq.}
+
+\Fachwissen{Gadget}
+{Gadgets sind technische Hilfsmittel, welche Agenten bei ihren Missionen unterstützen. Ein Agent kann mehrere Gadgets in seinem Inventar aufbewahren und diese dann durch die Nutzung von Aktionspunkten einsetzen. }
+{Elementarer Spielbestandteil.}
+{Akku-Föhn, Maulwürfel, Technicolor-Prisma, Klingen-Hut, Magnetfeld-Armbanduhr, Giftpillen-Flasche, Laser-Puderdose, Raketenwerfen-Füllfederhalter, Gaspatronen-Lippenstift, Mottenkugel-Beutel, Nebeldose, Wurfhaken, Jetpack, Wanze und Ohrstöpsel, Chicken Feed, Nugget, Mirror of Wilderness, Pocket Litter, Diamanthalsband der weißen Katze.}
+{Gadgets ermöglichen den Agenten dabei spezielle Aktionen, welche ohne diese nicht möglich wären. }
 {-}
-{-}
+{Das Gadget \glqq Wanze und Ohrstöpsel\grqq ermöglicht es einem Agenten eine Zielperson abzuhören.}
 
 \FachwissenSyn{Geheiminformation}
-{TODO}
+{Geheiminformationen können in Tresoren gefunden oder von der weißen Katze im Tausch gegen ihr Diamanthalsband erhalten werden. Da mit dem erstmaligen in Erfahrung bringen einer Geheiminformation für jede Fraktion eine bestimmte Anzahl an Intelligence Points verbunden ist, sind sie ein elementarer Bestandteil des Spiels. }
 {-}
 {-}
 {-}
@@ -87,12 +135,12 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Geheimnis}
 
 \FachwissenSyn{Health-Points (HP)}
-{Unter Health-Points versteht man die Anzahl der Lebenspunkte, die eine Spielfigur besitzt. Diese wird in der Spielkonfiguration festgelegt. Während einer Partie kann die Spielfigur von anderen Spielfiguren angegriffen werden und Schaden nehmen. Der erlittene Schaden wird dann von den noch vorhanden Lebenspunkten abgezogen.}
+{Unter Health-Points versteht man die Anzahl der Lebenspunkte, die ein Charakter besitzt. Diese wird in der Spielkonfiguration festgelegt. Während einer Partie kann die Charakter von anderen Charakteren angegriffen werden und Schaden nehmen. Der erlittene Schaden wird dann von den noch vorhanden Lebenspunkten abgezogen.}
 {-}
 {-}
-{Sinken die Health-Points unter einen Punkt, so muss die Spielfigur exfiltriert werden.}
+{Sinken die Health-Points unter einen Punkt, so muss der Charakter exfiltriert werden.}
 {-}
-{Die Spielfigur \glqq James Bond\grqq besitzt 100 HP.}
+{Der Charakter \glqq James Bond\grqq besitzt 100 HP.}
 {Lebenspunkte}
 
 \Fachwissen{Intelligence Points (IP)}
@@ -120,14 +168,6 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 {Computergegner, Bot}
 
-\Fachwissen{Level}
-{TODO}
-{-}
-{-}
-{-}
-{-}
-{-}
-
 \Fachwissen{Merge-Request}
 {Unter einem Merge-Request wird eine Anfrage zum \glqq mergen \grqq des Standes eines Entwicklungszweiges in den Hauptzweig verstanden. Ziel ist es dabei, dass neue Features auf eigenen Entwicklungszweigen implementiert werden und erst nach eingehender Prüfung in den Hauptzweig übernommen.}
 {Feature der Versionsverwaltungssoftware Git.}
@@ -145,11 +185,11 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 
 \Fachwissen{Nicht-Spieler Charakter (NPC)}
-{Unter einem NPC wird eine Spielfigur verstanden, welche von keinem der beiden Spieler gesteuert wird. Für die Spieler ist es dabei lediglich ersichtlich, dass der Charakter nicht zu ihrer Fraktion gehört, allerdings nicht, ob er zur gegnerischen Fraktion gehört. Die Aktionen der Spielfiguren werden dabei vom Server gesteuert, allerdings ohne auf ein Spielziel hinzuwirken.}
-{Spielfigur}
+{Unter einem NPC wird ein Charakter verstanden, welcher von keinem der beiden Spieler gesteuert wird. Für die Spieler ist es dabei lediglich ersichtlich, dass der Charakter nicht zu ihrer Fraktion gehört, allerdings nicht, ob er zur gegnerischen Fraktion gehört. Die Aktionen des Charakters werden dabei vom Server gesteuert, allerdings ohne auf ein Spielziel hinzuwirken.}
+{Charakter}
 {-}
 {-}
-{Die Spielfigur \glqq James Bond\grqq wird vom Server gesteuert und ist somit ein NPC.}
+{Der Charakter \glqq James Bond\grqq wird vom Server gesteuert und ist somit ein NPC.}
 
 \Fachwissen{Nutzer}
 {Ein Nutzer ist eine Person, welche über den Client mit dem Spiel  \glqq No Time To Spy\grqq interagiert. Diese Interaktion kann durch Bedienen des Konfigurators, Spielen des Spiels oder Beobachten einer laufenden Partie erfolgen.}
@@ -176,8 +216,8 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 
 \Fachwissen{Runde}
-{TODO}
-{-}
+{Das Spiel \glqq No Time To Spy\grqq ist ein rundenbasiertes Spiel. Zu Beginn einer jeden Runde handelt der Server Ereignisse wie das Platzieren von Cocktails auf leeren Bar-Tischen ab. Anschließend ordnet er die Charaktere zufällig an und lässt jeden der Reihe nach seinen Zug machen. }
+{Elementarer Spielbestandteil.}
 {-}
 {-}
 {-}
@@ -191,6 +231,14 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Der Server besitzt keine grafische Oberfläche, sondern lediglich ein Kommandozeileninterface.}
 {-}
 
+\Fachwissen{Sichtlinie}
+{TODO}
+{Elementarer Spielbestandteil.}
+{-}
+{-}
+{-}
+{-}
+
 \Fachwissen{Spieler}
 {Ein Spieler ist ein Nutzer, welcher sich in einer Partie des Spiels \glqq No Time To Spy\grqq gegen einen anderen Spieler befindet.}
 {Nutzer}
@@ -200,10 +248,26 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 
 \Fachwissen{Spielfeld}
-{Das Spielfeld beschreibt die festgelegte Fläche, auf welcher sich die Spielfiguren bewegen.}
+{Das Spielfeld beschreibt die festgelegte Fläche, auf welcher sich die Charaktere bewegen.}
 {-}
 {-}
+{Das Spielfeld besteht aus einzelnen Kacheln, welche in einem kartesischen Gitter angeordnet sind.}
 {-}
+
+\Fachwissen{Spielfeldkachel}
+{Das Spielfeld setzt sich aus unterschiedlichen Spielfeldkacheln zusammen, }
+{Elementarer Bestandteil des Spielfelds.}
+{Freies Feld, Wand, Kamin-Feld, Sitzplatz, Roulette-Tisch, Bar-Tisch, Tresor.}
+{Das Spielfeld besteht aus einzelnen Feldern, welche in einem kartesischen Gitter angeordnet sind.}
+{Bestimmte Arten von Feldern besitzen eine besondere Wirkung.}
+{-}
+{-}
+
+\FachwissenSyn{Szenario}
+{Das Spiel \glqq No Time To Spy\grqq spielt in einem Casino. Das Szenario wird dabei unter anderem durch die Art und Anordnung der Spielfeldkacheln sowie die Anzahl von Chips an den Roulette-Tischen bestimmt. }
+{-}
+{-}
+{Der Server bekommt das zu spielende Szenario übergeben.}
 {-}
 {-}
 
@@ -216,6 +280,14 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Google Test ist ein Framework für Unit-Tests mit C++.}
 {Modultest, Komponententest}
 
+\Fachwissen{Wahlphase}
+{Zum Partiebeginn stellen die Spieler sich ihre Fraktionen in einer Wahlphase zusammen. Dabei wählt der Server für jeden Spieler aus der Menge der Charaktere und Gadgets jeweils zufällig drei Charaktere und drei Gadgets aus, welche den Spielern angeboten werden. Jeder Spieler entscheidet sich dann für eines der angeboten Objekte. Der Server stellt dabei sicher, dass sich die Wahl der Spieler nicht überschneidet. Dieser Vorgang wird solange wiederholt, bis alle Slots belegt sind.}
+{Elementarer Bestandteil der Spielvorbereitung.}
+{-}
+{-}
+{-}
+{Der Spieler \glqq Max Mustermann \grqq hat sich in der Wahlphase für die Agenten \glqq Tiger Tanaka\grqq und \glqq Kissy Suzuki\grqq sowie die Gadgets \glqq Klingen-Hut\grqq und \glqq Giftpillen-Flasche \grqq entschieden.}
+
 \Fachwissen{WebSocket-Protokoll}
 {Das WebSocket-Protokoll ist ein Netzwerkprotokoll, welches auf TCP basiert und für eine bidirektionale Verbindung genutzt werden kann.}
 {Netzwerkprotokoll}
@@ -225,20 +297,20 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 
 \Fachwissen{Zufall}
-{Unter Zufall wird in diesem Dokument das Ziehen aus einer Normalverteilung verstanden.}
+{Unter Zufall wird in diesem Fall das gleichverteilte Ziehen aus einer Menge verstanden.}
 {-}
 {-}
 {Der Eintritt von Ereignissen innerhalb einer Runde wird vom Zufall bestimmt.}
 {-}
-{-}
+{Während der Drafting Phase werden vom Server zufällig pro Runde drei Charaktere ausgewählt.}
 
 \Fachwissen{Zug}
-{TODO}
+{In jeder Runde darf jeder Charakter einen Zug machen, wobei dieser in verschiedene Zugphasen unterteilt ist. Zu Beginn eines Zuges wird vom Server bestimmt, wie viele Bewegungs- und Aktionspunkte dem Charakter zur Verfügung stehen. Eine Zugphase beschreibt nun den Verbrauch eines solches Punktes, wobei die Anordnung der Bewegungs- und Aktionsphasen dabei beliebig ist, solange genügend entsprechende Punkte vorhanden sind.}
+{Elementarer Spielbestandteil.}
 {-}
+{Nicht genutzte Bewegungs- bzw. Aktionspunkte verfallen am Ende einer Runde.}
 {-}
-{-}
-{-}
-{-}
+{Francisco Scaramanga ist am Zug und besitzt 2 Bewegungspunkte und einen Aktionspunkt. Mit diesen bewegt er sich erst ein Feld, setzt dann ein Gadget ein und lässt den zweiten Bewegungspunkt schließlich verfallen.}
 
 \Fachwissen{Zuschauer}
 {Ein Zuschauer ist ein Nutzer, welcher eine Partie des Spiels \glqq{}No Time To Spy\grqq{} beobachtet. Dabei kann er das gesamte Spielfeld einsehen, allerdings im Gegensatz zu den Spielern keinen Einfluss auf das Spielgeschehen nehmen. Der Zuschauer besitzt dabei die Möglichkeit im Gegensatz zu den Spielern das gesamte Spielfeld einsehen zu können, kann allerdings auch auswählen, das Spiel aus Sicht einer der beiden Spieler zu verfolgen.}
