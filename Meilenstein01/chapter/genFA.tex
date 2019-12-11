@@ -603,6 +603,227 @@ ABHÄNGIGKEITEN: & \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit, 2.4 Maul
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Hutsichtlinie}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Hutsichtlinie \\
+	\hline
+	BESCHREIBUNG: & Die Hutsichtlinie ist eine reguläre Sichtlinie, wobei die Hutsichtlinie zusätzlich von Feldern blockiert wird, auf denen sich Charaktere befinden. \\
+	\hline
+	BEGRÜNDUNG: &  Man kann den Klingen-Hut nicht durch Personen durchwerfen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Klingen-Hut}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Klingen-Hut \\
+	\hline
+	BESCHREIBUNG: & Der Klingen-Hut ist ein Bowler-Hut mit einer scharfen Klinge in der Hutkrempe. Ein Charakter, der den Klingen-Hut im Inventar hat, kann diesen auf eine Zielperson in Hutsichtlinie und Hut-Wurf-Reichweite werfen. Die Zielperson wird mit Hut-Treffer-Wahrscheinlichkeit verletzt und erleidet n HP Hut-Schaden. Der Klingen-Hut landet nach einem Wurf auf eine Zielperson in jedem Fall auf einem zufälligen freien Nachbarfeld der Zielperson. Betritt ein Charakter das Feld, auf welchem der Klingen-Hut liegt, so nimmt dieser Charakter den Klingen-Hut in sein Inventar auf. \\
+	\hline
+	BEGRÜNDUNG: &  Damit kann weiter entfernten Charakteren Schaden zugefügt werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Hutsichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Magnetfeld-Armbanduhr}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Magnetfeld-Armbanduhr \\
+	\hline
+	BESCHREIBUNG: & Wird der Charakter, der die Magnetfeld-Uhr trägt mit einem Klingen-Hut beworfen, so erleidet dieser keinen Schaden und der Klingen-Hut landet auf einem zufälligen freien Nachbarfeld des Charakters. \\
+	\hline
+	BEGRÜNDUNG: &  Dieses Gadget schützt den Besitzer vor Angriffen mit dem Klingen-Hut. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Klingen-Hut} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Giftpillen-Flasche}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Giftpillen-Flasche \\
+	\hline
+	BESCHREIBUNG: & Die Giftpillen-Flasche enthält fünf Giftpillen. Der Besitzer der Giftpillen-Flasche kann eine Giftpille als Aktion in einen Cocktail werfen, wenn der Cocktail auf einem Nachbarfeld steht oder von einer benachbarten Person gehalten wird. Dieser Cocktail verwandelt sich dann in einen vergifteten Cocktail und die Giftpille ist damit verbraucht. Nur die Fraktion des Vergifters sieht, dass der Cocktail vergiftet ist. Wird ein vergifteter Cocktail getrunken, werden dem Charakter die Cocktail-Health Points als Schaden abgezogen. Sind alle fünf Giftpillen verbaucht, wird die Giftpillen-Flasche aus dem Inventar entfernt.  \\
+	\hline
+	BEGRÜNDUNG: &  Damit können Cocktails vergiftet werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Cocktail aufnehmen} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Laser-Puderdose}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Laser-Puderdose \\
+	\hline
+	BESCHREIBUNG: & Mit der Laser-Puderdose kann ein Charakter auf einen Cocktail schießen, der sich auf einem Feld in Sichtlinie befindet, egal ob der Cocktail herumsteht oder von einer Person gehalten wird. Die Laser-Schuss-Aktion trifft mit Laser-Treffer-Wahrscheinlichkeit und lässt den Cocktail bei einem Treffer verschwinden, indem dieser einfach verdampft. \\
+	\hline
+	BEGRÜNDUNG: &  Damit kann man Cocktails verschwinden lassen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Cocktail aufnehmen} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Raketenwerfer-Füllfederhalter}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Raketenwerfer-Füllfederhalter \\
+	\hline
+	BESCHREIBUNG: & Mit dem Raketenwerfer-Füllfederhalter kann eine Rakete auf ein Zielfeld in Sichtlinie und beliebiger Entfernung verschossen werden. Alle Wände auf dem Zielfeld und auf benachbarten Feldern werden durch die Explosion zu freien Feldern und alle Personen auf dem Zielfeld oder auf benachbarten Feldern bekommen einen Raketen-Schaden. Der Raketenwerfer-Füllfederhalter kann nur einmal benutzt werden und verschwindet dann aus dem Inventar. \\
+	\hline
+	BEGRÜNDUNG: &  Damit können Wände entfernt werden und anderen Charakteren Schaden zugefügt werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Wand} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Gaspatronen-Lippenstift}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Gaspatronen-Lippenstift \\
+	\hline
+	BESCHREIBUNG: & Mit dem Gaspatronen-Lippenstift kann eine Wolke Reizgas auf eine benachbarte Zielperson gesprüht werden, diese erleidet dann n HP Reizgas-Schaden. Der Gaspatronen-Lippenstift kann nur einmal verwendet werden und verschwindet dann aus dem Inventar. \\
+	\hline
+	BEGRÜNDUNG: &  Mit dem Gaspatronen-Lippenstift kann anderen Charakteren Schaden zugefügt werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Mottenkugel-Beutel}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Mottenkugel-Beutel \\
+	\hline
+	BESCHREIBUNG: & Ein Charakter, der den Mottelkugel-Beutel im Inventar hat, kann mit einer Aktion eine Mottenkugel auf ein in Sichtlinie und Mottenkugel-Wurf-Reichweite befindliches Kaminfeld werfen. Die entstehende Explosion fügt jeder Person auf einem Nachbarfeld des Kamins einen Mottenkugel-Schaden zu. Der Mottenkugel-Beutel enthält fünf Mottenkugeln und verschwindet aus dem Inventar, sobald diese aufgebraucht sind. \\
+	\hline
+	BEGRÜNDUNG: &  Dadurch kann Personen in der Nähe eines Kamins Schaden zugefügt werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Nebeldose}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Nebeldose \\
+	\hline
+	BESCHREIBUNG: & Die Nebeldose kann mit einer Aktion auf jedes Feld, das keine Wand ist geworfen werden, wenn sich dieses Zielfeld in Nebeldosen-Wurf-Reichweite und in Sichtlinie befindet. Die Nebeldose erzeugt auf dem Zielfeld und auf dessen Nachbarfeldern einen dichten Nebel, welcher die Sichtlinie blockiert. Charaktere, die sich im Nebel befinden können keine Aktionen ausführen. Der Nebel bleibt für den Rest der laufenden Runde und während der nächsten beiden Runden bestehen und löst sich dann auf. Die Nebeldose kann nur einmal verwendet werden und verschwindet dann aus dem Inventar. \\
+	\hline
+	BEGRÜNDUNG: &  Dadurch können Personen aktionsunfähig gemacht werden und Sichtlinien werden blockiert. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Wurfhaken}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Wurfhaken \\
+	\hline
+	BESCHREIBUNG: & Objekte, die frei auf dem Boden oder auf Tischen herumliegen und sich in Wurfhaken-Reichweite und in Sichtlinie befinden, können von einem Charakter mit dem Wurfhaken zu sich herangezogen werden. Diese Aktion gelingt mit Wurfhaken-Treffer-Wahrscheinlichkeit. Die herangezogenen Objekte werden dann sofort ins Inventar aufgenommen oder im Falle eines Cocktails aufgenommen und in der Hand gehalten. \\
+	\hline
+	BEGRÜNDUNG: &  Mit dem Wurfhaken können weiter entfernte Objekte aufgenommen werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Jetpack}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Jetpack \\
+	\hline
+	BESCHREIBUNG: & Mit dem Jetpack kann ein Charakter mit einer Aktion auf ein beliebiges freies Feld fliegen. Das Jetpack kann nur einmal verwendet werden und verschwindet dann aus dem Inventar. \\
+	\hline
+	BEGRÜNDUNG: &  Mit dem Jetpack können Charaktere weite Strecken zurücklegen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Wanze und Ohrstöpsel}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Wanze und Ohrstöpsel \\
+	\hline
+	BESCHREIBUNG: & Mit einer Aktion kann einer benachbarten Zielperson eine Wanze untergeschoben werden und die Ohrstöpsel behält der Besitzer selbst. Die Zielperson bemerkt dies nicht. Während die Wanze an der Zielperson klebt, werden alle IPs, die die verwanzte Person erwirbt ebenso dem Träger der Ohrstöpsel gutgeschrieben. Zu Beginn jeder neuen Runde kann es sein, dass die Wanze mit Wanzen-Ausfalls-Wahrscheinlichkeit ausfällt. Wenn dies passiert, verschwinden die Wanze und Ohrstöpsel. \\
+	\hline
+	BEGRÜNDUNG: &  Damit kann ein Charakter die IPs, die eine andere Person erwirbt ebenfalls bekommen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Chicken Feed}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Chicken Feed \\
+	\hline
+	BESCHREIBUNG: & Das ist ein Säckchen Hühnerfutter, das einer benachbarten Zielperson gegeben werden kann. Gehört diese Zielperson nicht zu gegnerischen Fraktion, passiert nichts und das Chicken Feed ist weg. Gehört die Zielperson zur gegnerischen Fraktion, verändern sich die IPs wie folgt: Als erstes wird der Absolutbetrag der Differenz zwischen den IPs der Zielperson und den IPs des Chicken Feed-Gebers berechnet. Hat der Geber weniger IPs als die Zielperson, wird ihm die Differenz abgezogen, wobei die IPs nicht unter 0 fallen können, und falls er mehr hat wird ihm die Differenz gutgeschrieben. Das Chicken Feed wird dadurch verbraucht und verschwindet aus dem Inventar. \\
+	\hline
+	BEGRÜNDUNG: &  Dieses Gadget verändert die IPs des Anwenders entweder zum Positiven oder zum Negativen. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Nugget}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Nugget \\
+	\hline
+	BESCHREIBUNG: & Das Nugget kann einer benachbarten Zielperson gegeben werden. Ist diese Zielperson ein NPC, schließt sich dieser der Fraktion des Nugget-Gebers an und man kann ihn als Spieler-Charakter steuern. Dabei wird das Nugget verbraucht. Ist die Zielperson ein Mitglied der gegnerischen Fraktion, wechselt dieses nicht die Seite und bekommt das Nugget ins Inventar und kann es selbst benutzen. Die gegnerische Fraktion bekommt diese Aktion dann mit. \\
+	\hline
+	BEGRÜNDUNG: &  Dadurch können NPC zu der eigenen Fraktion hinzugeholt werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Mirror of Wilderness}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Mirror of Wilderness \\
+	\hline
+	BESCHREIBUNG: & Wendet ein Charakter den Mirror of Wilderness bei einer benachbarten Zielperson an, werden die IPs der beiden Charaktere vertauscht. Bei Personen der eigenen Fraktion funktioniert dies immer und der Spiegel ist beliebig oft anwendbar, bei Mitgliedern der gegnerischen Fraktion klappt der Tausch nur mit einer Mirror-of-Wilderness-Wahrscheinlichkeit und wird im Erfolgsfall zerstört und verschwindet aus dem Inventar.\\
+	\hline
+	BEGRÜNDUNG: &  Dadurch können die IPs zwischen Charakteren vertauscht werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Pocket Litter}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Pocket Litter \\
+	\hline
+	BESCHREIBUNG: & Hat ein Charakter Pocket Litter in seinem Inventar, ist er so gut getarnt, dass er wie ein NPC erscheint und selbt Observations-Aktionen standhält. \\
+	\hline
+	BEGRÜNDUNG: &  Ein Charakter mit Pocket Litter kann von gegnerischen Charakteren nicht als ein Gegner erkannt werden.  \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Diamanthalsband der weißen Katze}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Diamanthalsband der weißen Katze \\
+	\hline
+	BESCHREIBUNG: & Das Diamanthalsband liegt in einem der Tresore im Casino. Wenn ein Charakter den Tresor öffnet, nimmt er das Diamanthalsband in sein Inventar auf. Das Diamanthalsband wird nicht in der Drafting Phase verwendet. \\
+	\hline
+	BEGRÜNDUNG: &  Wer das Halsband zu Blofelds weißer Katze bringt, bekommt von ihr ein Geheimnis, das eine Menge IPs wert ist. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Charakter Liste}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
