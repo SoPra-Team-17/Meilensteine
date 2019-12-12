@@ -5,14 +5,14 @@ all: Pflichtenheft.pdf
 Pflichtenheft.pdf: Pflichtenheft.tex Meilenstein01/domainmodel.pdf Meilenstein01/fields.pdf Meilenstein01/gadgets.pdf
 	latexmk -pdf Pflichtenheft.tex
 
-domainmodel.pdf: Meilenstein01/diagrams/domainmodel.dot
-	dot -T pdf -o $@ diagrams/domainmodel.dot
+Meilenstein01/domainmodel.pdf: Meilenstein01/diagrams/domainmodel.dot
+	dot -T pdf -o $@ Meilenstein01/diagrams/domainmodel.dot
 
-fields.pdf: Meilenstein01/diagrams/fields.dot
-	dot -T pdf -o $@ diagrams/fields.dot
+Meilenstein01/fields.pdf: Meilenstein01/diagrams/fields.dot
+	dot -T pdf -o $@ Meilenstein01/diagrams/fields.dot
 
-gadgets.pdf: Meilenstein01/diagrams/gadgets.dot
-	unflatten -l 5 -o compressed.dot diagrams/gadgets.dot
+Meilenstein01/gadgets.pdf: Meilenstein01/diagrams/gadgets.dot
+	unflatten -l 5 -o compressed.dot Meilenstein01/diagrams/gadgets.dot
 	dot -T pdf -o $@ compressed.dot 
 
 .PHONY: clean
