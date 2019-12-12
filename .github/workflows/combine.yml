@@ -7,9 +7,10 @@ jobs:
   combine:
     runs-on: ubuntu-latest
     steps:
-    - name: Combine repos
+    - name: Push to GitLab
       uses: SoPra-Team-17/repomerge-action@master
       with:
         org: "SoPra-Team-17"
         destination: "gitlab.informatik.uni-ulm.de/sopra/ws19-no-time-to-spy/teams/team0017.git"
         pat: oauth2:${{ secrets.GITLAB_PAT_OTTOJO }}
+        branch: Meilensteine
