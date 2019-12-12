@@ -18,7 +18,7 @@ digraph G {
 Gadget
 AkkuFohhn [label="Akku-Föhn"]
 Maulwurfel [label="Maulwürfel"]
-TechnicolorPrisma [label="Klingen-Hut"]
+TechnicolorPrisma [label="Technicolor-Prisma"]
 KlingenHut [label="Klingen-Hut"]
 MagnetfeldArmbanduhr [label="Magnetfeld-Armbanduhr"]
 GiftpillenFlasche [label="Giftpillen-Flasche"]
