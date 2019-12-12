@@ -48,7 +48,7 @@ digraph G {
     // Inheritance
     Agent -> Charakter
     NPC -> Charakter
-    KiSpieler -> Spieler
+    KISpieler -> Spieler
     MenschlicherSpieler -> Spieler
 
     // Aggregations
