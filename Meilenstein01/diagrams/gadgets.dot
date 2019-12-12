@@ -1,0 +1,58 @@
+digraph G {
+    // General Layout
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+
+    node [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        shape = "record"
+    ]
+
+    edge [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        arrowhead = "onormal"
+        labeldistance = 1.5
+    ]
+Gadget
+AkkuFohhn [label="Akku-Föhn"]
+Maulwurfel [label="Maulwürfel"]
+TechnicolorPrisma [label="Klingen-Hut"]
+KlingenHut [label="Klingen-Hut"]
+MagnetfeldArmbanduhr [label="Magnetfeld-Armbanduhr"]
+GiftpillenFlasche [label="Giftpillen-Flasche"]
+LaserPuderdose [label="Laser-Puderdose"]
+RaketenwerfenFullfederhalter [label="Raketenwerfen-Füllfederhalter"]
+GaspatronenLippenstift [label="Gaspatronen-Lippenstift"]
+MottenkugelBeutel [label="Mottenkugel-Beutel"]
+Nebeldose [label="Nebeldose"]
+Wurfhaken [label="Wurfhaken"]
+Jetpack [label="Jetpack"]
+Wanze [label="Wanze und Ohrstöpsel"]
+ChickenFeed [label="Chicken-Feed"]
+Nugget [label="Nugget"]
+MirrorofWilderness [label="Mirror of Wilderness"]
+PocketLitter [label="PocketLitter"]
+Diamanthalsband [label="Diamanthalsband"]
+
+AkkuFohhn->Gadget
+Maulwurfel->Gadget
+TechnicolorPrisma->Gadget
+KlingenHut->Gadget
+MagnetfeldArmbanduhr->Gadget
+GiftpillenFlasche->Gadget
+LaserPuderdose->Gadget
+RaketenwerfenFullfederhalter->Gadget
+GaspatronenLippenstift->Gadget
+MottenkugelBeutel->Gadget
+Nebeldose->Gadget
+Wurfhaken->Gadget
+Jetpack->Gadget
+Wanze->Gadget
+ChickenFeed->Gadget
+Nugget->Gadget
+MirrorofWilderness->Gadget
+PocketLitter->Gadget
+Diamanthalsband->Gadget
+}
