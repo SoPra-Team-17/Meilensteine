@@ -115,7 +115,7 @@
 	\hline
 	BEGRÜNDUNG: & An Roulette-Tischen haben Charaktere die Chance Chips zu gewinnen bzw. zu verlieren. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie}, FA-G\ref{Roulette spielen}, FA-G\ref{Spielchips} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie}, FA-G\ref{Roulette spielen}, FA-G\ref{Charakter-Spielchips} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -951,7 +951,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Schlürfen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren} \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Geheimnis erhalten},FA-G \ref{Charakter-Fraktion} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -960,12 +960,12 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	TITEL: & Tresor-Spicken \\
 	\hline
-	BESCHREIBUNG: & Wenn ein Charakter am Zug ist, sich auf einem Feld befindet, welches sich in Tresor-Spick-Reichweite befindet und die Kombination für diesen Tresor kennt, dann kann er als Aktion in diesen Tresor hineinschauen. Er erfährt ein Geheimnis und die Kombination für einen anderen Tresor.\\
+	BESCHREIBUNG: & Wenn ein Charakter am Zug ist, sich auf einem Feld befindet, welches sich in Tresor-Spick-Reichweite befindet und die Kombination für diesen Tresor kennt, dann kann er als Aktion in diesen Tresor hineinschauen. Er erfährt ein Geheimnis und die Kombination für einen anderen Tresor und erhält zusätzlich beliebig viele Gadgets.\\
 	 
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Hineinschauen in einen Tresor eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}  \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Geheimnis erhalten}, FA-G \ref{Charakter-Position}, FA-G \ref{Diamanthalsband der weissen Katze}, FA-G \ref{Gadgets}, FA-G \ref{Tresor} , FA-G \ref{Charakter-Fraktion} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -980,7 +980,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Erfahren von Geheimnissen eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
 
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G\ref{Spionieren}, FA-G\ref{Tresor-Spicken} \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G\ref{Spionieren}, FA-G\ref{Tresor-Spicken}, FA-G \ref{IP}, FA-G \ref{Charakter-Fraktion} \\
 \end{tabularx}
 
 
