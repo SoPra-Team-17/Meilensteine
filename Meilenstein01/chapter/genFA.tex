@@ -173,6 +173,19 @@
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Charakter Liste}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Charakter Liste \\
+	\hline
+	BESCHREIBUNG: & Eine Liste, die alle spielbaren Charaktere mit ihren Fähigkeiten beinhaltet. Die Charaktere, die im Lastenheft unter \glqq A Einige Vorschläge für Charaktere\grqq aufgeführt sind, sollen mindestens in der Liste enthalten sein.\\
+	\hline
+	BEGRÜNDUNG: & Aus dieser Liste können Charaktere zum Spielen gewählt werden.\\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Charakter-NameBeschreibung}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
@@ -314,7 +327,7 @@
 	\hline
 	BEGRÜNDUNG: & Werden benötigt, um Roulette zu spielen.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Roulette spielen}\\
+	ABHÄNGIGKEITEN: & FA-G\ref{Roulette-Tisch}, FA-G \ref{Roulette spielen}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -810,19 +823,6 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BEGRÜNDUNG: &  Wer das Halsband zu Blofelds weißer Katze bringt, bekommt von ihr ein Geheimnis, das eine Menge IPs wert ist. \\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
-\end{tabularx}
-
-\begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Charakter Liste}
-	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
-	\hline
-	TITEL: & Charakter Liste \\
-	\hline
-	BESCHREIBUNG: & Eine Liste, die alle spielbaren Charaktere mit ihren Fähigkeiten beinhaltet. Die Charaktere, die im Lastenheft unter \glqq A Einige Vorschläge für Charaktere\grqq aufgeführt sind, sollen mindestens in der Liste enthalten sein.\\
-	\hline
-	BEGRÜNDUNG: & Aus dieser Liste können Charaktere zum Spielen gewählt werden.\\
-	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Charakter}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
