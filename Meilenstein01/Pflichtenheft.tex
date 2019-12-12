@@ -24,8 +24,6 @@
 
 % Entnommen und angepasst von https://github.com/SoPra-Team-10
 \newcommand{\Fachwissen}[7] {
-	\begin{table}[h!]
-		\centering
 		\begin{tabular}{|p{2,25cm}|p{12cm}|}
 			\hline
 			\textbf{Begriff} & \textbf{#1} \\
@@ -43,12 +41,9 @@
 			\textbf{Beispiel} & #7 \\
 			\hline
 		\end{tabular}
-	\end{table}
 }
 
 \newcommand{\FachwissenSyn}[8] {
-	\begin{table}[h!]
-		\centering
 		\begin{tabular}{|p{2,25cm}|p{12cm}|}
 			\hline
 			\textbf{Begriff} & \textbf{#1} \\
@@ -68,7 +63,6 @@
 			\textbf{Synonym} & #8 \\
 			\hline
 		\end{tabular}
-	\end{table}
 }
 
 
@@ -114,7 +108,7 @@ Beschreibung des Systems und seiner Funktionen.
 \subsection{Akteure}
 \input{chapter/Akteure.tex}
 
-
+\clearpage
 \subsection{Funktionale Anforderungen}
 
 Dieser Abschnitt enthält alle Anforderungen, die die grundlegenden Aktionen des Softwaresystems
@@ -124,15 +118,21 @@ spezifizieren.
 
 \input{chapter/serverFA.tex}
 
+\clearpage
 \subsubsection{Client}
 \input{chapter/clientFA.tex}
+
+\clearpage
 \subsubsection{KI-Client}
 \input{chapter/kiFA.tex}
 \subsubsection{Editor}
 \input{chapter/editorFA.tex}
+
+\clearpage
 \subsubsection{Allgemeine funktionale Anforderungen}
 \input{chapter/genFA.tex}
 
+\clearpage
 \subsection{Nichtfunktionale Anforderungen}
 \input{chapter/nfa.tex}
 

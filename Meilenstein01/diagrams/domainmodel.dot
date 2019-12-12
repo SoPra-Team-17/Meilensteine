@@ -20,6 +20,12 @@ digraph G {
     Spieler [
         label = "{Spieler|+ Name: string\l}"
     ]
+    KISpieler [
+        label = "{KI Spieler}"
+    ]
+    MenschlicherSpieler [
+        label = "{Menschlicher Spieler}"
+    ]
     Spielfeld [
         label = "{Spielfeld|+ Höhe: ℕ\l+ Breite: ℕ\l}"
     ]
@@ -42,6 +48,8 @@ digraph G {
     // Inheritance
     Agent -> Charakter
     NPC -> Charakter
+    KISpieler -> Spieler
+    MenschlicherSpieler -> Spieler
 
     // Aggregations
     edge [
@@ -73,7 +81,7 @@ digraph G {
     ]
     Feld -> Spielfeld [
         headlabel = "1"
-        taillabel = "bxh"
+        taillabel = "n"
     ]
     Agent -> Fraktion [
         taillabel = "1..n"

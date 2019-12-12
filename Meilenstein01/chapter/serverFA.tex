@@ -91,6 +91,32 @@ ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}, \ref{s-websockets}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{s-partieinit}
+\textbf{ID} & \textbf{FA-S \arabic{table}} \\
+\hline
+TITEL: & Spiel Start und Initialisierung \\
+\hline
+BESCHREIBUNG: & Zum Starten des Spiels verteilt der Server alle Charaktere auf gültigen Feldern auf dem Spielfeld. \\
+\hline
+BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
+\hline
+ABHÄNGIGKEITEN: & FA-S \ref{s-regeln}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{s-rundeinit}
+\textbf{ID} & \textbf{FA-S \arabic{table}} \\
+\hline
+TITEL: & Rundenstart und Initialisierung \\
+\hline
+BESCHREIBUNG: & Zum Starten einer Runde legt der Server die Zugreihenfolge aller Agenten fest. \\
+\hline
+BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
+\hline
+ABHÄNGIGKEITEN: & FA-S \ref{s-regeln}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
 \refstepcounter{table}\label{s-spiel}
 \textbf{ID} & \textbf{FA-S \arabic{table}} \\
 \hline
@@ -101,6 +127,19 @@ BESCHREIBUNG: & Nach Starten eines Spiels muss der Server abwechselnd Spielzüge
 BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}, \ref{s-websockets}, \ref{s-regeln}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{s-alternatives}
+\textbf{ID} & \textbf{FA-S \arabic{table}} \\
+\hline
+TITEL: & Finden freier Felder und Alternativen \\
+\hline
+BESCHREIBUNG: & Wenn für eine Aktion ein benachbartes freies Feld benötigt wird, und es dieses nicht gibt, muss ein anderes möglichst nahes freies Feld gefunden werden. \\
+\hline
+BEGRÜNDUNG: & Fortsetzen des Spiels auch wenn die Regeln (benachbarte Felder) nicht exakt erfüllt werden können.\\
+\hline
+ABHÄNGIGKEITEN: & FA-S \ref{s-regeln}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}

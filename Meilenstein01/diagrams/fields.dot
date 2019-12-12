@@ -1,0 +1,89 @@
+digraph G {
+    // General Layout
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+
+    node [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        shape = "record"
+    ]
+
+    edge [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        arrowhead = "onormal"
+        labeldistance = 1.5
+    ]
+
+    // Classes
+    Spielfeld [
+        label = "{Spielfeld|+ Höhe: ℕ\l+ Breite: ℕ\l}"
+    ]
+    Feld [
+    ]
+    Gadget
+    Cocktail [
+        label = "{Cocktail|+ vergiftet: bool\l}"
+    ]
+    FreiesFeld
+    Wand
+    KaminFeld
+    Sitzplatz
+    RouletteTisch
+    BarTisch
+    Tresor
+
+    // Inheritance
+    FreiesFeld -> Feld
+    Wand -> Feld
+    KaminFeld -> Feld
+    Sitzplatz -> Feld
+    RouletteTisch -> Feld
+    BarTisch -> Feld
+    Tresor -> Feld
+
+    // Aggregations
+    edge [
+        arrowhead = "odiamond"
+    ]
+    Gadget -> FreiesFeld [
+        taillabel = "0..1"
+        headlabel = "1"
+    ]
+    Agent -> FreiesFeld [
+        taillabel = "0..1"
+        headlabel = "1"
+    ]
+    Agent -> Sitzplatz [
+        taillabel = "0..1"
+        headlabel = "1"
+    ]
+    Cocktail -> BarTisch [
+        taillabel = "0..1"
+        headlabel = "1"
+    ]
+    Geheimnis -> Tresor [
+        taillabel = "0..n"
+        headlabel = "1"
+    ]
+    Gadget -> Tresor [
+        taillabel = "0..n"
+        headlabel = "1"
+    ]
+
+    // Compositions
+    edge [
+        arrowhead = "diamond"
+    ]
+    Feld -> Spielfeld [
+        headlabel = "1"
+        taillabel = "n"
+    ]
+
+    // Normal Arrows
+    edge [
+        arrowhead = "vee"
+    ]
+
+}
