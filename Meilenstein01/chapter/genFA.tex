@@ -104,18 +104,6 @@
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
-\begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Spielchips}
-	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
-	\hline
-	TITEL: & Spielchips \\
-	\hline
-	BESCHREIBUNG: & Charaktere haben die Möglichkeit an Roulette-Tischen Spielchips zu gewinnen. Alle gesammelten Spielchips einer Fraktion werden am Ende einer Partie in Intelligence Points umgerechnet. \\
-	\hline
-	BEGRÜNDUNG: & Dadurch wird das Spiel spannender, da die Spielchips den Spielausgang beeinflussen. \\
-	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Roulette-Tisch} \\
-\end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Roulette-Tisch}
@@ -127,7 +115,7 @@
 	\hline
 	BEGRÜNDUNG: & An Roulette-Tischen haben Charaktere die Chance Chips zu gewinnen bzw. zu verlieren. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie}, FA-G\ref{Roulette spielen}, FA-G\ref{Spielchips} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -850,7 +838,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Die Bedingungen für das Bewegen eines Charakters müssen eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Charakter}, FA-G\ref{Felder}, FA-G\ref{Spielbrett}, FA-G\ref{Freies Feld}, \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Charakter}, FA-G\ref{Charakter-Position}, FA-G\ref{Felder}, FA-G\ref{Spielbrett}, FA-G\ref{Freies Feld}, FA-G\ref{Wand}, FA-G\ref{Kamin-Feld}, FA-G\ref{Sitzplatz}, FA-G\ref{Roulette-Tisch}, FA-G\ref{Bar-Tisch}, FA-G\ref{Tresor}, FA-G\ref{BP und AP} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -863,7 +851,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Um das Verhalten im Fall der Bewegung auf ein Spielfeld, welches mit einem anderen 			Charakter besetzt ist, eindeutig zu definieren.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Felder}, FA-G \ref{Freies Feld} \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Felder}, FA-G\ref{BP und AP} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
