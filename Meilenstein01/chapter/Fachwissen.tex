@@ -176,6 +176,15 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Zentraler Bestandteil des Feature-Branch-Workflows.}
 {-}
 
+\Fachwissen
+{Lobby}
+{Eine Lobby ist ein virtueller Raum, in welchem sich zwei Nutzer zu einem Spiel zusammenfinden können.}
+{Elementarer Spielbestandteil.}
+{-}
+{-}
+{-}
+{-}
+
 \Fachwissen{Monkey-Testing}
 {Unter Monkey-Testing wird eine spezielle Form des Softwaretestens verstanden, bei welcher zufällige Nutzereingaben simuliert werden. Ziel ist es dabei sicherzustellen, dass die Anwendung in keinem Fall abstürzt.}
 {Negativtest.}
@@ -184,7 +193,7 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Wird in Ergänzung zu den Unit-Tests verwendet.}
 {-}
 
-\Fachwissen{Nicht-Spieler Charakter (NPC)}
+\Fachwissen{Nichtspieler Charakter (NPC)}
 {Unter einem NPC wird ein Charakter verstanden, welcher von keinem der beiden Spieler gesteuert wird. Für die Spieler ist es dabei lediglich ersichtlich, dass der Charakter nicht zu ihrer Fraktion gehört, allerdings nicht, ob er zur gegnerischen Fraktion gehört. Die Aktionen des Charakters werden dabei vom Server gesteuert, allerdings ohne auf ein Spielziel hinzuwirken.}
 {Charakter}
 {-}
@@ -232,12 +241,12 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 
 \Fachwissen{Sichtlinie}
-{TODO}
+{Die Sichtlinie beschreibt die Verbindungslinie zwischen zwei beliebigen Kacheln auf dem Spielfeld. Wenn auf keinem Feld, dass von der Linie geschnitten wird eine Wand oder ein Kamin steht, so ist das eine Feld vom anderen aus sichtbar (und umgekehrt).}
 {Elementarer Spielbestandteil.}
 {-}
 {-}
-{-}
-{-}
+{Die Sichtlinie stellt sicher, dass Charaktere nicht durch Wände hindurch schauen können.}
+{Zwischen den Feldern A und C liegt Feld B, auf welchem eine Wand platziert ist. Daher kann der Charakter \glqq James Bond\grqq, welcher sich auf Feld A befindet, das Feld C nicht sehen.}
 
 \Fachwissen{Spieler}
 {Ein Spieler ist ein Nutzer, welcher sich in einer Partie des Spiels \glqq No Time To Spy\grqq gegen einen anderen Spieler befindet.}
@@ -246,6 +255,14 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Menschlicher Spieler, KI-Client}
 {-}
 {-}
+
+\Fachwissen{Spieler Charakter (PC)}
+{Ein Spieler Charakter ist ein Charakter, welcher von einem Spieler gesteuert wird.}
+{Charakter}
+{-}
+{-}
+{Das Pendant zum Spieler Charakter ist der Nichtspieler Charakter (NPC), welcher vom Server gesteuert wird und keiner der beiden Fraktionen angehört.}
+{Der Spieler \glqq Max Mustermann\grqq steuert den Charakter \glqq Q\grqq.}
 
 \Fachwissen{Spielfeld}
 {Das Spielfeld beschreibt die festgelegte Fläche, auf welcher sich die Charaktere bewegen.}
@@ -270,6 +287,7 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {Der Server bekommt das zu spielende Szenario übergeben.}
 {-}
 {-}
+{Level}
 
 \FachwissenSyn{Unit-Test}
 {Unit-Tests werden in der Softwareentwicklung verwendet, um einzelne Module gezielt und automatisiert Funktionstests unterziehen zu können.}
@@ -288,6 +306,9 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 {Der Spieler \glqq Max Mustermann \grqq hat sich in der Wahlphase für die Agenten \glqq Tiger Tanaka\grqq und \glqq Kissy Suzuki\grqq sowie die Gadgets \glqq Klingen-Hut\grqq und \glqq Giftpillen-Flasche \grqq entschieden.}
 
+\Fachwissen{Wahrscheinlichkeitsprobe}
+{TODO}
+
 \Fachwissen{WebSocket-Protokoll}
 {Das WebSocket-Protokoll ist ein Netzwerkprotokoll, welches auf TCP basiert und für eine bidirektionale Verbindung genutzt werden kann.}
 {Netzwerkprotokoll}
@@ -296,13 +317,14 @@ Im Folgenden werden Abkürzungen und domänenspezifische Begriffe, welche für d
 {-}
 {-}
 
-\Fachwissen{Zufall}
+\FachwissenSyn{Zufall}
 {Unter Zufall wird in diesem Fall das gleichverteilte Ziehen aus einer Menge verstanden.}
 {-}
 {-}
 {Der Eintritt von Ereignissen innerhalb einer Runde wird vom Zufall bestimmt.}
 {-}
 {Während der Drafting Phase werden vom Server zufällig pro Runde drei Charaktere ausgewählt.}
+{Zufällig}
 
 \Fachwissen{Zug}
 {In jeder Runde darf jeder Charakter einen Zug machen, wobei dieser in verschiedene Zugphasen unterteilt ist. Zu Beginn eines Zuges wird vom Server bestimmt, wie viele Bewegungs- und Aktionspunkte dem Charakter zur Verfügung stehen. Eine Zugphase beschreibt nun den Verbrauch eines solches Punktes, wobei die Anordnung der Bewegungs- und Aktionsphasen dabei beliebig ist, solange genügend entsprechende Punkte vorhanden sind.}
