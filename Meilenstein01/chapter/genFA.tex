@@ -208,7 +208,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, wo sich der Charakter auf dem Spielfeld befindet.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltratation}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Spielbrett}, FA-S \ref{s-partieinit}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltration}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Draengeln}, FA-G \ref{Jetpack}, FA-G \ref{Spielbrett}, FA-S \ref{s-partieinit}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -248,11 +248,11 @@
 	\hline
 	BEGRÜNDUNG: & Zeigt Auswirkung verschiedener Aktionen auf den Charakter. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit}, FA-G \ref{Aktion durchfuehren}, FA-G \ref{Gadgets}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit}, FA-G \ref{Aktion durchfuehren}, FA-G \ref{Gadgets}, FA-G \ref{Exfiltration}, FA-G \ref{Cocktail schluerfen}, FA-G \ref{Charakter-Position}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{Exfiltratation}
+	\refstepcounter{table}\label{Exfiltration}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
 	TITEL: & Exfiltration \\
@@ -261,7 +261,7 @@
 	\hline
 	BEGRÜNDUNG: & HP sollen nicht 0 sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{HP}, FA-S \ref{s-alternatives}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{HP}, FA-S \ref{s-alternatives}, FA-G \ref{Charakter-Position}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -274,7 +274,7 @@
 	\hline
 	BEGRÜNDUNG: & Punkte, die später für Sieg relevant sind.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Gaspatronen-Lippenstift}, FA-G \ref{Wanze und Ohrstoepsel}, FA-G \ref{Chicken Feed}, FA-G \ref{Geheimnis erhalten}  \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Gaspatronen-Lippenstift}, FA-G \ref{Wanze und Ohrstoepsel}, FA-G \ref{Chicken Feed}, FA-G \ref{Geheimnis erhalten}, FA-G \ref{Charakter-Spielchips} \\
 \end{tabularx}
 
 
@@ -314,7 +314,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, ob Interaktion mit einem Cocktail möglich ist oder nicht.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Cocktail aufnehmen}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Cocktail aufnehmen}, FA-G \ref{Laser-Puderdose}, FA-G \ref{Cocktail schluerfen}, FA-G \ref{Cocktail-Guss}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -340,7 +340,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
 	\hline
-	ABHÄNGIGKEITEN: & \\
+	ABHÄNGIGKEITEN: & FA-G \ref{BP und AP}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -866,7 +866,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Es muss genau definiert sein, unter welchen Bedingungen das Ausführen einer Aktion möglich ist und welche Konsequenzen die Aktion hat.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchfuehren} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{BP und AP}, FA-G \ref{Charakter-Position}, FA-G \ref{Inventar}, FA-G \ref{Eigenschaften}, FA-G \ref{Spielbrett}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
 
@@ -881,7 +881,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Das Verwenden von Gadgets stellt eine Aktion dar.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}  \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Inventar}, FA-G \ref{Charakter-Position}, FA-G \ref{Spielbrett}, FA-G \ref{Sichtlinie}  \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -894,7 +894,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist Roulette spielen eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren} \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Roulette-Tisch}, FA-G \ref{Charakter-Spielchips} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -908,7 +908,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Aufnehmen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren} \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Bar-Tisch}, FA-G \ref{Charakter-Position},  FA-G \ref{haelt Cocktail} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -922,7 +922,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Übergießen eines nebenstehenden Charakters mit einem Cocktail eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}  \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{haelt Cocktail}, FA-G \ref{Charakter-Position}, FA-G \ref{Klamme Klamotten}  \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -931,11 +931,11 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	TITEL: & Cocktail schlürfen \\
 	\hline
-	BESCHREIBUNG: & Wenn ein Charakter am Zug ist und einen Cocktail in der Hand hat, dann kann er als Aktion den Cocktail trinken. Danach müssen seine Health Points erhöht werden und der Cocktail muss verschwinden. Wenn die Differenz zwischen 100 und den aktuellen Health Points des Charakters kleiner oder gleich dem Wert Cocktail-HP ist, dann müssen seine Health Points auf 100 erhöht werden. Andernfalls müssen seine Health Points um den Wert Cocktail-HP erhöht werden.\\
+	BESCHREIBUNG: & Wenn ein Charakter am Zug ist und einen Cocktail in der Hand hat, dann kann er als Aktion den Cocktail trinken. Danach müssen seine Health Points erhöht werden und der Cocktail muss verschwinden. Wenn die Differenz zwischen 100 und den aktuellen Health Points des Charakters kleiner oder gleich dem Wert Cocktail-HP ist, dann müssen seine Health Points auf 100 erhöht werden. Andernfalls müssen seine Health Points um den Wert Cocktail-HP erhöht werden. Wenn der Cocktail vergiftet war und die Differenz zwischen den aktuellen Health Points der Charakters und 0 kleiner oder gleich dem Wert Gift-Cocktail-Schaden ist, dann müssen seine Health Points auf 0 reduziert werden. Andernfalls müssen seine Health Points um den Wert Gift-Cocktail-Schaden reduziert werden. \\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Schlürfen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren} \\
+	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{haelt Cocktail}, FA-G \ref{HP}, FA-G \ref{Giftpillen-Flasche}, FA-G \ref{Robuster Magen} \\
 \end{tabularx}
 
 
