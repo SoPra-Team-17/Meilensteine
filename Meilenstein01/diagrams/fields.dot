@@ -26,12 +26,20 @@ digraph G {
     Cocktail [
         label = "{Cocktail|+ vergiftet: bool\l}"
     ]
-    FreiesFeld
+    FreiesFeld [
+	label = "Freies Feld"
+    ]
     Wand
-    KaminFeld
+    KaminFeld [
+	label = "Kamin-Feld"
+    ]
     Sitzplatz
-    RouletteTisch
-    BarTisch
+    RouletteTisch [
+	label = "Roulette-Tisch"
+    ]
+    BarTisch [
+	label = "Bar-Tisch"
+    ]
     Tresor
 
     // Inheritance
