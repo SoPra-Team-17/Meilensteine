@@ -1,8 +1,5 @@
 %Hier kommen die generellen FA rein
 
-\todo[inline]{Carolin: 2.8 (Partievorbereitung, genFA), 2.10.1 (Dauer eines Zuges), 2.11: Ende der Partie}
-
-
 \begin{tabularx}{16cm}{l|X}
 	\refstepcounter{table}\label{Felder}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
@@ -179,6 +176,7 @@
 		\item hält Cocktail
 		\item Spielchips
 	\end{itemize}
+	Ein spezieller Charakter besitzt nur die Werte Name, Beschreibung, Position.
 	\\
 	\hline
 	BEGRÜNDUNG: & Jeder Charakter soll individuell sein und sich über das Spiel hinweg verändern können.\\
@@ -209,7 +207,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, wo sich der Charakter auf dem Spielfeld befindet.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltratation}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Spielbrett} \todo[inline]{2.9. Beginn der Partie}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltratation}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Spielbrett}, FA-S \ref{s-partieinit}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -222,7 +220,7 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, von wem der Charakter zu steuern ist.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Wahlphase}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -232,11 +230,11 @@
 	TITEL: & Bewegungspunkte (BP) und Aktionspunkte (AP) \\
 	\hline
 	BESCHREIBUNG: & Während eine Charakter am Zug ist, kann er BP für Bewegungen auf dem Spielfeld und AP für Aktionen einsetzen.
-	Zu Beginn eines Zuges erhält er jeweils Punkte. Nach Beenden eines Zuges verfallen übrig gebliebene Punkte. BP und AP können nicht negativ sein.\\
+	Zu Beginn eines Zuges erhält er standardmäßig zwei BP und ein AP. Nach Beenden eines Zuges verfallen übrig gebliebene Punkte. BP und AP können nicht negativ sein.\\
 	\hline
 	BEGRÜNDUNG: & Hält fest, wie viele Bewegungen und Aktionen der Charakter in diesem Spielzug noch ausführen kann. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Aktion durchfuehren} \todo[inline]{2.10.1 Züge}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Aktion durchfuehren}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -262,7 +260,7 @@
 	\hline
 	BEGRÜNDUNG: & HP sollen nicht 0 sein.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{HP} \todo[inline]{2.12 Alternativen}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{HP}, FA-S \ref{s-alternatives}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -275,7 +273,7 @@
 	\hline
 	BEGRÜNDUNG: & Punkte, die später für Sieg relevant sind.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Gaspatronen-Lippenstift}, FA-G \ref{Wanze und Ohrstoepsel}, FA-G \ref{Chicken Feed} \todo[inline]{2.6 Roulette?, 2.7 Geheimnisse}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Gaspatronen-Lippenstift}, FA-G \ref{Wanze und Ohrstoepsel}, FA-G \ref{Chicken Feed} \todo[inline]{2.7 Geheimnisse}\\
 \end{tabularx}
 
 
@@ -458,7 +456,7 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Health Points je nach Charakter.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{Cocktail-HP, Gift-Cocktail-Schaden}\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -484,7 +482,7 @@
 	\hline
 	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{Babysitter-Wahrscheinlichkeit, Wahrscheinlichkeitsprobe}\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -497,7 +495,7 @@
 	\hline
 	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
 	\hline
-	ABHÄNGIGKEITEN: & \todo[inline]{Honey-Trap-Wahrscheinlichkeit}\\
+	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -537,7 +535,7 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Tradecraft, so wiederholt e
 \hline
 BEGRÜNDUNG: & Höhere Chance für eine erfolgreiche Aktion.\\
 \hline
-ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Wahrscheinlichkeitsprobe}\\
+ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -550,7 +548,7 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Observation, so kann er die
 \hline
 BEGRÜNDUNG: & Möglichkeit um herauszufinden, welche Charaktere zur gegnerischen Fraktion gehören und welche NPCs sind.\\
 \hline
-ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Observation-Erfolg-Wahrscheinlichkeit}\\
+ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -589,7 +587,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Observation-Erfolg-Wahrs
 	\hline
 	BEGRÜNDUNG: &  Der Maulwürfel deaktiviert bei dem Charakter, der ihn im Inventar hat positive Eigenschaften und bringt dadurch Spannung in das Spiel. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Charakter}, FA-G \ref{Inventar},FA-G \ref{Eigenschaften}, \todo[inline]{Maulwürfel-Wurfweite} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Charakter}, FA-G \ref{Inventar},FA-G \ref{Eigenschaften} \\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -836,7 +834,7 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Observation-Erfolg-Wahrs
 	\hline
 	BEGRÜNDUNG: & Aus dieser Liste können Charaktere zum Spielen gewählt werden.\\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{Charakter} \todo[inline]{2.8.1 Wahlphase}\\
+	ABHÄNGIGKEITEN: & FA-G \ref{Charakter}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
@@ -927,14 +925,98 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel} \todo[inline]{Observation-Erfolg-Wahrs
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
-	\refstepcounter{table}\label{XXX}
+	\refstepcounter{table}\label{Partie-Vorbereitung}
 	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
 	\hline
-	TITEL: & XXX \\
+	TITEL: & Partie-Vorbereitung \\
 	\hline
-	BESCHREIBUNG: & XXX \\
+	BESCHREIBUNG: & Zu Beginn jeder Spielpartie muss die Partie vorbereitet werden. Die Vorbereitung besteht aus Wahl- und Ausrüstungsphase. \\
 	\hline
-	BEGRÜNDUNG: & XXX \\
+	BEGRÜNDUNG: & Spieler können Anfangszustand des Spiels mitbestimmen. \\
 	\hline
-	ABHÄNGIGKEITEN: & FA-G \ref{XXX} \\
+	ABHÄNGIGKEITEN: & FA-G \ref{Wahlphase}, FA-G \ref{Ausruestungsphase} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Wahlphase}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Wahlphase \\
+	\hline
+	BESCHREIBUNG: & Jeder Spieler stellt seine Fraktion aus zwei bis vier Charakteren zusammen und wählt so viele Gadgets aus, dass die Anzahl an Charakteren und Anzahl an Gadgets insgesamt acht beträgt.
+	\newline Die Wahlphase läuft folgendermaßen ab: Der Server präsentiert dem Spieler immer drei zufällige noch nicht vergebene Charaktere und drei zufällige noch nicht vergebene Gadgets. Aus diesen wählt dann der Spieler.
+	\newline Diese Schritte wiederholen sich solange, bis der Spieler seine Charaktere und Gadgets zusammengestellt hat.\\
+	\hline
+	BEGRÜNDUNG: & Jeder Spieler hat ein individuelles Team aus Agenten. \\
+	\hline
+	ABHÄNGIGKEITEN: &  FA-G \ref{Charakter Liste}, FA-G \ref{Gadgets}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Ausruestungsphase}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Ausrüstungsphase \\
+	\hline
+	BESCHREIBUNG: & Nach der Wahlphase muss der Spieler seine Gadgets seinen Agenten beliebig zuordnen.\\
+	\hline
+	BEGRÜNDUNG: & Gadgets können nur aus dem Inventar eines Charakters benutzt werden. \\
+	\hline
+	ABHÄNGIGKEITEN: & GA-G \ref{Wahlphase} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Ende der Spielpartie}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Ende der Spielpartie \\
+	\hline
+	BESCHREIBUNG: & Die Spielpartie ist beendet, wenn der spezielle Charakter weiße Katze ihr Diamanthalsband wieder hat oder keine Agenten mehr im Spiel sind. Die weiße Katze kann ihr Halsband auf folgende Arten wiederbekommen:
+	\begin{enumerate}
+		\item Ein Charakter, der das Diamanthalsband im Inventar hat, bewegt sich auf das Feld, auf dem sich die weiße Katze befindet und übergibt ihr somit das Halsband. Dafür erhält der Charakter ein Geheimnis.
+		\item Das Halsband liegt auf einem freien Feld und die weiße Katze bewegt sich auf dieses Feld. Sie findet somit das Halsband selbst.
+	\end{enumerate}\\
+	\hline
+	BEGRÜNDUNG: & Legt fest, wann das Spiel beendet ist. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{ueberlange Spielpartie} \todo[inline]{Geheimnis} \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{ueberlange Spielpartie}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & überlange Spielpartie \\
+	\hline
+	BESCHREIBUNG: & Ist die maximale Rundenzahl erreicht, so passiert folgendes:
+	\begin{enumerate}
+		\item NPC werden aus dem Szenario entfernt.
+		\item Der spezielle Charakter Hausmeister erscheint auf einem zufälligen freien Feld und wird in die Zugreihenfolge eingeordnet.
+	\end{enumerate}
+	Ist der Hausmeister am Zug, so wird der Charakter ermittelt, der die kürzeste Laufstrecke zu ihm hat. Der Hausmeister wechselt auf das Feld des ermittelten Charakter und der Charakter wird aus der Spielpartie entfernt.\\
+	\hline
+	BEGRÜNDUNG: & Verhindert, dass Spielpartie kein Ende findet. \\
+	\hline
+	ABHÄNGIGKEITEN: &  \\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+	\refstepcounter{table}\label{Sieger bestimmen}
+	\textbf{ID} & \textbf{FA-G \arabic{table}} \\
+	\hline
+	TITEL: & Sieger bestimmen \\
+	\hline
+	BESCHREIBUNG: & Nachdem die Partie zu Ende ist, werden die Spielchips jedes Charakters gemäß dem IPs-pro-Spielchip-Wert in IP umgerechnet und zu den IP des Charakters hinzugefügt. Um die siegreiche Fraktion zu bestimmen, werden folgende Sieg-Metriken der Reihenfolge nach angewendet (sobald ein Sieger feststeht, wird abgebrochen):
+	\begin{enumerate}
+		\item Es wird die Summer der IP der Charakter pro Fraktion gebildet. Die Fraktion, die mehr IP gesammelt hat gewinnt.
+		\item Falls die weiße Katze das Diamanthalsband durch einen Charakter wiedererhalten hat, gewinnt die Fraktion, zu der dieser Charakter gehört.
+		\item Es gewinnt die Fraktion, die mehr Cocktails getrunken hat.
+		\item Es gewinnt die Fraktion, die mehr Cocktails auf Charaktere der anderen Fraktion verschüttet hat.
+		\item Es gewinnt die Fraktion, die am wenigsten Schaden an HP erlitten hat.
+		\item Als letztes Mittel wird der Sieger zufällig gewählt.
+	\end{enumerate}\\
+	\hline
+	BEGRÜNDUNG: & Am Ende der Spielpartie, soll es einen Sieger geben. \\
+	\hline
+	ABHÄNGIGKEITEN: & FA-G \ref{Ende der Spielpartie}, FA-G \ref{Charakter} \\
 \end{tabularx}
