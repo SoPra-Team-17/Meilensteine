@@ -22,5 +22,36 @@
 
         \end{umlcall}
 
+        \begin{umlcall}[dt=35, op={register}, return={Success}]{P2}{Server}
+            \begin{umlcall}[op={name(String)}]{P2}{Server} 
+            \end{umlcall}
+            
+            \begin{umlfragment}[type=alt, label=Mensch, inner xsep=7] 
+                \begin{umlcall}[op={type("Mensch")}]{P2}{Server} 
+                \end{umlcall}
+
+                \umlfpart[KI]
+
+                \begin{umlcall}[op={type("KI")}]{P2}{Server}
+                \end{umlcall}
+            \end{umlfragment}
+
+        \end{umlcall}
+
+        \begin{umlcall}[op=ready]{Server}{P1}
+            \begin{umlcall}[op=ready, dt=-1]{Server}{P2}
+            \end{umlcall}
+        \end{umlcall}
+
+        \begin{umlfragment}[type=alt, label=P1, inner xsep=7] 
+            \begin{umlcall}[op=start, dt=10]{P1}{Server} 
+            \end{umlcall}
+
+            \umlfpart[P2]
+
+            \begin{umlcall}[op=start, dt=20]{P2}{Server}
+            \end{umlcall}
+        \end{umlfragment}
+
     \end{umlseqdiag} 
 \end{tikzpicture}
