@@ -1,0 +1,32 @@
+\subsection{Durchführen einer Aktion}
+
+\begin{tikzpicture}
+    \begin{umlseqdiag}
+        \umlactor[class=Client]{P1}
+        \umlobject[no ddots]{Server}
+        \umlactor[class=Client]{P2}
+
+        \begin{umlcall}[op=action]{P1}{Server}
+
+            \begin{umlcallself}[op=validate]{Server}
+            \end{umlcallself}
+
+            \begin{umlfragment}[type=alt, label=fail, inner xsep=8]
+
+                \begin{umlcall}[type=return, op=fail]{Server}{P1}
+                \end{umlcall}
+
+                \umlfpart[success]
+
+                \begin{umlcall}[op=action(result)]{Server}{P2}
+                \end{umlcall}
+
+                \begin{umlcall}[type=return, op=action(result)]{Server}{P1}
+                \end{umlcall}
+
+            \end{umlfragment}
+
+        \end{umlcall}
+
+    \end{umlseqdiag}
+\end{tikzpicture}
