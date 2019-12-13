@@ -2,7 +2,7 @@ all: Pflichtenheft.pdf
 	$(info ARTIFACTS:Pflichtenheft.pdf)
 
 .PHONY: Pflichtenheft.pdf
-Pflichtenheft.pdf: Pflichtenheft.tex Meilenstein01/domainmodel.pdf Meilenstein01/fields.pdf Meilenstein01/gadgets.pdf
+Pflichtenheft.pdf: Pflichtenheft.tex Meilenstein01/domainmodel.pdf Meilenstein01/fields.pdf Meilenstein01/gadgets.pdf tikz-uml.sty
 	latexmk -pdf Pflichtenheft.tex
 
 Meilenstein01/domainmodel.pdf: Meilenstein01/diagrams/domainmodel.dot
@@ -12,8 +12,7 @@ Meilenstein01/fields.pdf: Meilenstein01/diagrams/fields.dot
 	dot -T pdf -o $@ Meilenstein01/diagrams/fields.dot
 
 Meilenstein01/gadgets.pdf: Meilenstein01/diagrams/gadgets.dot
-	unflatten -l 5 -o compressed.dot Meilenstein01/diagrams/gadgets.dot
-	dot -T pdf -o $@ compressed.dot 
+	unflatten -l 5 Meilenstein01/diagrams/gadgets.dot | dot -T pdf -o $@
 
 .PHONY: clean
 clean:
@@ -22,3 +21,13 @@ clean:
 .PHONY: deploy
 deploy: Meilenstein01/Pflichtenheft.pdf
 	latexmk -pdf -c
+
+mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
+mkfile_dir := $(dir $(mkfile_path))
+
+tikz-uml.sty:
+	wget https://perso.ensta-paris.fr/~kielbasi/tikzuml/var/files/src/tikzuml-v1.0-2016-03-29.tbz
+	tar -xf tikzuml-v1.0-2016-03-29.tbz
+	cp tikzuml-v1.0-2016-03-29/tikz-uml.sty $(mkfile_dir)/
+	rm -r tikzuml-v1.0-2016-03-29
+	rm tikzuml-v1.0-2016-03-29.tbz

@@ -1,0 +1,26 @@
+\subsection{Verbindung mit dem Server}
+
+\begin{tikzpicture} 
+    \begin{umlseqdiag} 
+        \umlactor[class=Spieler]{P1}
+        \umlobject[no ddots]{Server}
+        \umlactor[class=Spieler]{P2}
+        
+        \begin{umlcall}[op={register}, return={Success}]{P1}{Server}
+            \begin{umlcall}[op={name(String)}]{P1}{Server} 
+            \end{umlcall}
+            
+            \begin{umlfragment}[type=alt, label=Mensch, inner xsep=7] 
+                \begin{umlcall}[op={type("Mensch")}]{P1}{Server} 
+                \end{umlcall}
+
+                \umlfpart[KI]
+
+                \begin{umlcall}[op={type("KI")}]{P1}{Server}
+                \end{umlcall}
+            \end{umlfragment}
+
+        \end{umlcall}
+
+    \end{umlseqdiag} 
+\end{tikzpicture}

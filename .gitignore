@@ -272,3 +272,6 @@ TSWLatexianTemp*
 *.glstex
 
 # End of https://www.gitignore.io/api/latex
+
+# downloaded packages
+*.sty
