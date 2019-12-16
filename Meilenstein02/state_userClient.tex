@@ -1,7 +1,30 @@
 %Found at: %https://tex.stackexchange.com/questions/420217/change-style-of-basic-states-in-tikz-uml-package
-\tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners}}
+\tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners, align=center}}
 
+\todo{Position der Verbindungen anpassen, sodass sie nicht mehr aufeinander liegen}
 \begin{tikzpicture}
 	\umlstateinitial[name=initial, x=5, y=0]
+	\node[singlestate] at (5, -6) (menuConnected){Hauptmenü\\ (connected)};
+	\node[singlestate] at (5, -2) (menuDisconnected){Hauptmenü\\ (disconnected)};
+	\node[singlestate] at (0, -4) (help){Hilfe};
+	\umlstatefinal[x=10, y=-4, name=final]
+	\node[singlestate] at (5, -8) (lobbyView){Lobbyübersicht};
+	\node[singlestate] at (8, -10) (guest){Lobbybeitritt als Zuschauer};
+	\node[singlestate] at (3, -10) (game){Lobbybeitritt als Spieler};
+	\node[singlestate] at (5, -14) (inGame){im Spiel};
+	\node[singlestate] at (5, -12) (inLobby){in einer Lobby};
+	\node[singlestate] at (5, -16) (gameEnded){Spiel beendet};
 	
+	\umltrans{initial}{menuDisconnected}
+	\umltrans[arg={Hilfe aufrufen/}, pos=0.4, align=right]{menuDisconnected}{help}
+	\umltrans[arg={Hilfe aufrufen/}, pos=0.4]{menuConnected}{help}
+	\umlVHtrans[arg={Hilfe schließen[connected]/}, align=right, pos=0.8]{help}{menuConnected}
+	\umlVHtrans[arg={Hilfe schließen[disconnected]/}, pos=0.5]{help}{menuDisconnected}
+	\umltrans[arg={verbinde mit Server/}, pos=0.5, align=right]{menuDisconnected}{menuConnected}
+	\umltrans[arg={trenne Serververbindung/}, pos=0.5, align=left]{menuConnected}{menuDisconnected}
+	\umlHVtrans[arg={Client schließen/}, pos=0.9, align=right]{menuDisconnected}{final}
+	\umlHVtrans[arg={Client schließen/}, pos=0.9, align=right]{menuConnected}{final}
+	\umltrans[arg={Lobbyübersicht aufrufen/}, pos=0.5, align=left]{menuConnected}{lobbyView}
+	%\umltrans[arg={Hauptmenü aufrufen/}, pos=0.5, align=left, arm1=-1cm]{lobbyView}{menuConnected}
+	\umlHVHtrans[arg={Zurück zum Hauptmenü/}, pos=0.2, align=left, arm1=8cm]{gameEnded}{menuConnected}
 \end{tikzpicture}
