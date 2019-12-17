@@ -17,11 +17,24 @@ ABHÄNGIGKEITEN: & \\
 \hline
 TITEL: & Hauptmenü \\
 \hline 
-BESCHREIBUNG: & Im Hauptmenü hat der Nutzer die Möglichkeit, seinen Namen festzulegen, einem Server durch Eingabe der Adresse beizutreten, oder das Spiel zu beenden.\\ 
+BESCHREIBUNG: & Im Hauptmenü hat der Nutzer die Möglichkeit, seinen Namen festzulegen, sich mit einem Server durch Eingabe der Adresse zu verbinden, zur Lobby-Übersicht zu wechseln oder das Spiel zu beenden.\\ 
 \hline
 BEGRÜNDUNG: & Vor dem Spielen muss der Spieler eine Verbindung zum Server aufbauen. \\
 \hline
-ABHÄNGIGKEITEN: & \\
+ABHÄNGIGKEITEN: & FA-C \ref{c-session}\\
+\end{tabularx}
+
+\begin{tabularx}{16cm}{l|X}
+\refstepcounter{table}\label{c-lobby-overview}
+\textbf{ID} & \textbf{FA-C \arabic{table}} \\
+\hline
+TITEL: & Lobby-Übersicht \\
+\hline 
+BESCHREIBUNG: & In der Lobby-Übersicht zeigt der Client dem Nutzer an, welchen Lobbies er beitreten kann und wie viele Spieler sich in diesen Lobbies befinden. Diese Daten werden in einer Liste dargestellt. Optional kann der Client auch anzeigen, wie viele Zuschauer sich innerhalb einer Lobby befinden.\\ 
+\hline
+BEGRÜNDUNG: & Damit ein Server mehrere Spielpartien gleichzeitig verwalten kann und die Benutzer sich ihre Mitspieler aussuchen können, ist eine Lobby-Übersicht erforderlich\\
+\hline
+ABHÄNGIGKEITEN: & FA-C \ref{c-menu}\\
 \end{tabularx}
 
 \begin{tabularx}{16cm}{l|X}
