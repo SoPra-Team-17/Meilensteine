@@ -1,30 +1,56 @@
 %Found at: %https://tex.stackexchange.com/questions/420217/change-style-of-basic-states-in-tikz-uml-package
 \tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners, align=center}}
 
-\todo{Position der Verbindungen anpassen, sodass sie nicht mehr aufeinander liegen}
 \begin{tikzpicture}
-	\umlstateinitial[name=initial, x=5, y=0]
-	\node[singlestate] at (5, -6) (menuConnected){Hauptmenü\\ (connected)};
-	\node[singlestate] at (5, -2) (menuDisconnected){Hauptmenü\\ (disconnected)};
-	\node[singlestate] at (0, -4) (help){Hilfe};
-	\umlstatefinal[x=10, y=-4, name=final]
-	\node[singlestate] at (5, -8) (lobbyView){Lobbyübersicht};
-	\node[singlestate] at (8, -10) (guest){Lobbybeitritt als Zuschauer};
-	\node[singlestate] at (3, -10) (game){Lobbybeitritt als Spieler};
-	\node[singlestate] at (5, -14) (inGame){im Spiel};
-	\node[singlestate] at (5, -12) (inLobby){in einer Lobby};
-	\node[singlestate] at (5, -16) (gameEnded){Spiel beendet};
+	\umlstateinitial[name=initial, x=0, y=0]
+	\begin{umlstate}[x=7, y=-2, name=menu]{Hauptmenü}
+		\umlstatetext{}
+		\umlbasicstate[x=0, y=0, name=menuDisconnected, do={bekannte Server\\ anpingen}, align=center]{Hauptmenü (disconnected)}
+		\umlbasicstate[x=0, y=-4, name=menuConnected, do={Lobbies abfragen}]{Hauptmenü (connected)}
+	\end{umlstate}
 	
-	\umltrans{initial}{menuDisconnected}
-	\umltrans[arg={Hilfe aufrufen/}, pos=0.4, align=right]{menuDisconnected}{help}
-	\umltrans[arg={Hilfe aufrufen/}, pos=0.4]{menuConnected}{help}
-	\umlVHtrans[arg={Hilfe schließen[connected]/}, align=right, pos=0.8]{help}{menuConnected}
-	\umlVHtrans[arg={Hilfe schließen[disconnected]/}, pos=0.5]{help}{menuDisconnected}
-	\umltrans[arg={verbinde mit Server/}, pos=0.5, align=right]{menuDisconnected}{menuConnected}
-	\umltrans[arg={trenne Serververbindung/}, pos=0.5, align=left]{menuConnected}{menuDisconnected}
-	\umlHVtrans[arg={Client schließen/}, pos=0.9, align=right]{menuDisconnected}{final}
-	\umlHVtrans[arg={Client schließen/}, pos=0.9, align=right]{menuConnected}{final}
-	\umltrans[arg={Lobbyübersicht aufrufen/}, pos=0.5, align=left]{menuConnected}{lobbyView}
-	%\umltrans[arg={Hauptmenü aufrufen/}, pos=0.5, align=left, arm1=-1cm]{lobbyView}{menuConnected}
-	\umlHVHtrans[arg={Zurück zum Hauptmenü/}, pos=0.2, align=left, arm1=8cm]{gameEnded}{menuConnected}
+	\node[singlestate] at (0, -2.7) (help){Hilfe};
+	\node[singlestate] at(16, -4.85) (settings){Einstellungen};
+	\umlstatefinal[x=16, y=-0, name=final]
+	\node[singlestate] at (7, -8) (lobbyView){Lobbyübersicht};
+	
+	\begin{umlstate}[x=7, y=-13, name=lobby]{Lobby}
+		\umlstatetext{}
+		\umlbasicstate[x=0, y=0, name=spieler, do={}, align=center]{in Lobby (Rolle: Spieler)}
+		\umlbasicstate[x=0, y=-4, name=zuschauer, do={}]{in Lobby (Rolle: Zuschauer)}
+	\end{umlstate}
+	
+	\node[singlestate] at (7, -20) (inGame){im Spiel};
+	\node[singlestate] at (7, -22) (gameEnded){Spiel beendet};
+	
+	\umlVHtrans{initial}{menuDisconnected}
+	
+	\umltrans[align=center, arg={verbinde/}, pos=0.5, align=right, anchor1=-120, anchor2=125]{menuDisconnected}{menuConnected}
+	\umltrans[arg={trennen/}, pos=0.5, align=left, anchor1=55, anchor2=-60]{menuConnected}{menuDisconnected}
+	
+	\umlHVtrans[arg={Hilfe aufrufen/}, pos=0.5, align=right, anchor1=160]{menu}{help}
+	\umlVHtrans[arg={Hilfe schließen/}, pos=0.5, anchor2=200]{help}{menu}
+	
+	\umlHVtrans[arg={Einstellungen aufrufen/}, pos=0.8, align=right, anchor1=-30]{menu}{settings}
+	\umlVHtrans[arg={Einstellungen schließen/}, pos=1.2, anchor1=-90, anchor2=-48, align=right]{settings}{menu}
+	
+	\umlHVtrans[arg={Client schließen/}, pos=0.7, align=right, anchor1=30]{menu}{final}
+	
+	\umltrans[arg={Lobbyübersicht aufrufen/}, pos=0.7, align=right, anchor1=-100, anchor2=158]{menu}{lobbyView}
+	\umltrans[arg={Zurück zum Menü/}, pos=0.3, align=left, anchor1=23, anchor2=-81]{lobbyView}{menu}
+	
+	\umltrans[arg={verlasse Lobby/}, pos=0.4, align=left, anchor1=90, anchor2=-90]{lobby}{lobbyView}
+	
+	\umlHVHtrans[arg={betrete Lobby[Spielerslots belegt]/}, pos=1.5, align=left, anchor1=0, anchor2=0, arm1=2cm]{lobbyView}{zuschauer}
+	\umlHVHtrans[arg={betrete Lobby[Spielerslot frei]/}, pos=1.5, align=right, anchor1=180, anchor2=180, arm1=-2cm]{lobbyView}{spieler}
+	
+	\umltrans[arg={Rollenwechsel/}, pos=0.5, align=right, anchor1=-110, anchor2=110]{spieler}{zuschauer}
+	\umltrans[arg={Rollenwechsel/}, pos=0.5, align=left, anchor1=70, anchor2=-70]{zuschauer}{spieler}
+	
+	\umlHVHtrans[arg={Zurück zum Menü/}, pos=0.2, align=left, arm1=8.5cm, anchor2=-15]{gameEnded}{menuConnected}
+	
+	\umltrans[arg={Spielende erreicht/}, pos=0.6, align=left]{inGame}{gameEnded}
+	
+	\umltrans[arg={Spiel starten[alle Spieler bereit]/}, pos=0.6, align=left]{lobby}{inGame}
+%
 \end{tikzpicture}
