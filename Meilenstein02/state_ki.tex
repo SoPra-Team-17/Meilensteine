@@ -1,0 +1,22 @@
+\begin{tikzpicture} 
+    \umlstateinitial[y=4, name=initial]
+    \begin{umlstate}[name=running]{running}
+        \begin{umlstate}[name=waiting, y=0]{Warte}
+        \end{umlstate}
+
+        \begin{umlstate}[name=analyzing, y=-4]{Analysiere Spielzustand}
+        \end{umlstate}
+
+        \begin{umlstate}[name=planning, y=-8]{Plane nächste Aktion}
+        \end{umlstate}
+
+        \umlHVHtrans[arm1=5, arg={Aktion Senden}, pos=0.5]{planning}{waiting}
+        \umltrans[arg={Aktion Empfangen}, pos=0.5]{waiting}{analyzing}
+        \umltrans{analyzing}{planning}
+
+    \end{umlstate}
+
+    \umltrans[arg={verbinde/}, pos=0.3]{initial}{waiting}
+    \umlstatefinal[name=final, x=-6, y=-1]
+    \umlHVtrans[arg={Spielende erreicht/}, pos=0.6]{waiting}{final}
+\end{tikzpicture}
