@@ -1,0 +1,16 @@
+\begin{tikzpicture} 
+    \umlstateinitial[y=4, name=initial]
+    \umlstateenter[name=connect, x=-4, y=4]
+    \umlstateend[name=end, x=-4, y=-6]
+    \begin{umlstate}{running}
+        \begin{umlstate}[y=0, name=lobby]{Lobby}
+        \end{umlstate}
+        \begin{umlstate}[y=-4, name=game]{Spiel}
+        \end{umlstate}
+    \end{umlstate}
+
+    \umltrans{initial}{running}
+    \umlVHtrans[arg={Verbinde Client}, pos=1.5]{connect}{lobby}
+    \umltrans[arg={Spielstart[$\geq 2$ Spieler]}, pos=0.5]{lobby}{game}
+    \umlHVtrans[arg={Spielende}, pos=0.5]{game}{end}
+\end{tikzpicture}
