@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+\begin{umlseqdiag} 
+	\umlactor[class=Mensch-Spieler]{P1}
+	\umlobject[no ddots]{Server}
+	\umlactor[class=Spieler]{P2}
+
+	
+	\begin{umlcall}[op=newLobby(String), dt=5]{P1}{Server}
+		\begin{umlcall}[type=return, op=lobbyCreated]{Server}{P1}
+		\end{umlcall}
+		
+		\begin{umlcall}[op=joinLobby(String)]{P1}{Server}
+			\begin{umlcall}[type=return, op=lobbyInfo]{Server}{P1}
+			\end{umlcall}
+		\end{umlcall}
+	
+	
+		\begin{umlfragment}[type=alt, label=Mensch, inner xsep=7]
+			\begin{umlcall}[op=joinLobby(String), dt=25]{P2}{Server}
+				\begin{umlcall}[type=return, op=lobbyInfo]{Server}{P2}
+				\end{umlcall}
+			\end{umlcall}
+			
+			\umlfpart[KI]
+			
+			\begin{umlcall}[op=lobbyInfo]{Server}{P2}
+			\end{umlcall}
+		\end{umlfragment}
+		
+	\end{umlcall}
+    
+\end{umlseqdiag}
+\end{tikzpicture}
