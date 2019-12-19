@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+    \begin{umlseqdiag}
+        \umlactor[class=Zuschauer]{W}
+        \umlobject[no ddots]{Server}
+        \umlactor[class=Spieler]{P}
+
+        \begin{umlcall}[op=action(result)]{Server}{P}
+	        \begin{umlcall}[op=action(result)]{Server}{W}
+	        \end{umlcall}
+
+            \begin{umlcallself}[op=updateView]{W}
+            \end{umlcallself}
+            
+			\begin{umlfragment}[type=alt, label=Mensch, inner xsep=5]
+
+				\begin{umlfragment}[type=alt, label=wasTurn, inner xsep=9]
+					\begin{umlcallself}[op=validateView, dt=15]{P}
+					\end{umlcallself}
+					
+					\umlfpart[wasNotTurn]
+					
+					\begin{umlcallself}[op=updateView]{P}
+					\end{umlcallself}
+				\end{umlfragment}
+			
+				\umlfpart[KI]
+				
+				\begin{umlcallself}[op=updateModel]{P}
+				\end{umlcallself}
+			\end{umlfragment}
+            
+
+        \end{umlcall}
+
+    \end{umlseqdiag}
+\end{tikzpicture}
