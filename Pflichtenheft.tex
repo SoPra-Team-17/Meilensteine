@@ -9,7 +9,6 @@
 \usepackage{placeins}
 \usepackage{tikz}
 \usepackage{tikz-uml}
-
 \setboolean{showsolutions}{false}
 
 \ifthenelse{\boolean{showsolutions}}{
@@ -150,9 +149,18 @@ spezifizieren.
 \subsection{Verbindungsaufbau zum Server}
 \input{Meilenstein02/sequenz_verbindung.tex}
 
-\clearpage
+\subsection{Beitreten einer Lobby}
+\input{Meilenstein02/sequenz_lobby.tex}
+
 \subsection{Durchführen einer Aktion}
 \input{Meilenstein02/sequenz_action.tex}
+
+\subsection{Aktualisieren des Spielfelds}
+\input{Meilenstein02/sequenz_update.tex}
+
+\subsection{Spielende und Abbau der Verbindung zum Server}
+\input{Meilenstein02/sequenz_end.tex}
+\clearpage
 
 \subsection{Zustände im Spiel}
 \input{Meilenstein02/state_game.tex}
