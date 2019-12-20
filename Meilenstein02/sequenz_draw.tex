@@ -1,0 +1,33 @@
+\subsubsection{Wahl- und Ausrüstungsphase}
+In diesem Diagramm wird die Wahl- und Ausrüstungsphase durch ein Sequenzdiagramm beschrieben.
+
+\begin{tikzpicture}
+	\begin{umlseqdiag}
+		\umlactor[class=Spieler]{P1}
+		\umlactor[no ddots]{Server}
+		\umlactor[class=Spieler]{P2}
+
+		\begin{umlfragment}[type=Wahlphase,inner xsep=7]
+			\begin{umlcall}[op={3 Char./ 3 Gadgets},dt=10,return={Gewähltes Gadget/Char.},padding=5]{Server}{P1}
+			\end{umlcall}
+			\begin{umlcall}[op={3 Char./ 3 Gadgets},dt=-6,return={Gewähltes Gadget/Char.},padding=5]{Server}{P2}
+			\end{umlcall}
+		\end{umlfragment}
+
+		
+
+		\begin{umlfragment}[type=Ausrüstungsphase,inner xsep=7]
+			\begin{umlcall}[op={Gadget auf Char.},dt=10,return={Bestätigung},padding=5]{P1}{Server}
+			\end{umlcall}
+			\begin{umlcall}[op={Gadget auf Char.},dt=10,return={Bestätigung},padding=5]{P2}{Server}
+			\end{umlcall}
+		\end{umlfragment}
+	\end{umlseqdiag}
+\end{tikzpicture}
+
+In der Wahlphase bietet der Server jedem Spieler drei Charaktere und drei Gadgets zur Auswahl an. 
+Es wird dabei durch den Server sichergestellt, dass die Spieler nicht das gleiche Gadget oder den gleichen Charakter wählen können.\\
+Eine vom Spieler zusammengestellte Fraktion besteht aus zwei bis vier Charakteren.
+Insgesamt wird die im Diagramm beschriebene Wahlphase acht mal wiederholt.\\
+
+In der Ausrüstungsphase muss jeder Spieler seine gewählten Gadgets einem seiner Agenten zuordnen. Die im Diagramm beschriebene Ausrüstungsphase wird solange wiederholt, bis alle Gadgets einem Charakter zugeordnet sind.
