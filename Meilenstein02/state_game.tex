@@ -14,21 +14,21 @@ In diesem Zustandsdiagramm werden abstrakt die Zustände beschrieben, welche wä
 	\end{umlstate}
 	
 	\umlHVtrans[anchor2=145]{initial}{turnp1}
-	\umltrans[arg={Zug beenden},pos=0.5,anchor1=10,anchor2=170]{turnp1}{turnp2}
-	\umltrans[arg={Zug beenden},pos=0.5,anchor1=-170,anchor2=-10]{turnp2}{turnp1}
+	%\umltrans[arg={Zug beenden},pos=0.5,anchor1=10,anchor2=170]{turnp1}{turnp2}
+	%\umltrans[arg={Zug beenden},pos=0.5,anchor1=-170,anchor2=-10]{turnp2}{turnp1}
 
-	\umltrans[arg=Zug beendet]{turnp1}{apbp}
-	\umltrans[arg=Zug beendet]{turnp2}{apbp}
-	\umlHVtrans[arg={Nächster Spieler},anchor1=175,anchor2=110,pos=0.4]{apbp}{turnp1}
+	\umltrans[arg=Zug beendet,align=right,pos=0.6]{turnp1}{apbp}
+	\umltrans[arg=Zug beendet,align=left,pos=0.6]{turnp2}{apbp}
+	\umlHVtrans[arg={Nächster Spieler},anchor1=175,anchor2=130,pos=0.05,align=right]{apbp}{turnp1}
 	\umlHVtrans[arg={Nächster Spieler},anchor2=65,pos=0.8]{apbp}{turnp2}
-	\umltrans[arg={Siegbedingung eingetreten},pos=0.5]{turnp1}{final}
-	\umltrans[arg={Siegbedingung eingetreten},pos=0.5]{turnp2}{final}
+	\umltrans[arg={Siegbedingung},pos=0.5,align=left,anchor1=270,anchor2=180]{turnp1}{final}
+	\umltrans[arg={Siegbedingung},pos=0.5,anchor1=270,anchor2=0,align=right]{turnp2}{final}
 	
-	\umltrans[arg=Bewegen, recursive=155|165|3.5cm, pos=1.5, recursive direction=left to left]{turnp1}{turnp1}
-	\umltrans[arg=Aktion, recursive=175|185|3.5cm, pos=1.5, recursive direction=left to left]{turnp1}{turnp1}
-	\umltrans[arg=Überlanges Spiel, recursive=195|205|3.5cm, pos=1.5, recursive direction=left to left]{turnp1}{turnp1}
+	\umltrans[arg={Bewegen  }, recursive=155|165|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
+	\umltrans[arg={Aktion  }, recursive=175|185|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
+	\umltrans[arg={Überlanges Spiel  }, recursive=195|205|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
 
-	\umltrans[arg=Bewegen, recursive=25|15|3.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
-	\umltrans[arg=Aktion, recursive=5|-5|3.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
-	\umltrans[arg=Überlanges Spiel, recursive=-15|-25|3.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
+	\umltrans[arg=Bewegen, recursive=25|15|1.5cm, pos=1.5,recursive direction=left to left]{turnp2}{turnp2}
+	\umltrans[arg=Aktion, recursive=5|-5|1.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
+	\umltrans[arg=Überlanges Spiel, recursive=-15|-25|1.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
 \end{tikzpicture}
