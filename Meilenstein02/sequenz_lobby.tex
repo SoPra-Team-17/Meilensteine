@@ -15,15 +15,17 @@
 		\end{umlcall}
 	
 	
-		\begin{umlfragment}[type=alt, label=Mensch, inner xsep=7]
-			\begin{umlcall}[op=joinLobby(String), dt=25]{P2}{Server}
-				\begin{umlcall}[type=return, op=lobbyInfo]{Server}{P2}
-				\end{umlcall}
+		\begin{umlfragment}[type=alt, label=KI, inner xsep=7]
+			\begin{umlcall}[op=addKiToLobby, dt = 10]{P1}{Server}
+			\end{umlcall}
+			\begin{umlcall}[op=lobbyInfo]{Server}{P2}
 			\end{umlcall}
 			
-			\umlfpart[KI]
-			
-			\begin{umlcall}[op=lobbyInfo]{Server}{P2}
+			\umlfpart[Mensch]
+		
+			\begin{umlcall}[op=joinLobby(String)]{P2}{Server}
+				\begin{umlcall}[type=return, op=lobbyInfo]{Server}{P2}
+				\end{umlcall}
 			\end{umlcall}
 		\end{umlfragment}
 		
