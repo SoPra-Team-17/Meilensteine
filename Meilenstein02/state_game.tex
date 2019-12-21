@@ -1,34 +1,41 @@
 In diesem Zustandsdiagramm werden abstrakt die Zustände beschrieben, welche während eines Spiels auftreten können.
+\tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners, align=center}}
 
 \begin{tikzpicture}
 	\umlstateinitial[name=initial, x=0, y=0]
-	\umlstatefinal[name=final,x=8,y=-11]
-	\begin{umlstate}[x=4, y=-7, name=turnp1]{Spieler 1 ist am Zug}
+	\umlstatefinal[name=final,x=8,y=-14]
+	\begin{umlstate}[x=4, y=-10, name=turnp1]{Spieler 1 ist am Zug}
 	\end{umlstate}
 
-	\begin{umlstate}[x=12,y=-7,name=turnp2]{Spieler 2 ist am Zug}
+	\begin{umlstate}[x=12,y=-10,name=turnp2]{Spieler 2 ist am Zug}
 	\end{umlstate}
 
-	\begin{umlstate}[x=8,y=-3,name=apbp]{Bestimmen der AP/BP}
+	\begin{umlstate}[x=8,y=-6,name=apbp]{Bestimmen der AP/BP}
 		\umlstatetext{Do/Bestimmen der AP und BP \\Abhängig von den \\gewählten Charaktere}
 	\end{umlstate}
-	
-	\umlHVtrans[anchor2=145]{initial}{turnp1}
-	%\umltrans[arg={Zug beenden},pos=0.5,anchor1=10,anchor2=170]{turnp1}{turnp2}
-	%\umltrans[arg={Zug beenden},pos=0.5,anchor1=-170,anchor2=-10]{turnp2}{turnp1}
 
-	\umltrans[arg=Zug beendet,align=right,pos=0.6]{turnp1}{apbp}
-	\umltrans[arg=Zug beendet,align=left,pos=0.6]{turnp2}{apbp}
+	\node[singlestate] at (3.5,-16)(charAction){Charakter gewählt};
+	\node[singlestate] at (12.5,-16)(charAction2){Charakter gewählt};
+
+	\umlHVtrans[anchor2=90]{initial}{apbp}
+
+	\umlHVtrans[arg=Zug beendet,align=right,pos=1.5,anchor1=0,anchor2=260]{turnp1}{apbp}
+	\umlHVtrans[arg=Zug beendet,align=left,pos=1.5,anchor1=180,anchor2=280]{turnp2}{apbp}
+
 	\umlHVtrans[arg={Nächster Spieler},anchor1=175,anchor2=130,pos=0.05,align=right]{apbp}{turnp1}
 	\umlHVtrans[arg={Nächster Spieler},anchor2=65,pos=0.8]{apbp}{turnp2}
-	\umltrans[arg={Siegbedingung},pos=0.5,align=left,anchor1=270,anchor2=180]{turnp1}{final}
-	\umltrans[arg={Siegbedingung},pos=0.5,anchor1=270,anchor2=0,align=right]{turnp2}{final}
-	
-	\umltrans[arg={Bewegen  }, recursive=155|165|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
-	\umltrans[arg={Aktion  }, recursive=175|185|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
-	\umltrans[arg={Überlanges Spiel  }, recursive=195|205|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
 
-	\umltrans[arg=Bewegen, recursive=25|15|1.5cm, pos=1.5,recursive direction=left to left]{turnp2}{turnp2}
-	\umltrans[arg=Aktion, recursive=5|-5|1.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
-	\umltrans[arg=Überlanges Spiel, recursive=-15|-25|1.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
+	\umlHVtrans[arg={Siegbedingung},pos=1.5,align=right,anchor1=-20,anchor2=135]{turnp1}{final}
+	\umlHVtrans[arg={Siegbedingung},pos=1.5,anchor1=200,anchor2=45,align=left]{turnp2}{final}
+	
+	\umltrans[arg={Überlanges Spiel  }, recursive=170|190|1.5cm, pos=2.1,align=right, recursive direction=left to left]{turnp1}{turnp1}
+	\umltrans[arg=Überlanges Spiel, recursive=10|-10|1.5cm, pos=1.5, recursive direction=left to left]{turnp2}{turnp2}
+
+
+	\umlHVtrans[arg=Charakter ausgewählt,anchor1=248,anchor2=100,align=right,pos=1.5]{turnp1}{charAction}
+	\umlHVtrans[arg=Aktion/Bewegung,pos=1.5,align=left]{charAction}{turnp1}
+
+	\umlHVtrans[arg=Charakter ausgewählt,anchor1=298,anchor2=80 ,align=left,pos=1.5]{turnp2}{charAction2}
+	\umlHVtrans[arg=Aktion/Bewegung,align=right,pos=1.5]{charAction2}{turnp2}
+
 \end{tikzpicture}
