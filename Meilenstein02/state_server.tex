@@ -12,8 +12,8 @@ Im Folgenden wird ein Ausschnitt der Zustände des Servers betrachtet. Um das Zu
 	    	\umlbasicstate[x=10, y=-1, name=waitSecond, do={}, align=center]{Warte auf zweiten Spieler}
 	    	\umlbasicstate[x=5, y=-5, name=startable, do={erlaube Spielstart}, align=center]{Spiel startbereit}
 	    \end{umlstate}
-	    \umlbasicstate[x=0,  y=-8, name=game, do={gampeplay}, align=center]{Spiel}
-	    \umlbasicstate[x=10, y=-7.8, name=paused, do={}, align=center]{Spiel pausiert}
+	    \umlbasicstate[x=1,  y=-8, name=game, do={gampeplay}, align=center]{Spiel}
+	    \umlbasicstate[x=11, y=-7.8, name=paused, do={}, align=center]{Spiel pausiert}
 	    \umlbasicstate[x=10, y=-10, name=disconnect, do={}, align=center]{Warte auf Reconnect}
     \end{umlstate}
     
@@ -21,13 +21,13 @@ Im Folgenden wird ein Ausschnitt der Zustände des Servers betrachtet. Um das Zu
     \umlstatefinal[x=10, y=-18.5, name=final]
 
     \umltrans{initial}{initialize}
-    \umltrans{initialize}{running}
+    \umltrans[anchor1=-90, anchor2=93]{initialize}{running}
     \umltrans[arg={Spieler 1 tritt bei/}, pos=0.5, anchor1=15.5, anchor2=170]{emptyLobby}{waitSecond}
     \umltrans[arg={Spieler 1 verlässt Lobby/}, pos=0.5, anchor1=-170, anchor2=-15.5]{waitSecond}{emptyLobby}
     \umlVHtrans[arg={Spieler 2 tritt bei/}, pos=0.5, anchor1=-140, anchor2=20, align=right]{waitSecond}{startable}
     \umlHVtrans[arg={Spieler 2 verlässt Lobby/}, pos=0.5, anchor1=-20, anchor2=-40, name=exit2]{startable}{waitSecond}
     \umlHVtrans[arg={Spielstart/Spieler*.gameStarted}, pos=0.01, anchor1=+160, anchor2=90, align=right]{startable}{game}
-    \umltrans[arg={Spiel pausieren/Spieler*.pause}, pos=0.5, anchor1=15.5, anchor2=158]{game}{paused}
+    \umltrans[arg={Spiel pausieren[Mensch-Spieler]/Spieler*.pause}, pos=0.5, anchor1=15.5, anchor2=157]{game}{paused}
     \umltrans[arg={Spiel fortsetzen/Spieler*.continue}, pos=0.5, anchor1=-170, anchor2=-15.5]{paused}{game}
     
     \umlVHtrans[arg={Spieler Verbindungsabbruch/Spieler*.notify}, pos=0.9, anchor1=-40, anchor2=160, align=left]{game}{disconnect}
@@ -35,6 +35,8 @@ Im Folgenden wird ein Ausschnitt der Zustände des Servers betrachtet. Um das Zu
     
     \umltrans[arg={Shutdown Server/}, pos=0.5]{running}{deinitialize}
     \umltrans{deinitialize}{final}
+    
+    \umlHVHtrans[arg={Spielende/Spieler*.redirectLobby}, anchor1=-180, anchor2=160, arm1=-3cm]{game}{lobby}
     
     \umlnote[x=10,y=0]{waitSecond}{Spieler 1 könnte die Lobby ebenfalls verlassen (gewollt oder wegen eines Verbindungsabbruchs), in diesem Fall wird der bisherige Spieler 2 nun zu Spieler 1.}
 \end{tikzpicture}
