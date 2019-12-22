@@ -1,42 +1,46 @@
+Sobald ein Sieger feststeht wird diese Information je nach Art des Teilnehmers verarbeitet. Anschließend verlassen die Teilnehmer das Spiel und landen erneut bei \glqq\ref{Sequ_Lobby} \nameref{Sequ_Lobby}\grqq, wenn sie nicht nicht die Verbindung zum Server beenden.
+
 \begin{tikzpicture} 
     \begin{umlseqdiag} 
-        \umlactor[class=Spieler]{P1}
+        \umlactor[class=Zuschauer]{W}
         \umlobject[no ddots]{Server}
-        \umlactor[class=Spieler]{P2}
+        \umlactor[class=Spieler]{P}
         
-        \begin{umlcall}[op={action(result)}]{Server}{P2}
-        \begin{umlcall}[type=return, op={action(result)}]{Server}{P1}
+        \begin{umlcall}[op={action(result)}]{Server}{P}
+        \begin{umlcall}[type=return, op={action(result)}]{Server}{W}
             
             \begin{umlfragment}[type=alt, label=Winner, inner xsep=8]
              
-             	\begin{umlfragment}[type=alt, label=Mensch, inner xsep=4]
-	             	\begin{umlcallself}[op=displayWinner]{P1}
-	             	\end{umlcallself}
+             	\begin{umlcallself}[op=displayWinner]{W}
+             	\end{umlcallself}
 	             	
-	             	\umlfpart[KI]
-	             	
-	             	\begin{umlcallself}[op=infoWinner]{P1}
-	             	\end{umlcallself}
-             	\end{umlfragment}
              	
              	\begin{umlfragment}[type=alt, label=Mensch, inner xsep=7]
-	             	\begin{umlcallself}[op=displayWinner]{P2}
+	             	\begin{umlcallself}[op=displayWinner, dt=5]{P}
 	             	\end{umlcallself}
 	             	
 	             	\umlfpart[KI]
 	             	
-	             	\begin{umlcallself}[op=infoWinner]{P2}
+	             	\begin{umlcallself}[op=infoWinner]{P}
 	             	\end{umlcallself}
              	\end{umlfragment}
              	
-             	\begin{umlcall}[op={deregister}, dt=7]{P1}{Server}
-             	\begin{umlcall}[op={deregister}, dt=10]{P2}{Server}
+             	\begin{umlcall}[op={leaveGame}, dt=7]{W}{Server}
+             	\begin{umlcall}[op={leaveGame}, dt=10]{P}{Server}
              	
 				\end{umlcall}
 				\end{umlcall}
 
             \end{umlfragment}
             
+            
+            \begin{umlfragment}[type=opt, inner xsep=7]
+	            \begin{umlcall}[op={deregister}, dt=7]{W}{Server}
+		            \begin{umlcall}[op={deregister}, dt=10]{P}{Server}
+		            \end{umlcall}
+	            \end{umlcall}
+            \end{umlfragment}
+        
             
 		\end{umlcall}
         \end{umlcall}

@@ -1,3 +1,5 @@
+P1 und P2 sind bereits mit dem Server verbunden. P1 kann entweder mit einem anderen Mensch-Spieler spielen, oder einen KI-Spieler zu seiner Lobby hinzufügen. Sind beide Spieler in der Lobby und signalisieren dem Server, dass sie bereit sind, so kann entweder P1 oder P2 die Spielpartie starten.\\
+Zum Erstellen einer neuen Lobby gehört auch die Konfiguration des Editors mit Szenario, Partie-Konfiguration und Charakter-Beschreibung. Diese wurde hier nicht explizit aufgeführt. \\
 \begin{tikzpicture}
 \begin{umlseqdiag} 
 	\umlactor[class=Mensch-Spieler]{P1}
@@ -15,13 +17,13 @@
 		\end{umlcall}
 	
 	
-		\begin{umlfragment}[type=alt, label=KI, inner xsep=7]
+		\begin{umlfragment}[type=alt, label=P2 is KI, inner xsep=10]
 			\begin{umlcall}[op=addKiToLobby, dt = 10]{P1}{Server}
 			\end{umlcall}
 			\begin{umlcall}[op=lobbyInfo]{Server}{P2}
 			\end{umlcall}
 			
-			\umlfpart[Mensch]
+			\umlfpart[P2 is Mensch]
 		
 			\begin{umlcall}[op=joinLobby(String)]{P2}{Server}
 				\begin{umlcall}[type=return, op=lobbyInfo]{Server}{P2}
@@ -30,6 +32,25 @@
 		\end{umlfragment}
 		
 	\end{umlcall}
+	
+	
+	
+	\begin{umlcall}[op=ready]{P1}{Server}
+	\begin{umlcall}[op=ready, dt=10]{P2}{Server}
+	\end{umlcall}
+	\end{umlcall}
+	
+	\begin{umlfragment}[type=alt, label=P1, inner xsep=7] 
+		\begin{umlcall}[op=start, dt=10]{P1}{Server} 
+		\end{umlcall}
+	
+		\umlfpart[P2]
+		
+		\begin{umlcall}[op=start, dt=20]{P2}{Server}
+		\end{umlcall}
+	\end{umlfragment}
+	
+	
     
 \end{umlseqdiag}
 \end{tikzpicture}

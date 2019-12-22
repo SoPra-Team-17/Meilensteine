@@ -1,10 +1,12 @@
+In jeder Runde legt der Server eine Zugreihenfolge für die Charaktere fest und berechnet deren Bewegungs- und Aktionspunkte. Hier ist gerade ein Charakter aus der Fraktion von P1 am Zug. Ein Zug kann entweder eine Bewegung oder eine Aktion sein. Die dargestellte Sequenz wiederholt sich solange bis der Charakter von P1 keine BP und AP mehr hat oder P1 den Zug beendet. Anschließend ist der nächste Charakter an der Reihe.\\
+
 \begin{tikzpicture}
     \begin{umlseqdiag}
         \umlactor[class=Client]{P1}
         \umlobject[no ddots]{Server}
         \umlactor[class=Client]{P2}
 
-        \begin{umlcall}[op=action]{P1}{Server}
+        \begin{umlcall}[op=zug]{P1}{Server}
 
             \begin{umlcallself}[op=validate]{Server}
             \end{umlcallself}
@@ -16,10 +18,10 @@
 
                 \umlfpart[success]
 
-                \begin{umlcall}[op=action(result)]{Server}{P2}
+                \begin{umlcall}[op=zug(result)]{Server}{P2}
                 \end{umlcall}
 
-                \begin{umlcall}[type=return, op=action(result)]{Server}{P1}
+                \begin{umlcall}[type=return, op=zug(result)]{Server}{P1}
                 \end{umlcall}
 
             \end{umlfragment}
