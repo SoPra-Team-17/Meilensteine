@@ -1,17 +1,40 @@
-\begin{tikzpicture} 
-    \umlstateinitial[y=4, name=initial]
-    \umlstateenter[name=connect, x=-6, y=4]
-    \umlstateend[name=end, x=-6, y=-6]
-    \begin{umlstate}{running}
-        \begin{umlstate}[y=0, name=lobby]{Lobby}
-        \end{umlstate}
-        \begin{umlstate}[y=-4, name=game]{Spiel}
-        \end{umlstate}
-    \end{umlstate}
+Im Folgenden wird ein Ausschnitt der Zustände des Servers betrachtet. Um das Zustandsdiagramm übersichtlich zu halten werden lediglich zwei Spieler und keine Zuschauer modelliert. Außerdem wird davon ausgegangen, dass die beiden Clients sich entsprechend Abschnitt \ref{connect} bereits beim Server registriert haben.  
 
-    \umltrans{initial}{running}
-    \umlVHtrans[arg={Verbinde Client}, pos=1.5]{connect}{lobby}
-    \umlHVHtrans[arg={Spielstart[$\geq 2$ Spieler]}, arm1=2, pos=1.5]{lobby}{game}
-    \umlHVtrans[arg={Spielende[Gewonnen]/NotifyClients}, pos=1.8]{game}{end}
-    \umlVHtrans[arg={Spielende[Timeout]/NotifyClients}, pos=1.5]{game}{end}
+\tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners, align=center}}
+
+\begin{tikzpicture} 
+    \umlstateinitial[x=5, y=2, name=initial]
+    \umlbasicstate[x=5, y=-1, name=initialize, do={erstelle Standard-Lobby}, align=center]{Initialisierung}
+    \begin{umlstate}[x=0, y=-5, name=running]{running}
+	    \begin{umlstate}[y=0, name=lobby]{Lobby}
+	    	\umlstatetext{}
+	    	\umlbasicstate[x=0,  y=-1, name=emptyLobby, do={}, align=center]{Leere Lobby}
+	    	\umlbasicstate[x=10, y=-1, name=waitSecond, do={}, align=center]{Warte auf zweiten Spieler}
+	    	\umlbasicstate[x=5, y=-5, name=startable, do={erlaube Spielstart}, align=center]{Spiel startbereit}
+	    \end{umlstate}
+	    \umlbasicstate[x=0,  y=-8, name=game, do={gampeplay}, align=center]{Spiel}
+	    \umlbasicstate[x=10, y=-7.8, name=paused, do={}, align=center]{Spiel pausiert}
+	    \umlbasicstate[x=10, y=-10, name=disconnect, do={}, align=center]{Warte auf Reconnect}
+    \end{umlstate}
+    
+    \umlbasicstate[x=3, y=-19, name=deinitialize, do={beende laufende Spiele}, align=center]{Deinitialisierung}
+    \umlstatefinal[x=10, y=-18.5, name=final]
+
+    \umltrans{initial}{initialize}
+    \umltrans{initialize}{running}
+    \umltrans[arg={Spieler 1 tritt bei/}, pos=0.5, anchor1=15.5, anchor2=170]{emptyLobby}{waitSecond}
+    \umltrans[arg={Spieler 1 verlässt Lobby/}, pos=0.5, anchor1=-170, anchor2=-15.5]{waitSecond}{emptyLobby}
+    \umlVHtrans[arg={Spieler 2 tritt bei/}, pos=0.5, anchor1=-140, anchor2=20, align=right]{waitSecond}{startable}
+    \umlHVtrans[arg={Spieler 2 verlässt Lobby/}, pos=0.5, anchor1=-20, anchor2=-40, name=exit2]{startable}{waitSecond}
+    \umlHVtrans[arg={Spielstart/Spieler*.gameStarted}, pos=0.01, anchor1=+160, anchor2=90, align=right]{startable}{game}
+    \umltrans[arg={Spiel pausieren/Spieler*.pause}, pos=0.5, anchor1=15.5, anchor2=158]{game}{paused}
+    \umltrans[arg={Spiel fortsetzen/Spieler*.continue}, pos=0.5, anchor1=-170, anchor2=-15.5]{paused}{game}
+    
+    \umlVHtrans[arg={Spieler Verbindungsabbruch/Spieler*.notify}, pos=0.9, anchor1=-40, anchor2=160, align=left]{game}{disconnect}
+    \umlHVtrans[arg={Spieler Reconnect/Spieler*.gameContinues}, pos=0.9, anchor1=-160, anchor2=-80, align=left]{disconnect}{game}
+    
+    \umltrans[arg={Shutdown Server/}, pos=0.5]{running}{deinitialize}
+    \umltrans{deinitialize}{final}
+    
+    \umlnote[x=10,y=0]{waitSecond}{Spieler 1 könnte die Lobby ebenfalls verlassen (gewollt oder wegen eines Verbindungsabbruchs), in diesem Fall wird der bisherige Spieler 2 nun zu Spieler 1.}
 \end{tikzpicture}
