@@ -154,27 +154,33 @@ spezifizieren.
 \subsection{Editor}
 \input{Meilenstein02/use_case_editor.tex}
 
+\clearpage
 \section{Abläufe im System}
 \subsection{Verbindungsaufbau zum Server}
 \input{Meilenstein02/sequenz_verbindung.tex}
 
-\subsection{Beitreten einer Lobby}
+\subsection{Beitreten einer Lobby und Spiel starten}
+\label{Sequ_Lobby}
 \input{Meilenstein02/sequenz_lobby.tex}
 
-\subsection{Durchführen einer Aktion}
+\clearpage
+\subsection{Ablauf des Spiels}
+\subsubsection{Wahl- und Ausrüstungsphase}
+\input{Meilenstein02/sequenz_draw.tex}
+
+\subsubsection{Durchführen eines Zugs}
 \input{Meilenstein02/sequenz_action.tex}
 
-\subsection{Aktualisieren des Spielfelds}
+\subsubsection{Aktualisieren des Spielfelds}
 \input{Meilenstein02/sequenz_update.tex}
 
 \subsection{Spielende und Abbau der Verbindung zum Server}
+\label{Sequ_Winner}
 \input{Meilenstein02/sequenz_end.tex}
 \clearpage
 
 \subsection{Zustände im Spiel}
 \input{Meilenstein02/state_game.tex}
-\clearpage
-\input{Meilenstein02/sequenz_draw.tex}
 \clearpage
 
 \clearpage

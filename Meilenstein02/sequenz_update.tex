@@ -1,14 +1,18 @@
+Nach jedem Zug muss das Spielfeld aktualisiert werden. Dabei unterscheidet sich die Verarbeitung je nach Art des Teilnehmers. Hier ist nur der Fall \glqq no Winner \grqq dargestellt. Der Fall \glqq Winner \grqq befindet sich in Kapitel \glqq\ref{Sequ_Winner} \nameref{Sequ_Winner}\grqq.\\
+
 \begin{tikzpicture}
     \begin{umlseqdiag}
         \umlactor[class=Zuschauer]{W}
         \umlobject[no ddots]{Server}
         \umlactor[class=Spieler]{P}
 
-        \begin{umlcall}[op=action(result)]{Server}{P}
-	        \begin{umlcall}[op=action(result)]{Server}{W}
+        \begin{umlcall}[op=zug(result)]{Server}{P}
+	        \begin{umlcall}[op=zug(result)]{Server}{W}
 	        \end{umlcall}
 
-            \begin{umlcallself}[op=updateView]{W}
+
+	\begin{umlfragment}[type=alt, label=noWinner], inner xsep=12]
+            \begin{umlcallself}[op=updateView, dt=15]{W}
             \end{umlcallself}
             
 			\begin{umlfragment}[type=alt, label=Mensch, inner xsep=5]
@@ -28,6 +32,8 @@
 				\begin{umlcallself}[op=updateModel]{P}
 				\end{umlcallself}
 			\end{umlfragment}
+			
+	\end{umlfragment}
             
 
         \end{umlcall}
