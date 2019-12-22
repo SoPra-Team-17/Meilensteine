@@ -84,135 +84,109 @@
 \title{Pflichtenheft Team 17}
 
 \begin{document}
+\setcounter{secnumdepth}{4}
 
 \maketitle
 
 \tableofcontents
 
+%\addtocontents{toc}{\protect\newpage}
+
 \clearpage
-\section{Kontextanalyse}
+\section{Überblick}
 \input{Meilenstein01/chapter/kontext.tex}
 
 \clearpage
-\section{Fachwissen}
+\section{Anforderungsanalyse}
+\subsection{Fachwissen}
 \input{Meilenstein01/chapter/Fachwissen.tex}
 
 \clearpage
-\section{Domänenmodell}
-\input{Meilenstein01/chapter/Domain.tex}
-
-\clearpage
-\section{Spezifische Anforderungen}
-Dieser Abschnitt enthält alle spezifischen Anforderungen des Systems. Er bietet eine detaillierte
-Beschreibung des Systems und seiner Funktionen.
-
-
-\subsection{Akteure}
+\subsection{Anwendungskontext}
+\subsubsection{Akteure}
 \input{Meilenstein01/chapter/Akteure.tex}
 
 \clearpage
-\subsection{Funktionale Anforderungen}
-
-Dieser Abschnitt enthält alle Anforderungen, die die grundlegenden Aktionen des Softwaresystems
-spezifizieren.
-
-\subsubsection{Server}
-
-\input{Meilenstein01/chapter/serverFA.tex}
-
-\clearpage
-\subsubsection{Client}
-\input{Meilenstein01/chapter/clientFA.tex}
-
-\clearpage
-\subsubsection{KI-Client}
-\input{Meilenstein01/chapter/kiFA.tex}
-\subsubsection{Editor}
-\input{Meilenstein01/chapter/editorFA.tex}
-
-\clearpage
-\subsubsection{Allgemeine funktionale Anforderungen}
-\input{Meilenstein01/chapter/genFA.tex}
-
-\clearpage
-\subsection{Nichtfunktionale Anforderungen}
-\input{Meilenstein01/chapter/nfa.tex}
-
-\clearpage
-\todo{Vielleicht die Diagramme thematisch und nicht nach Typ ordnen}
-\addtocontents{toc}{\protect\newpage}
-\section{Anwendungsfälle des Systems}
-\subsection{Verbindungsverwaltung zwischen Client und Server}
+\subsubsection{Anwendungsfälle des Systems}
+\paragraph{Verbindungsverwaltung zwischen Client und Server} \mbox{}\\
 \input{Meilenstein02/use_case_network.tex}
-
-\subsection{Verwaltung der Spielpartien bei Client und Server}
+\paragraph{Verwaltung der Spielpartien bei Client und Server} \mbox{}\\
 \input{Meilenstein02/use_case_lobbymanagement.tex}
-
-\subsection{Anwendungsfälle innerhalb einer Spielpartie}
+\paragraph{Anwendungsfälle innerhalb einer Spielpartie} \mbox{}\\
 \input{Meilenstein02/use_case_gamesession.tex}
-
-\subsection{Editor}
+\paragraph{Editor} \mbox{}\\
 \input{Meilenstein02/use_case_editor.tex}
 
 \clearpage
-\section{Abläufe im System}
-\subsection{Verbindungsaufbau zum Server}
+\subsubsection{Abläufe im System}
+\paragraph{Verbindungsaufbau zum Server} \mbox{}\\
 \input{Meilenstein02/sequenz_verbindung.tex}
-
-\subsection{Beitreten einer Lobby und Spiel starten}
+\paragraph{Beitreten einer Lobby und Spiel starten} \mbox{}\\
 \label{Sequ_Lobby}
 \input{Meilenstein02/sequenz_lobby.tex}
-
-\clearpage
-\subsection{Ablauf des Spiels}
-\subsubsection{Wahl- und Ausrüstungsphase}
+\paragraph{Ablauf des Spiels} \mbox{}\\
+\subparagraph{Wahl- und Ausrüstungsphase} \mbox{}\\
 \input{Meilenstein02/sequenz_draw.tex}
-
-\subsubsection{Durchführen eines Zugs}
+\subparagraph{Durchführen eines Zugs} \mbox{}\\
 \input{Meilenstein02/sequenz_action.tex}
-
-\subsubsection{Aktualisieren des Spielfelds}
+\subparagraph{Aktualisieren des Spielfelds} \mbox{}\\
 \input{Meilenstein02/sequenz_update.tex}
-
-\subsection{Spielende und Abbau der Verbindung zum Server}
+\paragraph{Spielende und Abbau der Verbindung zum Server} \mbox{}\\
 \label{Sequ_Winner}
 \input{Meilenstein02/sequenz_end.tex}
-\clearpage
-
-\subsection{Zustände im Spiel}
+\paragraph{Zustände im Spiel} \mbox{}\\
 \input{Meilenstein02/state_game.tex}
-\clearpage
-
-\clearpage
-\subsection{Zustände des Clients}
+\paragraph{Zustände des Clients} \mbox{}\\
 \input{Meilenstein02/state_userClient.tex}
-
-\subsection{Zustände des KI-Clients}
+\paragraph{Zustände des KI-Clients} \mbox{}\\
 \input{Meilenstein02/state_ki.tex}
-
-\subsection{Zustände des Servers}
+\paragraph{Zustände des Servers} \mbox{}\\
 \input{Meilenstein02/state_server.tex}
-\clearpage
 
-\section{Schnittstellenarten und Dialogstruktur}
-\subsection{Schnittstellenbeschreibung des Clients}
+\clearpage
+\subsubsection{Funktionale Systemanforderungen}
+Dieser Abschnitt enthält alle Anforderungen, die die grundlegenden Aktionen des Softwaresystems spezifizieren.
+\paragraph{Server} \mbox{}\\
+\input{Meilenstein01/chapter/serverFA.tex}
+\paragraph{Client} \mbox{}\\
+\input{Meilenstein01/chapter/clientFA.tex}
+\paragraph{KI-Client} \mbox{}\\
+\input{Meilenstein01/chapter/kiFA.tex}
+\paragraph{Editor} \mbox{}\\
+\input{Meilenstein01/chapter/editorFA.tex}
+\paragraph{Allgemeine funktionale Anforderungen} \mbox{}\\
+\input{Meilenstein01/chapter/genFA.tex}
+
+\clearpage
+\section{Softwarespezifikation}
+\subsection{Schnittstellenarten und Dialogstruktur}
+\subsubsection{Schnittstellenbeschreibung des Clients}
 \input{Meilenstein03/schnittstelle_client.tex}
-\clearpage
-
-\subsection{Schnittstellenbeschreibung des Servers}
+\subsubsection{Schnittstellenbeschreibung des Servers}
 \input{Meilenstein03/schnittstelle_server.tex}
-\clearpage
-
-\subsection{Schnittstellenbeschreibung des Editors}
+\subsubsection{Schnittstellenbeschreibung des Editors}
 \input{Meilenstein03/schnittstelle_editor.tex}
-\clearpage
-
-\subsection{Schnittstellenbeschreibung des KI-Clients}
+\subsubsection{Schnittstellenbeschreibung des KI-Clients}
 \input{Meilenstein03/schnittstelle_ki.tex}
-\clearpage
 
-\section{Graphische Gestaltung und Nutzungskonzept}
+\subsection{Graphische Gestaltung und Nutzungskonzept}
 \input{Meilenstein03/nutzungskonzept.tex}
+
 \clearpage
+\subsection{Domänenmodell}
+\input{Meilenstein01/chapter/Domain.tex}
+
+\clearpage
+\section{Randbedingungen}
+\subsection{Nichtfunktionale Anforderungen}
+\input{Meilenstein01/chapter/nfa.tex}
+\subsection{Betriebskonzept}
+\input{Meilenstein04/betriebskonzept.tex}
+\subsection{Entwicklungsvorgaben}
+\input{Meilenstein04/entwicklungsvorgaben.tex}
+\subsection{Abnahmekriterien}
+\input{Meilenstein04/abnahmekriterien.tex}
+
+
 
 \end{document}
