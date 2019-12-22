@@ -25,7 +25,7 @@ Im folgenden werden die möglichen Zustände des Clients in einem Zustandsdiagra
 	\node[singlestate] at (7, -18) (inGame){im Spiel};
 	\node[singlestate] at (7, -20) (gameEnded){Spiel beendet};
 	
-	\umlVHtrans{initial}{menuDisconnected}
+	\umlVHtrans[arg={Client starten/}, pos=0.5]{initial}{menuDisconnected}
 	
 	\umltrans[align=center, arg={verbinde/}, pos=0.5, align=right, anchor1=-120, anchor2=125]{menuDisconnected}{menuConnected}
 	\umltrans[arg={trennen/}, pos=0.5, align=left, anchor1=55, anchor2=-60]{menuConnected}{menuDisconnected}
