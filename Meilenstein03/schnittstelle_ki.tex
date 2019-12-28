@@ -1,0 +1,7 @@
+Die KI kommuniziert mit dem Server über eine Websocket Verbindung (FA-KI \ref{ki-session}, FA-KI \ref{ki-register}).\\
+Mit dem Mensch-Client interagiert die KI über eine graphische Oberfläche, die der Mensch-Client implementiert. Dabei hat der Mensch-Client in der Lobby die Möglichkeit über einen Button mit der Aufschrift "add KI" eine KI als gegnerischen Spieler hinzuzufügen (FA-KI \ref{ki-config}, FA-KI \ref{ki-intelligenz}).
+
+TODO: Dialogstrukturdiagramm (add KI -> Dialog KonfigKI -> back / add KI) einfache Benutzung QA10
+
+Während des Spiels können über die API der KI Tipps für den nächsten Spielzug angezeigt werden (FA-KI \ref{ki-api}).\\
+Zudem besitzt die KI ein Kommandozeileninterface, um diese unabhängig von einem Mensch-Client konfigurieren und einer Lobby hinzufügen zu können (FA-KI \ref{ki-cli}).
