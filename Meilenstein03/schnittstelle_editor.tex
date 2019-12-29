@@ -1,6 +1,26 @@
 Erstellt ein Mensch-Client über die Lobbyübersicht eine neue Lobby, so muss er die Konfiguration des Editors über eine graphische Oberfläche durchführen (FA-E \ref{e-gui}, FA-E \ref{e-szenarioedit}, FA-E \ref{e-partieedit}, FA-E \ref{e-charedit}).
 
+\begin{figure}[h]
+	\centering
+	\tikzstyle{block} = [draw, rectangle, 
+	minimum height=3em, minimum width=6em, very thick, align = center]
+	\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+	
+	\node[block] (Editor) at (0, 7) {<<Dialog>>\\ \textbf{Editor}};
+	
+	\node[block, above = 1.0cm of Editor] (Help) {<<Popup>>\\ \textbf{Help}\\ (QA10)};
+	
+	\node[block, below left = 1.0cm and 1.5cm of Editor] (Szenario) {<<Dialog>>\\ \textbf{Szenario-Editor}};
+	
+	\node[block, below = 1.0cm of Editor] (Partie) {<<Dialog>>\\ \textbf{Partie-Editor}};
+	
+	\node[block, below right = 1.0cm and 1.0cm of Editor] (Charakter) {<<Dialog>>\\ \textbf{Charakter-Editor}};
+	
+	TODO: addLines
+	
+	\end{tikzpicture}
+	\caption{graphische Schnittstelle des Editors}
+\end{figure}
 TODO: Dialogstrukturdiagramm (new Lobby -> Dialog Editor -> Szenario -> Partiekonfiguration(Zeit für Phasen, Wahrscheinlichkeiten) -> CharakterBeschreibung -> back / new Lobby) einfache Benutzung QA10
 
-\mbox{}\\
 Um die Konfiguration, die im Editor vorgenommen wurde, über die Websocket-Schnittstelle des Mensch-Clients mit dem Server zu kommunizieren, verfügt der Editor über eine JSON-Schnittstelle (FA-E \ref{e-json-encoding}, FA-E \ref{e-json-decoding}).

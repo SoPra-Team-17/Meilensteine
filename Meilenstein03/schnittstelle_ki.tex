@@ -1,7 +1,29 @@
 Die KI kommuniziert mit dem Server über eine Websocket Verbindung (FA-KI \ref{ki-session}, FA-KI \ref{ki-register}).\\
-Mit dem Mensch-Client interagiert die KI über eine graphische Oberfläche, die der Mensch-Client implementiert. Dabei hat der Mensch-Client in der Lobby die Möglichkeit über einen Button mit der Aufschrift "add KI" eine KI als gegnerischen Spieler hinzuzufügen (FA-KI \ref{ki-config}, FA-KI \ref{ki-intelligenz}).
+Mit dem Mensch-Client interagiert die KI über eine graphische Oberfläche, die der Mensch-Client implementiert. Dabei hat der Mensch-Client in der Lobby die Möglichkeit eine KI als gegnerischen Spieler hinzuzufügen (FA-KI \ref{ki-config}, FA-KI \ref{ki-intelligenz}).
 
-TODO: Dialogstrukturdiagramm (add KI -> Dialog KonfigKI -> back / add KI) einfache Benutzung QA10
+\begin{figure}[h]
+	\centering
+	\tikzstyle{block} = [draw, rectangle, 
+	minimum height=3em, minimum width=6em, very thick, align = center]
+	\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+	
+	\node[block] (KI) at (0, 7) {<<Dialog>>\\ \textbf{KI-Configuration}};
+	
+	\node[block, below left = 1.0cm and 1.0cm of KI] (Help) {<<Popup>>\\ \textbf{Help}\\ (QA10)};
+	
+	\node[block, above right = 1.0cm and 1.5cm of KI] (Lobby) {<<Dialog>>\\ \textbf{Lobby}};
+	
+	
+	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (KI.west) -| (Help.north) node [near start, xshift=3mm] {\small Help};
+	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Help.east) -| (KI.south) node [near start, xshift=3mm] {\small Close};
+	
+	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (KI.east) -| (Lobby.south) node [near start, xshift=1.5mm] {\small add KI $\vert\vert$ Back};
+	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Lobby.west) -| (KI.north) node [near start, xshift=3mm] {\small add KI};
+	
+	
+	\end{tikzpicture}
+	\caption{graphische Schnittstelle des KI-Client}
+\end{figure}
 
 Während des Spiels können über die API der KI Tipps für den nächsten Spielzug angezeigt werden (FA-KI \ref{ki-api}).\\
 Zudem besitzt die KI ein Kommandozeileninterface, um diese unabhängig von einem Mensch-Client konfigurieren und einer Lobby hinzufügen zu können (FA-KI \ref{ki-cli}).
