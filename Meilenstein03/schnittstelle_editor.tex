@@ -1,4 +1,4 @@
-Erstellt ein Mensch-Client über die Lobbyübersicht eine neue Lobby, so muss er die Konfiguration des Editors über eine graphische Oberfläche durchführen (FA-E \ref{e-gui}, FA-E \ref{e-szenarioedit}, FA-E \ref{e-partieedit}, FA-E \ref{e-charedit}).
+Erstellt ein Benutzer-Client über die Lobbyübersicht eine neue Lobby, so muss er die Konfiguration des Editors über eine graphische Oberfläche durchführen (FA-E \ref{e-gui}, FA-E \ref{e-szenarioedit}, FA-E \ref{e-partieedit}, FA-E \ref{e-charedit}).
 
 \begin{figure}[h]
 	\centering
@@ -16,14 +16,14 @@ Erstellt ein Mensch-Client über die Lobbyübersicht eine neue Lobby, so muss er
 	
 	\node[block, below right = 3.0cm and 3.0cm of Editor] (Charakter) {<<Dialog>>\\ \textbf{Charakter-Editor}};
 	
-	\node[block, above right = 1.0cm and 1.5cm of Editor] (Lobby) {<<Dialog>>\\ \textbf{create Lobby}};
+	\node[block, above right = 1.0cm and 1.5cm of Editor] (Lobby) {<<Dialog>>\\ \textbf{Create Lobby}};
 	
 	
 	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Editor.west) -| (Help.south) node [near start, xshift=3mm] {\small Help};
 	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Help.east) -| ([xshift= -0.5cm]Editor.north) node [near start, xshift=3mm] {\small Close};
 	
-	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Editor.east) -| (Lobby.south) node [near start, xshift=1.5mm] {\small safe $\vert\vert$ Back};
-	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Lobby.west) -| ([xshift= 0.5cm]Editor.north) node [near start, xshift=3mm] {\small configure};
+	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Editor.east) -| (Lobby.south) node [near start, xshift=1.5mm] {\small Save $\vert\vert$ Back};
+	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Lobby.west) -| ([xshift= 0.5cm]Editor.north) node [near start, xshift=3mm] {\small Configure};
 	
 	\draw[thick, ->, shorten >=1mm,shorten <=1mm] ([xshift = -0.5cm]Editor.south) -- (Szenario.north) node [near start, xshift=-30mm, yshift = -5mm] {\small Szenario};
 	\draw[thick, ->, shorten >=1mm,shorten <=1mm] (Szenario.east) -- (Partie.west) node [near start, xshift=3mm] {\small Partie};
