@@ -1,0 +1,395 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns:pencil="http://www.evolus.vn/Namespace/Pencil" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:rdfa="http://docs.oasis-open.org/opendocument/meta/rdfa#" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:regexp="http://exslt.org/regular-expressions" xmlns:em="http://exslt.org/math" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1790" height="977" id="exportedSVG" version="1.1" pencil:version="1.2.2" sodipodi:docname="Szenario-Editor"><g inkscape:label="Untitled Page" inkscape:groupmode="layer" id="layer_untitled_page"><g><rect x="0" y="0" width="1790" height="977" fill="none"/><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="2ec1ad82551c4f2aae7c2146339158ed" transform="matrix(1,0,0,1,447,319)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="09170ea190304419b7dc2c69b52106ca" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="5fe69b3065a742248ff47e09d4b0ea36">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="c86f79af09ea46d29825c7ba541f86ba">
+                    <rect p:name="textClipPathRect" id="fdbe50a7690947f8b845aa0a132a4b27" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#09170ea190304419b7dc2c69b52106ca" transform="translate(2, 2)" p:filter="url(#5fe69b3065a742248ff47e09d4b0ea36)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="42bd68e9369a4062ae8ad1fb59d5f4c5"/>
+            <use xlink:href="#09170ea190304419b7dc2c69b52106ca"/>
+            <g clip-path="url(#c86f79af09ea46d29825c7ba541f86ba)" p:name="text" id="619287cf52bc4c9c8ade64336e344ef8" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="5d948105f2604b719b39623ae8152a46" transform="matrix(1,0,0,1,349,319)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="e444d2b7563a42958b05de950a389e85" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="555a7e21623c403b909e7224d7204dde">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="35b2cb668bd84179ba91329d02937970">
+                    <rect p:name="textClipPathRect" id="70c2e3590693485bb2de3ab5e7fb8381" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#e444d2b7563a42958b05de950a389e85" transform="translate(2, 2)" p:filter="url(#555a7e21623c403b909e7224d7204dde)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="cf1fb372eae74007a9c4eb81181e2b4d"/>
+            <use xlink:href="#e444d2b7563a42958b05de950a389e85"/>
+            <g clip-path="url(#35b2cb668bd84179ba91329d02937970)" p:name="text" id="af25a51e54624755956c237ddd6641f2" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="50b41800bf634b958faeb3b021f5f446" transform="matrix(1,0,0,1,545,319)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="74631fe1df1d469b8feb4bd324f9a928" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="b5a384a31eeb447fbd3b2e4525b749ac">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="2c9d3dd0e54941c788144841d73de685">
+                    <rect p:name="textClipPathRect" id="836376993d394aa7bb7f748ec7d69860" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#74631fe1df1d469b8feb4bd324f9a928" transform="translate(2, 2)" p:filter="url(#b5a384a31eeb447fbd3b2e4525b749ac)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="7492027f7c904008bc53c3466d17442b"/>
+            <use xlink:href="#74631fe1df1d469b8feb4bd324f9a928"/>
+            <g clip-path="url(#2c9d3dd0e54941c788144841d73de685)" p:name="text" id="9d67038c980a4895bb79b15cca3722c4" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="55e2421adff54379956e707dcaf8d703" transform="matrix(1,0,0,1,447,417)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="ba9a328456dc490f821a9b60cebc3181" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="f3821891ecee43389531ff745bcb72f9">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="9a89736a09c347449849928d848a79f0">
+                    <rect p:name="textClipPathRect" id="da2f5cfd655d424f96c1e03e624371b5" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#ba9a328456dc490f821a9b60cebc3181" transform="translate(2, 2)" p:filter="url(#f3821891ecee43389531ff745bcb72f9)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="fdcb2e33ab5f4d0fae90a97ea2ac1385"/>
+            <use xlink:href="#ba9a328456dc490f821a9b60cebc3181"/>
+            <g clip-path="url(#9a89736a09c347449849928d848a79f0)" p:name="text" id="571c05c6ca3b4ce0b15c6c0d696dc8b4" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="fb65211b07824ff59915fb2711ebbbe0" transform="matrix(1,0,0,1,349,417)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="ab023c88a31f4bf6a14503098027a616" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="44487f2b0aec4630a8a7a26b4fbe58c4">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="a1226a67db024686b4b49caa93c10ded">
+                    <rect p:name="textClipPathRect" id="1826179f87304e19a2d168a593d8f951" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#ab023c88a31f4bf6a14503098027a616" transform="translate(2, 2)" p:filter="url(#44487f2b0aec4630a8a7a26b4fbe58c4)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="c8bb497802ce4c7ba491482743aec0de"/>
+            <use xlink:href="#ab023c88a31f4bf6a14503098027a616"/>
+            <g clip-path="url(#a1226a67db024686b4b49caa93c10ded)" p:name="text" id="8503110687874e7db41aa6665fb4d22e" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="62090321ae6643d1ab121a1317dcd89f" transform="matrix(1,0,0,1,545,417)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="bd485e4b5138492a9d13e558cf0d17b1" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="f55da8eebcec4207b5a68bb4cafd5a47">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="899ae6fce8814258a8c2de716f221e76">
+                    <rect p:name="textClipPathRect" id="61c2ca5c3a94457bbbe666603df67e82" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#bd485e4b5138492a9d13e558cf0d17b1" transform="translate(2, 2)" p:filter="url(#f55da8eebcec4207b5a68bb4cafd5a47)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="3f2b58a83825444f9f8423d82b441cad"/>
+            <use xlink:href="#bd485e4b5138492a9d13e558cf0d17b1"/>
+            <g clip-path="url(#899ae6fce8814258a8c2de716f221e76)" p:name="text" id="ec3a7416d47f4ec19fe5c85e72302bd6" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="95c826e6490a4e73836597bffb5c69e5" transform="matrix(1,0,0,1,447,514)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="3840b05606514cdaa50ec071bd097a0e" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="e3bb565bdfad41138a9780b86625221b">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="6546765a04554344a97518102f23301b">
+                    <rect p:name="textClipPathRect" id="ef09322f2ce149789a39948da50d738e" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#3840b05606514cdaa50ec071bd097a0e" transform="translate(2, 2)" p:filter="url(#e3bb565bdfad41138a9780b86625221b)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="fa190d50f9ec4dad93f98c512fd43e67"/>
+            <use xlink:href="#3840b05606514cdaa50ec071bd097a0e"/>
+            <g clip-path="url(#6546765a04554344a97518102f23301b)" p:name="text" id="b46ff07596fc40c999ed4a28fa1e7dd0" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="787cc7553e664b41a177ab8327a48ec5" transform="matrix(1,0,0,1,349,514)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="af81e0993fbe4ed69ba4839fef5a3c30" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="a79efec94fea4a8eae00148abe5a99b2">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="b147d19ad43943ccbe687e7f8bcae21f">
+                    <rect p:name="textClipPathRect" id="cc2ec3976a3444b28b812efb361de98e" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#af81e0993fbe4ed69ba4839fef5a3c30" transform="translate(2, 2)" p:filter="url(#a79efec94fea4a8eae00148abe5a99b2)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="aac4e151a7564b4a9bf516426dea75d7"/>
+            <use xlink:href="#af81e0993fbe4ed69ba4839fef5a3c30"/>
+            <g clip-path="url(#b147d19ad43943ccbe687e7f8bcae21f)" p:name="text" id="4a5ce2c393814b3caf678caf558bde42" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Shape" p:def="Evolus.Common:RoundedRectV2" id="ecf4ab12a4b14ce49d240d827dd0f03e" transform="matrix(1,0,0,1,545,514)"><p:metadata><p:property name="box">100,100</p:property><p:property name="withBlur">false</p:property><p:property name="radius">0,0</p:property><p:property name="textPadding">0,0.423728813559322</p:property><p:property name="fillColor">#FFFFFFFF</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">
+                </p:property><p:property name="textFont">"Liberation Sans",Arial,sans-serif|normal|normal|13px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+
+            <defs>
+                <rect width="98" height="98" rx="0" ry="0" x="0" y="0" style="stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-opacity: 1;" p:name="rrRect" id="5a2ca16ec7b64eed9d279f11ce8b84ad" transform="translate(1,1)"/>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="shadingFilter" id="9b943ffd7988445a96cc25584c9eb270">
+                    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+                </filter>
+                <clipPath p:name="textClipPath" id="45935e42f7b146d582d0846329d6ce09">
+                    <rect p:name="textClipPathRect" id="6020de3984884874811e7bd3bf644e4a" x="0.423728813559322" y="0.423728813559322" width="99.15254237288136" height="99.15254237288136"/>
+                </clipPath>
+            </defs>
+            <use xlink:href="#5a2ca16ec7b64eed9d279f11ce8b84ad" transform="translate(2, 2)" p:filter="url(#9b943ffd7988445a96cc25584c9eb270)" style="opacity: 0.5; visibility: hidden; display: none;" p:heavy="true" p:name="bgCopy" id="918ca3f6837146119f40eccddfc15af8"/>
+            <use xlink:href="#5a2ca16ec7b64eed9d279f11ce8b84ad"/>
+            <g clip-path="url(#45935e42f7b146d582d0846329d6ce09)" p:name="text" id="2083de161a304d1ab1989ba6debda028" dominant-baseline="auto" style="font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; color: rgb(0, 0, 0);"><g transform="translate(0,50)"><text/></g></g>
+        </g><g p:type="Group" transform="matrix(1,0,0,1,281,549)" id="b7f02a87e89d4339ab59ac2cd5a4d7f0" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="e6b69b5d21cb4ad4aadf120dd7d99c61" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="32868b25a03d438c8bf1ab32c815cfd7" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="82b255b8641c48769b3a8663a9f88158" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="8835868512f340dc969a7893de2fa62c" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="005f3a63d7d3404ba73cbac0f00c4e3c" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="dc24165a0d8f4ba8b4eae84e0251727f" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="85eb8b7821bb4acbb1874b017fc4b914" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="fba3d63f69304f0eb4e4107ce9ba0878" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,281,442)" id="cc711942d7874ee9b9bdd32a7c56a653" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="428c216a8cbb4f0eba4cd9656ec1f264" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="17a754999c154136a1cf25a09fcb1105" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="eac9e98d3f8b416c800f02bfae699d8d" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="45a7330c4c0340c58bda784c60362d88" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="08e849e3ec1c4e48b715ab886c742e56" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="88f53550fe8e48b796e30117ec3f6f6f" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="b2e7b377bc0d41e4a01f490614da2ee8" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="63fbac1003554f729bd1b2cc63bfbeeb" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,472,249)" id="581e67448a124827994644d0b71f3b89" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="9088ff27764442bd937e62224275aac2" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="38121f819eaa4e348bb58fe061dfb641" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="bfda72dc3e5b4c3bacedd6103875931b" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="7e4c0ce39b7a44f6a13a6d72ace5e059" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="3bf85eff1aaf40f6b3563b0a2b3282e2" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="93f5a932a03843e5af7fc55811a0c60e" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="3c9e149465a146dcbee8b7e072fd278b" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="389619ce359e4fdcaca1fa9d4bd245b9" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,665,442)" id="02e3b697689845329ddc91b15b70ea11" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="d734e3b70f2c4426b71ea630c7f7f483" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="29d0308f06dc4b04a91fb0e6d9a4228a" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="290271a4200848b981635e2645f1bf4a" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="559c307b1aa54a9c85ba3c5757b42dfd" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="2be413a3eb424d09aca4ce383b963d65" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="ab6c9535aa444826a04a819ca04c88a5" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="658bf2b789d342d2bcf32ce8ea52ce4b" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="7e49f35b8cf14d9aa2a456050a0a8eae" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,374,249)" id="869d8387ca6f49ed933d5d741407ebf1" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="99e1d6aa54704abab78934cc645356d9" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="551c6bcb51684e5caeb4b2b12a23f41e" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="d189d608e5044d139711a514eaa183db" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="3fa3f6ed0bf64f919526bdad3de8f94a" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="7d45a63cea3945f398cfa8c0f850446f" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="b424d0317f7f478dbfb5598d0a2f7ee3" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="45364c9c932149cc98c402eae0cfa7b2" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="3c0012e7f788472da9e97db0a57459e4" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,281,344)" id="8b62cba27f974f58a10f6d086da8c313" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="d0fca2684fab42a1b79e11f445c19ae1" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="1007c68060bb4ae5a867d2efadec83df" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="1b3322019c2d44e98999360d24c3ff18" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="56fe56a13c084f18ae177e69d6881da6" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="b36c554de8f846749d33f0eb58780f0f" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="6a3ef9e4151a4795966a99fbe8bd2f7b" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="797266722b624f138d68c9be15fee16b" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="3525299ec66e42c8b6459d49f2f57601" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,665,549)" id="57c8e95ed95d48eaa6df6665a7221c5c" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="413a62f2456f4a97b0ce34958ac861dc" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="b3f32e45ad28479f8434d602969a6a0c" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="3453f4f544bf41639d9026a145fc7fc1" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="a6a14d92d7114b72b12127aab58be9f5" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="349679bab4be48dd87ecc06c6ccc971a" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="39ac2fa9daff47a1bb6c3df6bde9ce16" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="a7991bcfa25e4c2097515d430425061a" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="37cbd101832344eda1baf6d83882c31c" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,570,633)" id="80fa59ed217c463f9937c299c03eca82" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="8eda12aaae1443b38ed9e44fdf807dfd" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="853f540017b943419d4c38e94ff45efa" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="b935b7ec1bd8457d9df56e76dd663b68" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="694b9145978243bcbf20da6a3288a91b" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="729f35dae43f405fa50a05d6ffdf5c12" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="6224d4577354445785e10f2cb01c968a" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="bf4952fb009645e59595eafdca03b30d" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="260f95d9f0794517b68a48f0e08e5956" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,374,633)" id="53c8bedd63e641229297f4e4d3b42f59" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="5f730c1e07ca45a4b347fe148db5ed9c" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="450fea22c0b24a57b40f15e02af37c90" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="def5a4ab19d6403ca3a3def4757039bc" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="7f76427cce654e019c900aaf533b461b" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="d5f95896e2cd4cd89680229e812e3152" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="bb958da291f4456d92ba8b58669ba39f" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="09e678e930174b9280ea88db14837ffe" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="52b6f966ef674b6ca7b027f61c98502f" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,570,249)" id="6d1904dacf9941c2a07bb2258d175260" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="07bded3cde4c47f692cc45583957baa0" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="8abbb99cdd364901ae7e3238f928d0bb" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="9ed6f39cc2b34894a0481592b758a904" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="58463c6aa9be4ad0b1ac0bbf8d1cfe30" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="cee7fa0845ad4cfdabb50069a81a5c45" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="73c286b6788b4fa1816d300b17e25e19" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="2fbf8cc48012496385f0b3152d61afea" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="76ab8e5bd6a84d64bb4474a3a2db436a" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,472,633)" id="db5b404898ec4c1e87738511fb7ad97a" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="441900804b4c466488fcc292acecb1bf" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="385c56133b574739be6504c385d28362" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="0dc05baa6e58458c94f120de7db819c9" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="a85dbd1ea7dd4c2e8ac87ea0f8b058d3" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="ae1b8ddf35ce40d99489b9d48fd32696" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="c446cbcf9cbb4d28aede4011c6988638" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="dbac8fb07b7448d6a9b96ffc8f8411d0" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="90223ebb1fe2494e8dfbf0bad347d4ce" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,665,344)" id="08787208e5684a2286cadc414c9c4275" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="2f3d7f7df2f240668622fa4aa5e2a201" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="3aec82f2a37b44ee9d80f641acdf7a21" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="5f5b7eee10b64881b2a7184d97da7631" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="a4feaa5161fe45719a0e312a379c95be" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="4330568279d149708c9b2ba8bfc58f1c" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="2059bd4ba66445acb9325c849f0b0273" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="218fe8dda15c41309f90bdac6891e82e" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="b574768feaf94ec58f5c412dc38bed0c" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Shape" p:def="Evolus.Common:Bitmap" id="f56c73a82fa64327b8557dd957affea2" transform="matrix(1,0,0,1,447.9999999999999,96)"><p:metadata><p:property name="box">100,100</p:property><p:property name="imageData">134,150,ref://675bb275e61248ceafb45ecfc55818d4.svg</p:property><p:property name="withBlur">false</p:property><p:property name="fillColor">#FFFFFF00</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">0|</p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="5e5ed818df6a45088b6fd4255d0bd507">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="32b27eebc2fc411eb6e33b47f8cbfaa7">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="572a433b5d38479d917ac49dc86abecb" transform="translate(0,0)" width="100" height="100"/>
+                    <g p:name="imageContainer" id="e219cc6277b347ce94633bbb3cd8b00b" transform="scale(0.746268656716418,0.6666666666666666)">
+                        <image x="0" y="0" p:name="image" id="71d4b273929448e3b4c6698a177a014a" xlink:href="file:///C:/Users/lb31/AppData/Local/Temp/tmp-76607UoO9szDEoSV/refs/675bb275e61248ceafb45ecfc55818d4.svg?token=1578058472221" width="134" height="150"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#32b27eebc2fc411eb6e33b47f8cbfaa7" transform="translate(1, 1)" p:filter="url(#5e5ed818df6a45088b6fd4255d0bd507)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="fa0ca5af27f146888ab520d98a9fd84d"/>
+            <use xlink:href="#32b27eebc2fc411eb6e33b47f8cbfaa7"/>
+        </g><g p:type="Shape" p:def="Evolus.Common:Bitmap" id="9485a3379a1e410d8135b4550f9e5ff8" transform="matrix(1,0,0,1,324,96)"><p:metadata><p:property name="box">100,100</p:property><p:property name="imageData">150,150,ref://61a4099530294b1db3f611aa92f204fe.svg</p:property><p:property name="withBlur">false</p:property><p:property name="fillColor">#FFFFFF00</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">0|</p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="47a2ea65a6784359b44aff425a28b0ca">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="95342acd34b64a399f0a33045eb37d33">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="2746b05bd38f499d96099a372bee30ea" transform="translate(0,0)" width="100" height="100"/>
+                    <g p:name="imageContainer" id="31e2f9cb11804cad9d375ae24cc4ef37" transform="scale(0.6666666666666666,0.6666666666666666)">
+                        <image x="0" y="0" p:name="image" id="3a3dd1cee78b43b699f2be28db65f790" xlink:href="file:///C:/Users/lb31/AppData/Local/Temp/tmp-76607UoO9szDEoSV/refs/61a4099530294b1db3f611aa92f204fe.svg?token=1578059972571" width="150" height="150"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#95342acd34b64a399f0a33045eb37d33" transform="translate(1, 1)" p:filter="url(#47a2ea65a6784359b44aff425a28b0ca)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="484800d8bf944f039dcc2b110799dcd9"/>
+            <use xlink:href="#95342acd34b64a399f0a33045eb37d33"/>
+        </g><g p:type="Shape" p:def="Evolus.Common:Bitmap" id="c9e4afaa31b0423b935e458e4c4b795e" transform="matrix(1,0,0,1,197,96)"><p:metadata><p:property name="box">100,100</p:property><p:property name="imageData">150,150,ref://c6386d2f78fb4313a098d80a788a3052.svg</p:property><p:property name="withBlur">false</p:property><p:property name="fillColor">#FFFFFF00</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">0|</p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="f7c98160a9cd4705ba9db871a6c2b953">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="c9ebd3b1980442bb8b05ef3551c7a86f">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="2b2404e5f20a4489903defc969c2d04c" transform="translate(0,0)" width="100" height="100"/>
+                    <g p:name="imageContainer" id="5b219ac07e5a46829f4f68ab400213df" transform="scale(0.6666666666666666,0.6666666666666666)">
+                        <image x="0" y="0" p:name="image" id="16f2f518f8934554af140caebdf1255a" xlink:href="file:///C:/Users/lb31/AppData/Local/Temp/tmp-76607UoO9szDEoSV/refs/c6386d2f78fb4313a098d80a788a3052.svg?token=1578060246630" width="150" height="150"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#c9ebd3b1980442bb8b05ef3551c7a86f" transform="translate(1, 1)" p:filter="url(#f7c98160a9cd4705ba9db871a6c2b953)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="2562ae1cf0c74cd3bc1aea6a47749ef3"/>
+            <use xlink:href="#c9ebd3b1980442bb8b05ef3551c7a86f"/>
+        </g><g p:type="Shape" p:def="Evolus.Common:Bitmap" id="76bf459f3b844a7fbef231c4b8389af2" transform="matrix(1,0,0,1,545,96)"><p:metadata><p:property name="box">100,100</p:property><p:property name="imageData">150,150,ref://854bf9939489475698889e1468b6ff84.svg</p:property><p:property name="withBlur">false</p:property><p:property name="fillColor">#FFFFFF00</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">0|</p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="4d3d5856006d4d32b54816ff0b0dc738">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="b4fe8e4031e54b4d9b4bd3322db86da2">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="ac26c7495d954f89ac38a6c98e3adbf8" transform="translate(0,0)" width="100" height="100"/>
+                    <g p:name="imageContainer" id="48653ffeacde4352badef444cd2c9307" transform="scale(0.6666666666666666,0.6666666666666666)">
+                        <image x="0" y="0" p:name="image" id="b7c3fc67cc5e4bbfad868d87383a1fe8" xlink:href="file:///C:/Users/lb31/AppData/Local/Temp/tmp-76607UoO9szDEoSV/refs/854bf9939489475698889e1468b6ff84.svg?token=1578060521527" width="150" height="150"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#b4fe8e4031e54b4d9b4bd3322db86da2" transform="translate(1, 1)" p:filter="url(#4d3d5856006d4d32b54816ff0b0dc738)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="00b88aa599d540c99e8bb36f07abade1"/>
+            <use xlink:href="#b4fe8e4031e54b4d9b4bd3322db86da2"/>
+        </g><g p:type="Shape" p:def="Evolus.Common:Bitmap" id="419614a27d33406f899306ded3151ff6" transform="matrix(1,0,0,1,640,96)"><p:metadata><p:property name="box">100,100</p:property><p:property name="imageData">150,150,ref://59dcc1f5e55e4d1c86fb3e1cb506d0c5.svg</p:property><p:property name="withBlur">false</p:property><p:property name="fillColor">#FFFFFF00</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">0|</p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="4679eed849ef4e6cb0762645702bf73b">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="f98dd85bcdff443993ad4b247c85f103">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="29a98c86c0354e21a60a5fb4e6731b40" transform="translate(0,0)" width="100" height="100"/>
+                    <g p:name="imageContainer" id="cce4343012e54321b57240d2aa9f21f1" transform="scale(0.6666666666666666,0.6666666666666666)">
+                        <image x="0" y="0" p:name="image" id="c0694fa455544d4b9ca8d400b77ccbcc" xlink:href="file:///C:/Users/lb31/AppData/Local/Temp/tmp-76607UoO9szDEoSV/refs/59dcc1f5e55e4d1c86fb3e1cb506d0c5.svg?token=1578060590538" width="150" height="150"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#f98dd85bcdff443993ad4b247c85f103" transform="translate(1, 1)" p:filter="url(#4679eed849ef4e6cb0762645702bf73b)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="a5921def4ce0494b8f71a1fa34382974"/>
+            <use xlink:href="#f98dd85bcdff443993ad4b247c85f103"/>
+        </g><g p:type="Shape" p:def="Evolus.Common:Bitmap" id="82ab57a2626a4daaa5722048c6120cac" transform="matrix(1,0,0,1,749,96)"><p:metadata><p:property name="box">100,100</p:property><p:property name="imageData">150,150,ref://ad5d3435b7924261a9d5978267452658.svg</p:property><p:property name="withBlur">false</p:property><p:property name="fillColor">#FFFFFF00</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">0|</p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="f1540d5b1faa4bdb91a15b33706faa90">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="195d7ec9a2044f79a54f2e4d8da9c1ed">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="22883278b51f4703b278821823c9f62b" transform="translate(0,0)" width="100" height="100"/>
+                    <g p:name="imageContainer" id="d2f9e8e410064ee9b93e539933889099" transform="scale(0.6666666666666666,0.6666666666666666)">
+                        <image x="0" y="0" p:name="image" id="25d690edbb9349b182ca274e1dd9d507" xlink:href="file:///C:/Users/lb31/AppData/Local/Temp/tmp-76607UoO9szDEoSV/refs/ad5d3435b7924261a9d5978267452658.svg?token=1578060854358" width="150" height="150"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#195d7ec9a2044f79a54f2e4d8da9c1ed" transform="translate(1, 1)" p:filter="url(#f1540d5b1faa4bdb91a15b33706faa90)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="d13bc58f8cc144658c5b205c448f65fa"/>
+            <use xlink:href="#195d7ec9a2044f79a54f2e4d8da9c1ed"/>
+        </g><g p:type="Shape" p:def="Evolus.Prototype.GUI:buttonCancel" id="56f8d009fbe541888befd6baba00b695" transform="matrix(1,0,0,1,136,805)"><p:metadata><p:property name="box">117,40</p:property><p:property name="disabled">false</p:property><p:property name="default">false</p:property><p:property name="fillColor">#FAFAFAFF</p:property><p:property name="strokeColor">#666666FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">Abbrechen</p:property><p:property name="textFont">'Arial'|normal|normal|15px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+            <g p:name="rect" id="82c120a850cb46ddb135bbc9c09618fd" style="fill: rgb(250, 250, 250); fill-opacity: 1; stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;">
+    			<path style="stroke-linejoin: round;" p:name="line1" id="f73d415e30de42f1b5453d90aaf234a1" d="M 0 0 L 117 0 L 117 40 L 0 40 L 0 0 z"/>
+    		</g>
+    		<text p:name="text" id="dd704696e24445959683091412d9f078" transform="translate(23,26)" style="font-family: Arial; font-size: 15px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;">Abbrechen</text>
+        </g><g p:type="Shape" p:def="Evolus.Prototype.GUI:buttonCancel" id="c92ed4dccca042f3a6c19839b8270d1e" transform="matrix(1,0,0,1,447,805)"><p:metadata><p:property name="box">117,40</p:property><p:property name="disabled">false</p:property><p:property name="default">false</p:property><p:property name="fillColor">#FAFAFAFF</p:property><p:property name="strokeColor">#666666FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">Editor-Übersicht</p:property><p:property name="textFont">'Arial'|normal|normal|15px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+            <g p:name="rect" id="8e206002ea204eb3ba0314fc8af4d4e3" style="fill: rgb(250, 250, 250); fill-opacity: 1; stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;">
+    			<path style="stroke-linejoin: round;" p:name="line1" id="84ca763306804c4a9adaec8cca5c3394" d="M 0 0 L 117 0 L 117 40 L 0 40 L 0 0 z"/>
+    		</g>
+    		<text p:name="text" id="d40c174a0a56449fb9cc79ac4a87285d" transform="translate(4,26)" style="font-family: Arial; font-size: 15px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;">Editor-Übersicht</text>
+        </g><g p:type="Shape" p:def="Evolus.Prototype.GUI:buttonCancel" id="4c65e0a8a58b44fea9c0bfc6ff97465b" transform="matrix(1,0,0,1,790,805)"><p:metadata><p:property name="box">117,40</p:property><p:property name="disabled">false</p:property><p:property name="default">false</p:property><p:property name="fillColor">#FAFAFAFF</p:property><p:property name="strokeColor">#666666FF</p:property><p:property name="strokeStyle">2|</p:property><p:property name="textContent">Speichern</p:property><p:property name="textFont">'Arial'|normal|normal|15px|none|0</p:property><p:property name="textColor">#000000FF</p:property><p:property name="textAlign">1,1</p:property></p:metadata>
+            <g p:name="rect" id="1b0e8d4d100442daa194f19fb29a6f5f" style="fill: rgb(250, 250, 250); fill-opacity: 1; stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;">
+    			<path style="stroke-linejoin: round;" p:name="line1" id="a568d829e5f5412dbbea1665d479435a" d="M 0 0 L 117 0 L 117 40 L 0 40 L 0 0 z"/>
+    		</g>
+    		<text p:name="text" id="d400ad83d68e48388aa10b0abd86d9b4" transform="translate(25,26)" style="font-family: Arial; font-size: 15px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;">Speichern</text>
+        </g><g p:type="Group" transform="matrix(1,0,0,1,281,633)" id="2801d9cdd79d4effa8251c0fc571da56" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="642fa259987a414395d2355d6b9c8b3d" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="99bf531685464d11be6f7a74c0b89fdb" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="a3b5f7b79a6b4f038c35896fb52b5433" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="a262e150374b49ff96293d4bb69884e7" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="4dfc64f7546c4647927967041b98790a" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="9882c7856dc548629a3a213b3459d835" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="67601484b13c48f385777eae5d51801f" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="7d3ee77108bb4c58a2c7f8379615a2bd" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,665,249)" id="5aac3fe2a591486ab992c01a34999d68" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="cdb4e67247b44f84ae59c797da95128a" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="76e1e7886731477192b6d6a6657d5fa5" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="f6575b6f909843e8acb9555f86cac24c" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="71eb7872375244008b58bbb34b6a1fe8" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="06c9baf26bb64b6f989a112cbd91731d" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="85a2cf4fb2254c1eb4922bfb4486d852" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="57689056ec80488185369d5aca8a7eee" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="420b0229a10c423d9797ff592361737a" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,665,633)" id="1741b6162ecc409ea7705577d43259f8" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="f89e3d2a33f5494392f8ec008fd47a12" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="66df0f389b024812a1598f36213ee318" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="936d7e22ac5b444b956918a26a7b4fdd" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="8dc49c6fd90e45d0b2bf74d506cff1e6" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="5cdb9e51b22241a8a9effacae5bac638" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="0865726699c14bfeae37b46e2b0baff6" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="fa6c858e3c2b42bba94416f1a03a91b1" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="570edee87d3847f199f52f18e17fe8e0" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g><g p:type="Group" transform="matrix(1,0,0,1,281,249)" id="38a0e0983d584af49bd778c0fc31e026" p:sizing-gow="50" p:sizing-goh="50"><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Horizontal Line" id="813aefe20bb24692940ae2f15b5e7cbc" transform="matrix(1,0,0,1,-1,24)" p:sizing-ox="0" p:sizing-oy="25" p:sizing-ow="50" p:sizing-oh="0"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">50,0</p:property><p:property name="mode">horizontal</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="daef00118423409086cf23cb1126a31a" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="47069f5b2ab14ccd8d73d7402c75e92b" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="c6fb77dc8ef24d79974d9adee130db24" transform="translate(0.5,0.5)" d="M 0 0 C 17 0 33 0 50 0"/>
+    		</g>
+        </g><g p:type="Shape" p:def="Evolus.Sketchy.GUI:lineV2" p:sc="Vertical Line" id="95eae604090e4b9cb5e069a44eace39f" transform="matrix(1,0,0,1,24,-1)" p:sizing-ox="25" p:sizing-oy="0" p:sizing-ow="0" p:sizing-oh="50"><p:metadata><p:property name="startLine">0,0</p:property><p:property name="endLine">0,50</p:property><p:property name="mode">vertical</p:property><p:property name="strokeColor">#000000FF</p:property><p:property name="strokeStyle">1|</p:property></p:metadata>
+            <g p:name="rect" id="1db526f40e0e4188a2e86d7a1a3b6292" transform="translate(0.5,0.5)" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 1;">
+    			<path style="stroke: #FFFFFF; stroke-opacity: 0; stroke-width: 8px; fill: none;" p:name="bg" id="463336bc9fc443c6975be7c3b6f1b602" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    			<path style="stroke-linejoin: round; fill: none;" p:name="line1" id="e9c514183fde4461ba7738d17e6e0ea9" transform="translate(0.5,0.5)" d="M 0 0 C 0 17 0 33 0 50"/>
+    		</g>
+        </g></g></g></g></svg>
