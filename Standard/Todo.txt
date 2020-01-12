@@ -1,0 +1,6 @@
+TODO
+- sequenzdiagramme auswahl- und ausrüstungsphase -> michael
+- sequenzdiagramme spielphase -> marco
+- sequenzdiagramme kontrollnachrichten -> marco 
+- definition von request config -> jo
+- definition property enum und gadget property -> heiko
