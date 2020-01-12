@@ -8,6 +8,12 @@ Falls in dieses Feld kein valider Lobby-Name eingegeben wurde, so wird ein Pop-U
 In den drei Dropdown-Menüs kann der Benutzer das gewünschte Szenario, die gewünschte Charakterliste und die gewünschte Partie-Konfiguration auswählen. Wenn man in einem Dropdown-Menü den Eintrag 'Neue(s) Szenario/Charakterliste/Partie-Konfiguration erstellen' auswählt, dann wechselt die Ansicht zum Dialog \glqq{}Szenario-/Charakter-/Partie-Editor\grqq{} und eine neue Datei des entsprechenden Typs wird erstellt und zum editieren geöffnet.
 Wenn man in einem der Dropdown-Menüs einen Eintrag auswählt, dann wird eine Schaltfläche mit der Aufschrift \glqq{}Bearbeiten\grqq{} neben dem Eintrag. Mit dieser Schaltfläche wechselt man ebenfalls in den entsprechenden Editor und die Datei des Eintrags wird geöffnet zum editieren.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Meilenstein03/Lobby-Konfiguration_Mockup.png}
+  \caption{Mockup für die Lobby-Konfiguration}
+\end{figure}
+
 Dialog \glqq{}Lobby\grqq{}
 
 Die Liste mit den verbundenen Clients wird kontinuierlich sortiert, sodass die Spieler immer an oberster Stelle stehen. Die Spieler und die Zuschauer werden untereinander chronologisch nach Beitritt zur Lobby bzw. dem letzten Rollenwechsel sortiert, sodass der Client, der als letzter als Zuschauer der Lobby beigetreten ist bzw. als letzter innerhalb der Lobby die Rolle zu Zuschauer geändert hat, den untersten Eintrag in der Liste hat. Die KI-Clients sind am Benutzernamen erkennbar. 
@@ -38,13 +44,13 @@ Mit direkter Eingabe in das Feld der Anzeige des Werts einer Wahrscheinlichkeit 
 
 Dialog \glqq{}KI-Konfiguration\grqq{}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{Meilenstein03/KI-Konfiguration_Mockup.png}
-  \caption{Mockup für das Lobby-View}
-\end{figure}
-
 Mit der Schaltfläche \glqq{}Zurück\grqq{} wechselt man zum Dialog \glqq{}Lobby\grqq{}, ohne das ein KI-Client hinzugefügt wurde, mit der Schaltfläche \glqq{}KI hinzufügen\grqq{} wechselt man zum Dialog \glqq{}Lobby\grqq{} und fügt einen KI-Client mit den ausgewählten Parametern hinzu.
 Die Intelligenzstufe der KI kann über die Radiobuttons mit den Bezeichnungen 'dumm', 'normal' und 'schlau' eingestellt werden.
 Wie in FA-KI 43 beschrieben, muss es möglich sein, die KI mithilfe einer Konfigurationsdatei zu konfigurieren. Deswegen wird in diesem Dialog eine Liste mit Konfigurationsdateien dargestellt, aus denen man eine gespeicherte Konfiguration auswählen kann. Nach der Auswahl einer Konfiguration kann man mit der Schaltfläche \glqq{}Konfiguration laden\grqq{} diese Konfiguration automatisch einstellen.
 In das Eingabefeld über der Schaltfläche \glqq{}Konfiguration speichern\grqq{} wird der Name der Konfigurationsdatei vom Benutzer eingetragen. Wenn dort ein valider Dateiname eingegeben wurde, so kann die aktuell eingestellte Konfiguration mit der Schaltfläche \glqq{}Konfiguration speichern\grqq{} in das dafür vorgesehene Verzeichnis gespeichert werden und wird an die Liste der Konfigurationsdateien angefügt.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Meilenstein03/KI-Konfiguration_Mockup.png}
+  \caption{Mockup für die KI-Konfiguration}
+\end{figure}
