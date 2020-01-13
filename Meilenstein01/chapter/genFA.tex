@@ -10,6 +10,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Arten von Feldern erlauben den Charakteren das Fortbewegen und interagieren auf dem Spielbrett. \\
 	\hline
+	PRIORITÄT: & ++\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Spielbrett} \\
 \end{tabularx}
 
@@ -22,6 +24,8 @@
 	BESCHREIBUNG: & Das Spiel findet auf einem Spielbrett statt, welches aus den Feldern eines kartesischen Gitters aufgebaut ist. \\
 	\hline
 	BEGRÜNDUNG: & Der Aufbau aus Feldern in einem kartesischen Gitter ermöglicht die Fortbewegung der Charaktere durch Bewegungspunkte. \\
+	\hline
+	PRIORITÄT: & ++\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder} \\
 \end{tabularx}
@@ -36,6 +40,8 @@
 	\hline
 	BEGRÜNDUNG: & Mit der Entfernung zwischen zwei Feldern A und B wird berechnet, wieviele Bewegungspunkte ein Charakter benötigt, um von Feld A zu Feld B zu gelangen. \\
 	\hline
+	PRIORITÄT: & ++\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Spielbrett} \\
 \end{tabularx}
 
@@ -48,6 +54,8 @@
 	BESCHREIBUNG: & Es existiert eine Sichtlinie zwischen zwei Feldern A und B, wenn gilt: Betrachtet man die Verbindungslinie vom Mittelpunkt von A zum Mittelpunkt von B, so müssen alle Felder, die von dieser Verbindunglinie geschnitten werden Felder sein, die die Sichtlinie nicht blockieren. Dann ist B von A aus sichtbar. Felder, die von dieser Verbindungslinie nur tangiert werden blockieren die Sicht nicht. \\
 	\hline
 	BEGRÜNDUNG: & Dadurch wird festgestellt, ob ein Feld B von einem Feld A aus sichtbar ist, also ob ein Charakter auf Feld A sehen kann, was sich auf Feld B befindet. \\
+	\hline
+	PRIORITÄT: & ++\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Spielbrett} \\
 \end{tabularx}
@@ -62,6 +70,8 @@
 	\hline
 	BEGRÜNDUNG: & Freie Felder dienen der Fortbewegung der Charaktere. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
@@ -74,6 +84,8 @@
 	BESCHREIBUNG: & Ein Feld, auf welchem sich eine Wand befindet ist nicht betretbar und es blockiert die Sichtlinie. \\
 	\hline
 	BEGRÜNDUNG: & Durch Wände können große Räume getrennt werden oder neue Räume entstehen. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
@@ -88,6 +100,8 @@
 	\hline
 	BEGRÜNDUNG: & Der Kamin trocknet die klammen Klamotten, dadurch kann ein Charakter diese Eigenschaft los werden. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
@@ -100,6 +114,8 @@
 	BESCHREIBUNG: & Auf einem solchen Feld befindet sich eine Sitzgelegenheit, bspw. ein Sessel, Barhocker, etc. Das Feld ist betretbar und blockiert die Sichtlinie nicht. Befindet sich ein Charakter am Anfang einer Runde auf einem Sitzplatz-Feld, so werden seine Health Points am Ende der Runde auf den Maximalwert aufgefüllt. \\
 	\hline
 	BEGRÜNDUNG: & Dadurch können Charaktere mit wenigen Health Points diese wieder füllen. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
@@ -115,6 +131,8 @@
 	\hline
 	BEGRÜNDUNG: & An Roulette-Tischen haben Charaktere die Chance Chips zu gewinnen bzw. zu verlieren. \\
 	\hline
+	PRIORITÄT: & +\\ 
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie}, FA-G\ref{Roulette spielen}, FA-G\ref{Charakter-Spielchips} \\
 \end{tabularx}
 
@@ -128,6 +146,8 @@
 	\hline
 	BEGRÜNDUNG: & An Bar-Tischen können die Charaktere Cocktails aufnehmen. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Cocktail aufnehmen}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
@@ -140,6 +160,8 @@
 	BESCHREIBUNG: & Felder, auf denen sich ein Tresor befindet, sind nicht betretbar und sie blockieren die Sichtlinie nicht. Tresore können Geheiminformationen oder Gadgets enthalten. Die Tresore sind eindeutig und sichtbar durchnummeriert (1, 2, ...). \\
 	\hline
 	BEGRÜNDUNG: & An Tresoren können Charaktere Geheimnisse oder Gadgets erhalten. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Felder}, FA-G \ref{Sichtlinie}, FA-G \ref{Gadgets}, FA-G \ref{Geheimnis erhalten} \\
 \end{tabularx}
@@ -169,6 +191,8 @@
 	\hline
 	BEGRÜNDUNG: & Jeder Charakter soll individuell sein und sich über das Spiel hinweg verändern können.\\
 	\hline
+	PRIORITÄT: & ++\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Charakter-NameBeschreibung}, FA-G \ref{Charakter-Position}, FA-G \ref{Charakter-Fraktion},  FA-G \ref{BP und AP}, FA-G \ref{HP}, FA-G \ref{IP}, FA-G \ref{Eigenschaften}, FA-G \ref{Inventar}, FA-G \ref{haelt Cocktail}, FA-G \ref{Charakter-Spielchips} \\
 \end{tabularx}
 
@@ -181,6 +205,8 @@
 	BESCHREIBUNG: & Eine Liste, die alle spielbaren Charaktere mit ihren Fähigkeiten beinhaltet. Die Charaktere, die im Lastenheft unter \glqq A Einige Vorschläge für Charaktere\grqq aufgeführt sind, sollen mindestens in der Liste enthalten sein.\\
 	\hline
 	BEGRÜNDUNG: & Aus dieser Liste können Charaktere zum Spielen gewählt werden.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Charakter}\\
 \end{tabularx}
@@ -195,6 +221,8 @@
 	\hline
 	BEGRÜNDUNG: & Zusätzliche Informationen für den Spieler. \\
 	\hline
+	PRIORITÄT: & -\\
+	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -207,6 +235,8 @@
 	BESCHREIBUNG: & Gibt die Position des Charakters auf dem Spielfeld in x- und y-Koordinaten an.\\
 	\hline
 	BEGRÜNDUNG: & Hält fest, wo sich der Charakter auf dem Spielfeld befindet.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Exfiltration}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Draengeln}, FA-G \ref{Jetpack}, FA-G \ref{Spielbrett}, FA-S \ref{s-partieinit}\\
 \end{tabularx}
@@ -221,6 +251,8 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, von wem der Charakter zu steuern ist.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Wahlphase}\\
 \end{tabularx}
 
@@ -230,10 +262,12 @@
 	\hline
 	TITEL: & Bewegungspunkte (BP) und Aktionspunkte (AP) \\
 	\hline
-	BESCHREIBUNG: & Während eine Charakter am Zug ist, kann er BP für Bewegungen auf dem Spielfeld und AP für Aktionen einsetzen.
+	BESCHREIBUNG: & Während ein Charakter am Zug ist, kann er BP für Bewegungen auf dem Spielfeld und AP für Aktionen einsetzen.
 	Zu Beginn eines Zuges erhält er standardmäßig zwei BP und ein AP. Nach Beenden eines Zuges verfallen übrig gebliebene Punkte. BP und AP können nicht negativ sein.\\
 	\hline
 	BEGRÜNDUNG: & Hält fest, wie viele Bewegungen und Aktionen der Charakter in diesem Spielzug noch ausführen kann. \\
+	\hline
+	PRIORITÄT: & +\\ 
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet}, FA-G \ref{Bewegung durchfuehren}, FA-G \ref{Aktion durchfuehren}\\
 \end{tabularx}
@@ -248,6 +282,8 @@
 	\hline
 	BEGRÜNDUNG: & Zeigt Auswirkung verschiedener Aktionen auf den Charakter. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit}, FA-G \ref{Aktion durchfuehren}, FA-G \ref{Gadgets}, FA-G \ref{Exfiltration}, FA-G \ref{Cocktail schluerfen}, FA-G \ref{Charakter-Position}\\
 \end{tabularx}
 
@@ -261,6 +297,8 @@
 	\hline
 	BEGRÜNDUNG: & HP sollen nicht 0 sein.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{HP}, FA-S \ref{s-alternatives}, FA-G \ref{Charakter-Position}\\
 \end{tabularx}
 
@@ -273,6 +311,8 @@
 	BESCHREIBUNG: & IP geben Auskunft, über die Spionagefähigkeiten des Charakter. Zu Beginn besitzen die IP den Wert 0.\\
 	\hline
 	BEGRÜNDUNG: & Punkte, die später für Sieg relevant sind.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gaspatronen-Lippenstift}, FA-G \ref{Wanze und Ohrstoepsel}, FA-G \ref{Chicken Feed}, FA-G \ref{Geheimnis erhalten}, FA-G \ref{Charakter-Spielchips} \\
 \end{tabularx}
@@ -288,6 +328,8 @@
 	\hline
 	BEGRÜNDUNG: & Fähigkeiten sorgen für individuelle Charaktere und Eigenschaften halten den aktuellen Zustand des Charakters fest. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Flinkheit}, FA-G \ref{Schwerfaelligkeit}, FA-G \ref{Behaendigkeit}, FA-G \ref{Behaebigkeit}, FA-G \ref{Agilitaet}, FA-G \ref{Glueckspilz}, FA-G \ref{Pechvogel}, FA-G \ref{Klamme Klamotten}, FA-G \ref{Konstant Klamme Klamotten}, FA-G \ref{Robuster Magen}, FA-G \ref{Zaehigkeit}, FA-G \ref{Babysitter}, FA-G \ref{Honey Trap}, FA-G \ref{Bang and Burn}, FA-G \ref{Flaps and Seals}, FA-G \ref{Tradecraft}, FA-G \ref{Observation} \\
 \end{tabularx}
 
@@ -300,6 +342,8 @@
 	BESCHREIBUNG: & Im Inventar sind alle Gadgets aufgelistet, die der Charakter aktuell bei sich trägt.\\
 	\hline
 	BEGRÜNDUNG: & Hält fest, welche Gadgets der Charakter nutzen kann.\\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}\\
 \end{tabularx}
@@ -314,6 +358,8 @@
 	\hline
 	BEGRÜNDUNG: & Hält fest, ob Interaktion mit einem Cocktail möglich ist oder nicht.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Cocktail aufnehmen}, FA-G \ref{Laser-Puderdose}, FA-G \ref{Cocktail schluerfen}, FA-G \ref{Cocktail-Guss}\\
 \end{tabularx}
 
@@ -326,6 +372,8 @@
 	BESCHREIBUNG: & Zu Beginn des Spiels besitzt jeder Charakter 10 Spielchips. Mit diesen kann er an Roulette-Tischen spielen und dadurch seine Anzahl an Spielchips erhöhen oder verringern.\\
 	\hline
 	BEGRÜNDUNG: & Werden benötigt, um Roulette zu spielen.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Roulette-Tisch}, FA-G \ref{Roulette spielen}\\
 \end{tabularx}
@@ -340,6 +388,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{BP und AP}\\
 \end{tabularx}
 
@@ -352,6 +402,8 @@
 	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Schwerfälligkeit, so erhält er in jeder Runde einen Bewegungspunkt.\\
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -366,6 +418,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -378,6 +432,8 @@
 	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Behäbigkeit, so wird ihm zu Beginn jeder Runde zufällig entweder ein Bewegungspunkt oder einer Aktionspunkt abgezogen.\\
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -392,6 +448,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Anzahl an BP und AP je nach Charakter.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -404,6 +462,8 @@
 	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Glückspilz, so beträgt seine Gewinnchance beim Roulette $\frac{23}{37}$.\\
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Gewinnchancen beim Roulette je nach Charakter.\\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -418,6 +478,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Gewinnchancen beim Roulette je nach Charakter. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: &\\
 \end{tabularx}
 
@@ -430,6 +492,8 @@
 	BESCHREIBUNG: & Besitzt ein Charakter den Zustand Klamme Klamotten, so halbiert sich seine Erfolgswahrscheinlichkeit bei einer Wahrscheinlichkeitsprobe. \\
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Erfolgswahrscheinlichkeiten je nach Zustand des Charakters.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Konstant Klamme Klamotten}, FA-G \ref{Kamin-Feld}, FA-G \ref{Akku-Foehn},  FA-G \ref{Cocktail-Guss}\\
 \end{tabularx}
@@ -444,6 +508,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Erfolgswahrscheinlichkeiten je nach Charakter.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -456,6 +522,8 @@
 	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Robuster Magen, so erhält er die doppelte Anzahl Cocktail-HP und nur den halben Gift-Cocktail-Schaden durch vergiftete Cocktails.\\
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Health Points je nach Charakter.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -470,6 +538,8 @@
 	\hline
 	BEGRÜNDUNG: & Unterschiedliche Health Points je nach Charakter.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -482,6 +552,8 @@
 	BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Babysitter, so wehrt er Angriffe auf benachbarte Charaktere der eigenen Fraktion mit der vorgegebenen Babysitter-Wahrscheinlichkeit ab. Bei einem Angriff wird zuerst die Wahrscheinlichkeitsprobe durch den Angreifer gemacht und wenn diese erfolgreich ist wird die Babysitter Fähigkeit eingesetzt. Ist der Charakter mit der Fähigkeit Babysitter erfolgreich, so misslingt der Angriff, ohne dass die gegnerische Fraktion etwas von der Fähigkeit erfährt, ansonsten wird der Angriff durchgeführt.\\
 	\hline
 	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -496,6 +568,8 @@
 	\hline
 	BEGRÜNDUNG: & Ermöglicht es Angriffen zu entgehen.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -509,6 +583,8 @@
 	\hline
 	BEGRÜNDUNG: & Verhindert das Sammeln von Spielchips, die später über den Sieg mitentscheiden.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Charakter-Position}, FA-G \ref{Roulette-Tisch}\\
 \end{tabularx}
 
@@ -521,6 +597,8 @@ TITEL: & Flaps and Seals \\
 BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Flaps and Seals, so kann er in einen Tresor spicken, der zwei Felder von ihm entfernt und somit nicht auf einem Nachbarfeld steht.\\
 \hline
 BEGRÜNDUNG: & Weniger Bewegungspunkte notwendig, um zu Tresor zu gelangen.\\
+\hline
+PRIORITÄT: & 0\\
 \hline
 ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 \end{tabularx}
@@ -536,6 +614,8 @@ BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Tradecraft, so wiederholt e
 \hline
 BEGRÜNDUNG: & Höhere Chance für eine erfolgreiche Aktion.\\
 \hline
+PRIORITÄT: & 0\\
+\hline
 ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 \end{tabularx}
 
@@ -548,6 +628,8 @@ TITEL: & Observation \\
 BESCHREIBUNG: & Besitzt ein Charakter die Fähigkeit Observation, so kann er diese als Aktion gegen einen anderen Charakter in Sichtlinie ausführen. Dabei wird mit der vorgegebenen Observation-Erfolg-Wahrscheinlichkeit aufgedeckt, ob der Charakter zur gegnerischen Fraktion gehört oder nicht. Die Aktion bleibt vom observierten Charakter unbemerkt. \\
 \hline
 BEGRÜNDUNG: & Möglichkeit um herauszufinden, welche Charaktere zur gegnerischen Fraktion gehören und welche NPCs sind.\\
+\hline
+PRIORITÄT: & 0\\
 \hline
 ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 \end{tabularx}
@@ -562,6 +644,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Dadurch wird das Spiel spannender, denn die Gadgets beeinflussen den Spielverlauf. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Charakter}, FA-G \ref{Inventar}, FA-G \ref{Eigenschaften}, FA-G \ref{Aktion durchfuehren} \\
 \end{tabularx}
 
@@ -574,6 +658,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Wird der Akku-Föhn von einem Charakter als Aktion an sich selbst oder einem benachbarten Charakter angewendet, so verliert dieser Ziel-Charakter die Klamme Klamotten-Eigenschaft. Der Akku-Föhn kann beliebig oft eingesetzt werden. \\
 	\hline
 	BEGRÜNDUNG: & Das ermöglicht es den Charakteren die Klamme Klamotten-Eigenschaft loszuwerden.  \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Charakter}, FA-G \ref{Aktion durchfuehren} \\
 \end{tabularx}
@@ -588,6 +674,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Der Maulwürfel deaktiviert bei dem Charakter, der ihn im Inventar hat positive Eigenschaften und bringt dadurch Spannung in das Spiel. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Charakter}, FA-G \ref{Inventar},FA-G \ref{Eigenschaften} \\
 \end{tabularx}
 
@@ -600,6 +688,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Durch eine Aktion kann das Technicolor-Prisma an einem Roulette-Tisch installiert werden und vertauscht dann die Farben rot und schwarz. Dadurch wird das Resultat beim Roulette-Spielen negiert, d.h. ein Charakter verliert, wenn er normalerweise gewonnen hätte und umgekehrt. Damit sind die Erfolgswahrscheinlichkeiten für Glückspilze und Pechvögel beim Roulette-Spielen vertauscht. Ein Technicolor-Prisma kann nur einmal verwendet werden. \\
 	\hline
 	BEGRÜNDUNG: &  Durch das Technicolor-Prisma wird das Roulette-Spielen beeinflusst. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Roulette spielen}, \\
 \end{tabularx}
@@ -614,6 +704,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Man kann den Klingen-Hut nicht durch Personen durchwerfen. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
@@ -626,6 +718,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Der Klingen-Hut ist ein Bowler-Hut mit einer scharfen Klinge in der Hutkrempe. Ein Charakter, der den Klingen-Hut im Inventar hat, kann diesen auf eine Zielperson in Hutsichtlinie und Hut-Wurf-Reichweite werfen. Die Zielperson wird mit Hut-Treffer-Wahrscheinlichkeit verletzt und erleidet n HP Hut-Schaden. Der Klingen-Hut landet nach einem Wurf auf eine Zielperson in jedem Fall auf einem zufälligen freien Nachbarfeld der Zielperson. Betritt ein Charakter das Feld, auf welchem der Klingen-Hut liegt, so nimmt dieser Charakter den Klingen-Hut in sein Inventar auf. \\
 	\hline
 	BEGRÜNDUNG: &  Damit kann weiter entfernten Charakteren Schaden zugefügt werden. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Hutsichtlinie} \\
 \end{tabularx}
@@ -640,6 +734,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Dieses Gadget schützt den Besitzer vor Angriffen mit dem Klingen-Hut. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Klingen-Hut} \\
 \end{tabularx}
 
@@ -652,6 +748,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Die Giftpillen-Flasche enthält fünf Giftpillen. Der Besitzer der Giftpillen-Flasche kann eine Giftpille als Aktion in einen Cocktail werfen, wenn der Cocktail auf einem Nachbarfeld steht oder von einer benachbarten Person gehalten wird. Dieser Cocktail verwandelt sich dann in einen vergifteten Cocktail und die Giftpille ist damit verbraucht. Nur die Fraktion des Vergifters sieht, dass der Cocktail vergiftet ist. Wird ein vergifteter Cocktail getrunken, werden dem Charakter die Cocktail-Health Points als Schaden abgezogen. Sind alle fünf Giftpillen verbaucht, wird die Giftpillen-Flasche aus dem Inventar entfernt.  \\
 	\hline
 	BEGRÜNDUNG: &  Damit können Cocktails vergiftet werden. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Cocktail aufnehmen} \\
 \end{tabularx}
@@ -666,6 +764,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Damit kann man Cocktails verschwinden lassen. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Cocktail aufnehmen} \\
 \end{tabularx}
 
@@ -678,6 +778,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Mit dem Raketenwerfer-Füllfederhalter kann eine Rakete auf ein Zielfeld in Sichtlinie und beliebiger Entfernung verschossen werden. Alle Wände auf dem Zielfeld und auf benachbarten Feldern werden durch die Explosion zu freien Feldern und alle Personen auf dem Zielfeld oder auf benachbarten Feldern bekommen einen Raketen-Schaden. Der Raketenwerfer-Füllfederhalter kann nur einmal benutzt werden und verschwindet dann aus dem Inventar. \\
 	\hline
 	BEGRÜNDUNG: &  Damit können Wände entfernt werden und anderen Charakteren Schaden zugefügt werden. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Wand} \\
 \end{tabularx}
@@ -692,6 +794,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Mit dem Gaspatronen-Lippenstift kann anderen Charakteren Schaden zugefügt werden. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
 
@@ -704,6 +808,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Ein Charakter, der den Mottelkugel-Beutel im Inventar hat, kann mit einer Aktion eine Mottenkugel auf ein in Sichtlinie und Mottenkugel-Wurf-Reichweite befindliches Kaminfeld werfen. Die entstehende Explosion fügt jeder Person auf einem Nachbarfeld des Kamins einen Mottenkugel-Schaden zu. Der Mottenkugel-Beutel enthält fünf Mottenkugeln und verschwindet aus dem Inventar, sobald diese aufgebraucht sind. \\
 	\hline
 	BEGRÜNDUNG: &  Dadurch kann Personen in der Nähe eines Kamins Schaden zugefügt werden. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
@@ -718,6 +824,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Dadurch können Personen aktionsunfähig gemacht werden und Sichtlinien werden blockiert. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
@@ -730,6 +838,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Objekte, die frei auf dem Boden oder auf Tischen herumliegen und sich in Wurfhaken-Reichweite und in Sichtlinie befinden, können von einem Charakter mit dem Wurfhaken zu sich herangezogen werden. Diese Aktion gelingt mit Wurfhaken-Treffer-Wahrscheinlichkeit. Die herangezogenen Objekte werden dann sofort ins Inventar aufgenommen oder im Falle eines Cocktails aufgenommen und in der Hand gehalten. \\
 	\hline
 	BEGRÜNDUNG: &  Mit dem Wurfhaken können weiter entfernte Objekte aufgenommen werden. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
@@ -744,6 +854,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Mit dem Jetpack können Charaktere weite Strecken zurücklegen. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
 
@@ -756,6 +868,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Mit einer Aktion kann einer benachbarten Zielperson eine Wanze untergeschoben werden und die Ohrstöpsel behält der Besitzer selbst. Die Zielperson bemerkt dies nicht. Während die Wanze an der Zielperson klebt, werden alle IPs, die die verwanzte Person erwirbt ebenso dem Träger der Ohrstöpsel gutgeschrieben. Zu Beginn jeder neuen Runde kann es sein, dass die Wanze mit Wanzen-Ausfalls-Wahrscheinlichkeit ausfällt. Wenn dies passiert, verschwinden die Wanze und Ohrstöpsel. \\
 	\hline
 	BEGRÜNDUNG: &  Damit kann ein Charakter die IPs, die eine andere Person erwirbt ebenfalls bekommen. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
@@ -770,6 +884,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Dieses Gadget verändert die IPs des Anwenders entweder zum Positiven oder zum Negativen. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
 
@@ -782,6 +898,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Das Nugget kann einer benachbarten Zielperson gegeben werden. Ist diese Zielperson ein NPC, schließt sich dieser der Fraktion des Nugget-Gebers an und man kann ihn als Spieler-Charakter steuern. Dabei wird das Nugget verbraucht. Ist die Zielperson ein Mitglied der gegnerischen Fraktion, wechselt dieses nicht die Seite und bekommt das Nugget ins Inventar und kann es selbst benutzen. Die gegnerische Fraktion bekommt diese Aktion dann mit. \\
 	\hline
 	BEGRÜNDUNG: &  Dadurch können NPC zu der eigenen Fraktion hinzugeholt werden. \\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
@@ -796,6 +914,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Dadurch können die IPs zwischen Charakteren vertauscht werden. \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
 
@@ -809,6 +929,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: &  Ein Charakter mit Pocket Litter kann von gegnerischen Charakteren nicht als ein Gegner erkannt werden.  \\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
 
@@ -821,6 +943,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Das Diamanthalsband liegt in einem der Tresore im Casino. Wenn ein Charakter den Tresor öffnet, nimmt er das Diamanthalsband in sein Inventar auf. Das Diamanthalsband wird nicht in der Drafting Phase verwendet. \\
 	\hline
 	BEGRÜNDUNG: &  Wer das Halsband zu Blofelds weißer Katze bringt, bekommt von ihr ein Geheimnis, das eine Menge IPs wert ist. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Gadgets} \\
 \end{tabularx}
@@ -838,6 +962,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Die Bedingungen für das Bewegen eines Charakters müssen eindeutig definiert sein.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Charakter}, FA-G\ref{Charakter-Position}, FA-G\ref{Felder}, FA-G\ref{Spielbrett}, FA-G\ref{Freies Feld}, FA-G\ref{Wand}, FA-G\ref{Kamin-Feld}, FA-G\ref{Sitzplatz}, FA-G\ref{Roulette-Tisch}, FA-G\ref{Bar-Tisch}, FA-G\ref{Tresor}, FA-G\ref{BP und AP} \\
 \end{tabularx}
 
@@ -850,6 +976,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Wenn ein Charakter sich auf ein Feld bewegt, auf dem bereits ein anderer Charakter 		befindet, so tauschen die beiden Charaktere Plätze. Das heißt, der Charakter der die Bewegung durchgeführt hat steht auf dem Feld, auf das er sich bewegen wollte. Dies ist das Feld, auf dem der andere Charakter vor der Bewegung stand. Der andere Charakter befindet sich, nach dem Durchführen der Bewegung, auf dem Feld, auf dem der aktive Charakter ursprünglich stand. \\
 	\hline
 	BEGRÜNDUNG: & Um das Verhalten im Fall der Bewegung auf ein Spielfeld, welches mit einem anderen 			Charakter besetzt ist, eindeutig zu definieren.\\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Bewegung durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Felder}, FA-G\ref{BP und AP} \\
 \end{tabularx}
@@ -866,6 +994,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Es muss genau definiert sein, unter welchen Bedingungen das Ausführen einer Aktion möglich ist und welche Konsequenzen die Aktion hat.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{BP und AP}, FA-G \ref{Charakter-Position}, FA-G \ref{Inventar}, FA-G \ref{Eigenschaften}, FA-G \ref{Spielbrett}, FA-G \ref{Sichtlinie} \\
 \end{tabularx}
 
@@ -881,6 +1011,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Das Verwenden von Gadgets stellt eine Aktion dar.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Inventar}, FA-G \ref{Charakter-Position}, FA-G \ref{Spielbrett}, FA-G \ref{Sichtlinie}  \\
 \end{tabularx}
 
@@ -893,6 +1025,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Ein Charakter, der sich innerhalb eines Zuges auf einem Feld befindet, welches an ein Feld mit Roulette-Tisch angrenzt, der kann als Aktion einmal Roulette spielen. Der Client muss dazu einen Betrag an Spielchips eingeben. Dieser Betrag hat den Mindestwert 1 und einen Höchstwert. Der Höchstwert ist der kleinere der beiden folgenden Werte: die Anzahl der Spielchips, welche der Charakter im Moment besitzt; die Anzahl der Spielchips, die am Tisch verfügbar sind. Die eingegebene Betrag stellt den Einsatz des Charakters dar. Wenn der Charakter gewinnt, dann wird der Spielchips-Wert des Charakters um den Einsatz-Wert erhöht und der Spielchips-Wert des Roulette-Tisches um den Einsatz-Wert verringert. Wenn der Charakter verliert, dann wird der Spielchips-Wert des Charakters um den Einsatz-Wert reduziert und der Spielchipswert des Roulette-Tisches um den Einsatz-Wert erhöht. Ob ein Charakter gewinnt wird durch die Roulette-Gewinn-Wahrscheinlichkeit bestimmt.\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist Roulette spielen eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Roulette-Tisch}, FA-G \ref{Charakter-Spielchips} \\
 \end{tabularx}
@@ -908,6 +1042,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Aufnehmen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Bar-Tisch}, FA-G \ref{Charakter-Position},  FA-G \ref{haelt Cocktail} \\
 \end{tabularx}
 
@@ -922,6 +1058,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Übergießen eines nebenstehenden Charakters mit einem Cocktail eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{haelt Cocktail}, FA-G \ref{Charakter-Position}, FA-G \ref{Klamme Klamotten}  \\
 \end{tabularx}
 
@@ -934,6 +1072,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Wenn ein Charakter am Zug ist und einen Cocktail in der Hand hat, dann kann er als Aktion den Cocktail trinken. Danach müssen seine Health Points erhöht werden und der Cocktail muss verschwinden. Wenn die Differenz zwischen 100 und den aktuellen Health Points des Charakters kleiner oder gleich dem Wert Cocktail-HP ist, dann müssen seine Health Points auf 100 erhöht werden. Andernfalls müssen seine Health Points um den Wert Cocktail-HP erhöht werden. Wenn der Cocktail vergiftet war und die Differenz zwischen den aktuellen Health Points der Charakters und 0 kleiner oder gleich dem Wert Gift-Cocktail-Schaden ist, dann müssen seine Health Points auf 0 reduziert werden. Andernfalls müssen seine Health Points um den Wert Gift-Cocktail-Schaden reduziert werden. \\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Schlürfen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
+	\hline
+	PRIORITÄT: & 0\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{haelt Cocktail}, FA-G \ref{HP}, FA-G \ref{Giftpillen-Flasche}, FA-G \ref{Robuster Magen} \\
 \end{tabularx}
@@ -951,6 +1091,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Schlürfen eines Cocktails eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
+	PRIORITÄT: & 0\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Charakter-Position}, FA-G \ref{Geheimnis erhalten},FA-G \ref{Charakter-Fraktion} \\
 \end{tabularx}
 
@@ -965,6 +1107,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Hineinschauen in einen Tresor eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G \ref{Geheimnis erhalten}, FA-G \ref{Charakter-Position}, FA-G \ref{Diamanthalsband der weissen Katze}, FA-G \ref{Gadgets}, FA-G \ref{Tresor} , FA-G \ref{Charakter-Fraktion} \\
 \end{tabularx}
 
@@ -978,6 +1122,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	 
 	\hline
 	BEGRÜNDUNG: & Aufgrund der Spielmechanik ist das Erfahren von Geheimnissen eine Aktion. Das Verhalten beim Ausführen dieser Aktion muss eindeutig definiert sein.\\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 
 	ABHÄNGIGKEITEN: & FA-G\ref{Aktion durchfuehren}, FA-G\ref{Spionieren}, FA-G\ref{Tresor-Spicken}, FA-G \ref{IP}, FA-G \ref{Charakter-Fraktion} \\
@@ -994,6 +1140,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Spieler können Anfangszustand des Spiels mitbestimmen. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Wahlphase}, FA-G \ref{Ausruestungsphase} \\
 \end{tabularx}
 
@@ -1009,6 +1157,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Jeder Spieler hat ein individuelles Team aus Agenten. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: &  FA-G \ref{Charakter Liste}, FA-G \ref{Gadgets}\\
 \end{tabularx}
 
@@ -1021,6 +1171,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	BESCHREIBUNG: & Nach der Wahlphase muss der Spieler seine Gadgets seinen Agenten beliebig zuordnen.\\
 	\hline
 	BEGRÜNDUNG: & Gadgets können nur aus dem Inventar eines Charakters benutzt werden. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & GA-G \ref{Wahlphase} \\
 \end{tabularx}
@@ -1039,6 +1191,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\hline
 	BEGRÜNDUNG: & Legt fest, wann das Spiel beendet ist. \\
 	\hline
+	PRIORITÄT: & +\\
+	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{ueberlange Spielpartie} FA-G \ref{Geheimnis erhalten} \\
 \end{tabularx}
 
@@ -1056,6 +1210,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	Ist der Hausmeister am Zug, so wird der Charakter ermittelt, der die kürzeste Laufstrecke zu ihm hat. Der Hausmeister wechselt auf das Feld des ermittelten Charakter und der Charakter wird aus der Spielpartie entfernt.\\
 	\hline
 	BEGRÜNDUNG: & Verhindert, dass Spielpartie kein Ende findet. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: &  \\
 \end{tabularx}
@@ -1077,6 +1233,8 @@ ABHÄNGIGKEITEN: & FA-G \ref{Maulwuerfel}\\
 	\end{enumerate}\\
 	\hline
 	BEGRÜNDUNG: & Am Ende der Spielpartie, soll es einen Sieger geben. \\
+	\hline
+	PRIORITÄT: & +\\
 	\hline
 	ABHÄNGIGKEITEN: & FA-G \ref{Ende der Spielpartie}, FA-G \ref{Charakter} \\
 \end{tabularx}

@@ -8,6 +8,8 @@ BESCHREIBUNG: & Der Server muss beim Start der Spielpartie die Partie-Konfigurat
 \hline
 BEGRÜNDUNG: & Die Konfiguration soll für das Balancing des Spiels einfach angepasst werden können. \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}\\
 \end{tabularx}
 
@@ -21,6 +23,8 @@ BESCHREIBUNG: & Der Server muss beim Start der Spielpartie die Szenario-Konfigur
 \hline
 BEGRÜNDUNG: & Das Spielfeld soll veränderbar sein. \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}\\
 \end{tabularx}
 
@@ -33,6 +37,8 @@ TITEL: & Charakter Konfiguration \\
 BESCHREIBUNG: & Der Server muss beim Start der Spielpartie die Konfiguration der Charaktere aus einer Datei lesen. \\
 \hline
 BEGRÜNDUNG: & Notwendig für Balancing des Spiels\\
+\hline
+PRIORITÄT: & ++\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}\\
 \end{tabularx}
@@ -48,6 +54,8 @@ Die Verbindung wird vom Client initiiert. Bei Verbindungsabbruch muss die Verbin
 \hline
 BEGRÜNDUNG: & Integrale Funktionalität des Servers \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -60,6 +68,8 @@ TITEL: & Zuschauer \\
 BESCHREIBUNG: & Ein Client kann sich als Zuschauer verbinden, bekommt also Updates über den Spielzustand, kann aber nicht aktiv am Spiel teilnehmen. \\
 \hline
 BEGRÜNDUNG: & Ermöglicht anderen das Spiel zu beobachten.\\
+\hline
+PRIORITÄT: & +\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}\\
 \end{tabularx}
@@ -74,6 +84,8 @@ BESCHREIBUNG: & Der Server muss die Verbindung mit Clients, die nicht innerhalb 
 \hline
 BEGRÜNDUNG: & Abbau von Verbindungen mit fehlerhaften und unresponsiven Clients\\
 \hline
+PRIORITÄT: & +\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -86,6 +98,8 @@ TITEL: & Verspätete Nachrichten \\
 BESCHREIBUNG: & Der Server muss Nachrichten empfangen, die zum aktuellen Zeitpunkt ungültig sind, in einer vorherigen Phase aber korrekt waren. Diese Nachrichten werden verworfen und nicht als Protokollverletzung gewertet. \\
 \hline
 BEGRÜNDUNG: & Client ist nicht verantwortlich für verspätet eintreffende Pakete (z.B. aufgrund von Netzwerkproblemen)\\
+\hline
+PRIORITÄT: & 0\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}, \ref{s-websockets}\\
 \end{tabularx}
@@ -100,6 +114,8 @@ BESCHREIBUNG: & Zum Starten des Spiels verteilt der Server alle Charaktere auf g
 \hline
 BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
 \hline
+PRIORITÄT: & +\\
+\hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-regeln}\\
 \end{tabularx}
 
@@ -112,6 +128,8 @@ TITEL: & Rundenstart und Initialisierung \\
 BESCHREIBUNG: & Zum Starten einer Runde legt der Server die Zugreihenfolge aller Agenten fest. \\
 \hline
 BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
+\hline
+PRIORITÄT: & +\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-regeln}\\
 \end{tabularx}
@@ -126,6 +144,8 @@ BESCHREIBUNG: & Nach Starten eines Spiels muss der Server abwechselnd Spielzüge
 \hline
 BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-clientconnection}, \ref{s-websockets}, \ref{s-regeln}\\
 \end{tabularx}
 
@@ -139,6 +159,8 @@ BESCHREIBUNG: & Wenn für eine Aktion ein benachbartes freies Feld benötigt wir
 \hline
 BEGRÜNDUNG: & Fortsetzen des Spiels auch wenn die Regeln (benachbarte Felder) nicht exakt erfüllt werden können.\\
 \hline
+PRIORITÄT: & +\\
+\hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-regeln}\\
 \end{tabularx}
 
@@ -151,6 +173,8 @@ TITEL: & Spielpause \\
 BESCHREIBUNG: & Auf Anfrage eines (Nicht-KI-)Clients muss der Server das Spiel pausieren. \\
 \hline
 BEGRÜNDUNG: & Integrale Funktionalität des Spiels\\
+\hline
+PRIORITÄT: & 0\\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -166,6 +190,8 @@ Ungültige Aktionen werden vom Server abgelehnt. \\
 \hline
 BEGRÜNDUNG: & Um korrekten Spielablauf zu gewährleisten. \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -178,6 +204,8 @@ TITEL: & Senden des Spielzustands \\
 BESCHREIBUNG: & Nachdem ein Spieler seinen Zug beendet hat, muss der Server den aktuellen Spielzustand an alle aktiven Spieler und Zuschauer senden. \\
 \hline
 BEGRÜNDUNG: & Notwendig für die Darstellung des Spielfelds beim Spieler. \\
+\hline
+PRIORITÄT: & ++\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-websockets}\\
 \end{tabularx}
@@ -193,6 +221,8 @@ Wenn ein Spieler das Spiel gewinnt, wird dieses sofort beendet. \\
 \hline
 BEGRÜNDUNG: & Integrale Funktionalität des Servers\\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-spiel}\\
 \end{tabularx}
 
@@ -205,6 +235,8 @@ TITEL: & Erstellen von Replay Files \\
 BESCHREIBUNG: & Der Server soll den Spielablauf in einer Log-Datei speichern, sodass dieser zu späterem Zeitpunkt vom Client angezeigt/abgespielt werden kann.\\
 \hline
 BEGRÜNDUNG: & Ermöglicht spätere Analyse von Spielabläufen\\
+\hline
+PRIORITÄT: & -\\
 \hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
@@ -219,6 +251,8 @@ BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, Nachrichten, die A
 \hline
 BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -232,6 +266,8 @@ BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, Nachrichten, die A
 \hline
 BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -244,6 +280,8 @@ TITEL: & Websockets \\
 BESCHREIBUNG: & Der Server muss die Funktionalität besitzen, JSON encodierte Nachrichten über eine Websockets Verbindung mit mehreren Clients auszutauschen.\\
 \hline
 BEGRÜNDUNG: & Notwendig für Kommunikation mit Clients. \\
+\hline
+PRIORITÄT: & ++\\
 \hline
 ABHÄNGIGKEITEN: & FA-S \ref{s-json-decoding}, \ref{s-json-encoding} \\
 \end{tabularx}

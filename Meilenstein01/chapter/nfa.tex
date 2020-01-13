@@ -8,6 +8,8 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline 
 	 BESCHREIBUNG: & Die Anwendung darf nicht abstürzen. Bei 100 Spielen darf maximal 1 Spiel
 	aufgrund eines Fehlers abgebrochen werden. \\
+	\hline
+	 PRIORITÄT: & ++\\
 \end{tabularx}
 
 
@@ -16,7 +18,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 	 TITEL: & Kommandozeileninterface für Server \\
 	 \hline 
-	 BESCHREIBUNG: & Der Server muss nicht-interaktiv auf einem Linux-System über ein Kommandozeileninterface innerhalb eines Docker-Containers gestartet werden können. Es müssen standardisierte Parameter unterstützt werden. 
+	 BESCHREIBUNG: & Der Server muss nicht-interaktiv auf einem Linux-System über ein Kommandozeileninterface innerhalb eines Docker-Containers gestartet werden können. Es müssen standardisierte Parameter unterstützt werden.\\ 
+	 \hline
+	 PRIORITÄT: & ++\\
 \end{tabularx} 
 
 
@@ -25,7 +29,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 	 TITEL: & Kommandozeileninterface für KI-Client \\
 	 \hline 
-	 BESCHREIBUNG: & Der KI-Client muss nicht-interaktiv auf einem Linux-System über ein Kommandozeileninterface innerhalb eines Docker-Containers gestartet werden können. Es müssen standardisierte Parameter unterstützt werden. 
+	 BESCHREIBUNG: & Der KI-Client muss nicht-interaktiv auf einem Linux-System über ein Kommandozeileninterface innerhalb eines Docker-Containers gestartet werden können. Es müssen standardisierte Parameter unterstützt werden.\\ 
+	 \hline
+	 PRIORITÄT: & ++\\
 \end{tabularx} 
 
 
@@ -34,7 +40,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Performanz des Client \\
 	 \hline 
-	 BESCHREIBUNG: & Der Client muss dem Benutzer eines modernen Systems eine Aktualiserungsrate von $60\si{\hertz}$ bieten. Der Input-Delay darf maximal $50\si{\milli\second}$ betragen. 
+	 BESCHREIBUNG: & Der Client muss dem Benutzer eines modernen Systems eine Aktualiserungsrate von $60\si{\hertz}$ bieten. Der Input-Delay darf maximal $50\si{\milli\second}$ betragen.\\ 
+	 \hline
+	 PRIORITÄT: & +\\
 \end{tabularx} 
 
 
@@ -43,7 +51,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Antwortzeit des Servers\\ 
 	 \hline 
-	 BESCHREIBUNG: & Der Server muss einem Client, welcher auf eine Antwort wartet, innerhalb von $100\si{\milli\second}$ eine Antwort senden. In der Zeit sind Verzögerungen, welche durch das Netzwerk entstehen nicht enthalten.
+	 BESCHREIBUNG: & Der Server muss einem Client, welcher auf eine Antwort wartet, innerhalb von $100\si{\milli\second}$ eine Antwort senden. In der Zeit sind Verzögerungen, welche durch das Netzwerk entstehen nicht enthalten.\\
+	 \hline
+	 PRIORITÄT: & +\\
 \end{tabularx} 
 
 
@@ -52,7 +62,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Anlegen von Log-Dateien\\ 
 	 \hline 
-	 BESCHREIBUNG: & Alle Komponenten der verteilten Anwendung sollen Log-Dateien erstellen. Auf Basis dieser muss der Zustand und Verhalten rekonstruiert werden können. Insbesondere müssen die Log-Dateien auch bei Absturz einer Komponente intakt sein. 
+	 BESCHREIBUNG: & Alle Komponenten der verteilten Anwendung sollen Log-Dateien erstellen. Auf Basis dieser muss der Zustand und Verhalten rekonstruiert werden können. Insbesondere müssen die Log-Dateien auch bei Absturz einer Komponente intakt sein.\\ 
+	 \hline 
+	 PRIORITÄT: & -\\
 \end{tabularx} 
 
 
@@ -61,7 +73,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Testcoverage\\ 
 	 \hline 
-	 BESCHREIBUNG: & Alle Komponenten der verteilten Anwendung müssen getestet werden. Bei Unittests wird eine Testcoverage von mindestens 50\% erwartet. Es wird außerdem monkey-testing eingesetzt. 
+	 BESCHREIBUNG: & Alle Komponenten der verteilten Anwendung müssen getestet werden. Bei Unittests wird eine Testcoverage von mindestens 50\% erwartet. Es wird außerdem monkey-testing eingesetzt.\\ 
+	 \hline
+	 PRIORITÄT: & 0\\
 \end{tabularx} 
 
 
@@ -71,7 +85,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Codeanalyse\\ 
 	 \hline 
-	 BESCHREIBUNG: & Der Code aller Komponenten soll analysiert werden. Das Mergen eines Pullrequests soll erst möglich sein, wenn die in SonarQube konfigurierten Gütekriterien vollständig erfüllt sind. Die Gütekriterien in SonarQube sind so zu wählen, dass eine hohe Codequalität gewährleistet werden kann. 
+	 BESCHREIBUNG: & Der Code aller Komponenten soll analysiert werden. Das Mergen eines Pullrequests soll erst möglich sein, wenn die in SonarQube konfigurierten Gütekriterien vollständig erfüllt sind. Die Gütekriterien in SonarQube sind so zu wählen, dass eine hohe Codequalität gewährleistet werden kann.\\ 
+	 \hline
+	 PRIORITÄT: & ++\\
 \end{tabularx} 
 
 
@@ -80,7 +96,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Continous Integration\\ 
 	 \hline 
-	 BESCHREIBUNG: & Es soll Continous Integration verwendet werden um den Code auf Funktionalität zu prüfen. Insbesondere müssen CI-Checks erfüllt sein, bevor ein Pull-Request gemerged werden kann.
+	 BESCHREIBUNG: & Es soll Continous Integration verwendet werden um den Code auf Funktionalität zu prüfen. Insbesondere müssen CI-Checks erfüllt sein, bevor ein Pull-Request gemerged werden kann.\\
+	 \hline
+	 PRIORITÄT: & ++\\
 \end{tabularx} 
 
 
@@ -89,7 +107,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Einfache Benutzung\\ 
 	 \hline 
-	 BESCHREIBUNG: & Ein Benutzer der verteilten Anwendungen soll bei allen Komponenten nach dreimaliger Benutzung ein grundlegendes Verständis für die Benutzung haben. 
+	 BESCHREIBUNG: & Ein Benutzer der verteilten Anwendungen soll bei allen Komponenten nach dreimaliger Benutzung ein grundlegendes Verständis für die Benutzung haben.\\ 
+	 \hline
+	 PRIORITÄT: & +\\
 \end{tabularx} 
 
 \begin{tabularx}{16cm}{l|X}
@@ -97,7 +117,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & User-Experience\\ 
 	 \hline 
-	 BESCHREIBUNG: & Um eine gute UX zu bieten, müssen alle sechs Teammitglieder einer Änderung der graphischen Benutzerschnittstelle zustimmen. Es soll sichergestellt werden, dass auch außenstehende mit der Benutzerschnittstelle arbeiten können. 
+	 BESCHREIBUNG: & Um eine gute UX zu bieten, müssen alle sechs Teammitglieder einer Änderung der graphischen Benutzerschnittstelle zustimmen. Es soll sichergestellt werden, dass auch außenstehende mit der Benutzerschnittstelle arbeiten können. \\
+	 \hline
+	 PRIORITÄT: & +\\
 \end{tabularx} 
 
 
@@ -106,7 +128,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Dokumentation\\ 
 	 \hline 
-	 BESCHREIBUNG: & Der Code aller Komponenten muss dokumentiert werden. Es sollen dafür Doxygen-Kommentare verwendet werden. Das daraus generierte Referenzhandbuch muss zu jedem Zeitpunkt der Entwicklung auf einem akutellen und vollständigen Stand sein.  
+	 BESCHREIBUNG: & Der Code aller Komponenten muss dokumentiert werden. Es sollen dafür Doxygen-Kommentare verwendet werden. Das daraus generierte Referenzhandbuch muss zu jedem Zeitpunkt der Entwicklung auf einem akutellen und vollständigen Stand sein. \\ 
+	 \hline
+	 PRIORITÄT: & ++\\
 \end{tabularx} 
 
 
@@ -115,7 +139,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Entwicklerhandbuch\\ 
 	 \hline 
-		BESCHREIBUNG: & Auf Basis der in \textit{QA12} beschriebenen generierten Dokumentation soll ein Entwicklerhandbuch erstellt werden. Dieses soll Details zur Architektur enthalten und vollständig alle verwendeten Technoligien und Frameworks auflisten.
+		BESCHREIBUNG: & Auf Basis der in \textit{QA12} beschriebenen generierten Dokumentation soll ein Entwicklerhandbuch erstellt werden. Dieses soll Details zur Architektur enthalten und vollständig alle verwendeten Technoligien und Frameworks auflisten.\\
+		\hline
+		PRIORITÄT: & 0\\
 \end{tabularx} 
 
 
@@ -124,7 +150,9 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Benutzerhandbuch\\ 
 	 \hline 
-	 BESCHREIBUNG: & Für jede Komponente der verteilten Anwendung soll ein Benutzerhandbuch erstellt werden. In diesem wird einem Benutzer anhand von Beispielen erklärt, wie die Anwendung zu verwenden ist. 
+	 BESCHREIBUNG: & Für jede Komponente der verteilten Anwendung soll ein Benutzerhandbuch erstellt werden. In diesem wird einem Benutzer anhand von Beispielen erklärt, wie die Anwendung zu verwenden ist. \\
+	 \hline 
+	 PRIORITÄT: & 0\\
 \end{tabularx} 
 
 
@@ -133,5 +161,7 @@ Dieser Abschnitt spezifiziert die Qualitätsanforderungen (QA) an das Softwaresy
 	 \hline
 		TITEL: & Projekttagebuch\\ 
 	 \hline 
-	 BESCHREIBUNG: & Es soll über den gesamten Entwicklungsprozess ein Projekttagebuch geführt werden. In diesem werden alle Tätigkeiten der Teammitglieder und der dazugehörige Zeitaufwand aufgelistet. 
+	 BESCHREIBUNG: & Es soll über den gesamten Entwicklungsprozess ein Projekttagebuch geführt werden. In diesem werden alle Tätigkeiten der Teammitglieder und der dazugehörige Zeitaufwand aufgelistet. \\
+	 \hline
+	 PRIORITÄT: & 0\\
 \end{tabularx} 

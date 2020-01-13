@@ -8,6 +8,8 @@ BESCHREIBUNG: & Der KI-Client muss eine Websocket Verbindung zum Server aufbauen
 \hline
 BEGRÜNDUNG: & Kommunikation mit dem Server \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -20,6 +22,8 @@ TITEL: & Registrieren als KI \\
 BESCHREIBUNG: & Der KI-Client muss sich nach der Verbindung mit dem Server als KI identifizieren. \\
 \hline
 BEGRÜNDUNG: & Anzeige für den Spielers, ob er gegen eine KI oder einen menschlichen Gegner spielt. \\
+\hline
+PRIORITÄT: & ++\\
 \hline
 ABHÄNGIGKEITEN: & FA-KI \ref{ki-session} \\
 \end{tabularx}
@@ -34,6 +38,8 @@ BESCHREIBUNG: & Der KI-Client muss Kommandozeilen Argumente unterstützen um Par
 \hline
 BEGRÜNDUNG: & Nicht-interaktive Benutzung, Konfiguration des Clients. \\
 \hline
+PRIORITÄT: & +\\
+\hline
 ABHÄNGIGKEITEN: & \\
 \end{tabularx}
 
@@ -46,6 +52,8 @@ TITEL: & Konfigurationsdatei \\
 BESCHREIBUNG: & Die Parameter des Commandline Interface müssen auch über eine Konfigurationsdatei konfigurierbar sein. \\
 \hline
 BEGRÜNDUNG: & Persistentes Speichern der Parameter \\
+\hline
+PRIORITÄT: & -\\
 \hline
 ABHÄNGIGKEITEN: & FA-KI \ref{ki-cli}\\
 \end{tabularx}
@@ -60,6 +68,8 @@ BESCHREIBUNG: & Der KI-Client muss die Möglichkeit besitzen, zwischen mehreren 
 \hline
 BEGRÜNDUNG: & Unterschiedlicher Schwierigkeitsgrad für Anfänger vs. fortgeschrittene Spieler \\
 \hline
+PRIORITÄT: & 0\\
+\hline
 ABHÄNGIGKEITEN: & FA-KI \ref{ki-cli}, \ref{ki-config}\\
 \end{tabularx}
 
@@ -73,6 +83,8 @@ BESCHREIBUNG: & Die KI muss in jeder Runde regelkonforme und sinnvolle Aktionen 
 \hline
 BEGRÜNDUNG: & Grundlegende Funktionalität der KI \\
 \hline
+PRIORITÄT: & ++\\
+\hline
 ABHÄNGIGKEITEN: & FA-KI \ref{ki-session}\\
 \end{tabularx}
 
@@ -85,6 +97,8 @@ TITEL: & Optional: API \\
 BESCHREIBUNG: & Die KI soll eine Programmierschnittstelle zur Anbindung an den Benutzer Client besitzen. \\
 \hline
 BEGRÜNDUNG: & Verwenden der KI zum Vorschlagen von Aktionen für den Spieler \\
+\hline
+PRIORITÄT: & +\\
 \hline
 ABHÄNGIGKEITEN: & FA-KI \ref{ki-actions}\\
 \end{tabularx}
