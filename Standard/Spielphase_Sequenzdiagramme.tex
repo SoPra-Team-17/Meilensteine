@@ -35,10 +35,6 @@
 					\end{umlcall}
 				\end{umlfragment}
 				
-				\begin{umlcall}[op=Spielstatusnachricht, dt=7.5]{Server}{Spieler}
-				\end{umlcall}
-				\begin{umlcall}[op=Spielstatusnachricht]{Server}{Zuschauer}
-				\end{umlcall}
 			\end{umlfragment}
 			
 						
@@ -47,6 +43,11 @@
 			\begin{umlcallself}[op=wait, dt = 7.5]{Spieler}
 			\end{umlcallself}
 		\end{umlfragment}
+		
+		\begin{umlcall}[op=Spielstatusnachricht, dt=30]{Server}{Spieler}
+		\end{umlcall}
+		\begin{umlcall}[op=Spielstatusnachricht]{Server}{Zuschauer}
+		\end{umlcall}
 		
 	\end{umlfragment}
 	
