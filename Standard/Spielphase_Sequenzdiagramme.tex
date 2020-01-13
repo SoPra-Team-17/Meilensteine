@@ -1,0 +1,58 @@
+\documentclass[12pt,a4paper]{scrbook}
+
+\usepackage{tikz-uml}
+\usepackage[ngerman]{babel}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+	\begin{umlseqdiag}
+	\umlactor[class=Client]{Spieler}
+	\umlobject[no ddots]{Server}
+	\umlactor[class=Client]{Zuschauer}
+	
+	
+	\begin{umlfragment}[type=loop, label=nächster Charakter]
+		
+		\begin{umlcallself}[op=Vorbereitung, dt=7.5]{Server}
+		\end{umlcallself}
+		\begin{umlcall}[op=Spielstatusnachricht]{Server}{Spieler}
+		\end{umlcall}
+		\begin{umlcall}[op=Spielstatusnachricht]{Server}{Zuschauer}
+		\end{umlcall}
+		
+		\begin{umlfragment}[type=alt, label=Spieler ist am Zug, inner ysep=7.5]
+		
+			\begin{umlfragment}[type=loop, label=nächste Aktion, inner xsep = 7.5]
+				\begin{umlcall}[op=Aktionsnachricht, dt=22.5]{Spieler}{Server}
+				\end{umlcall}
+				\begin{umlcallself}[op=Validierung]{Server}
+				\end{umlcallself}
+						
+				\begin{umlfragment}[type=opt, label=nicht valide, inner xsep=10]
+					\begin{umlcall}[op=Strike, dt=7.5]{Server}{Spieler}
+					\end{umlcall}
+				\end{umlfragment}
+				
+				\begin{umlcall}[op=Spielstatusnachricht, dt=7.5]{Server}{Spieler}
+				\end{umlcall}
+				\begin{umlcall}[op=Spielstatusnachricht]{Server}{Zuschauer}
+				\end{umlcall}
+			\end{umlfragment}
+			
+						
+			\umlfpart[Spieler ist nicht am Zug]
+		
+			\begin{umlcallself}[op=wait, dt = 7.5]{Spieler}
+			\end{umlcallself}
+		\end{umlfragment}
+		
+	\end{umlfragment}
+	
+	
+	\end{umlseqdiag}
+\end{tikzpicture}
+
+
+\end{document}
