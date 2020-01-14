@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{scrbook}
+
+
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage[ngerman]{babel}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\begin{umlseqdiag}
+
+	\umlactor[x = 3, class=Client]{Spieler 1}
+	\umlactor[class=Client]{Spieler 2}
+	\umlobject[x = 9, no ddots]{Server}
+	\umlactor[x = 14, class=Client]{Zuschauer/KI}
+	
+	
+	\begin{umlfragment}[type=alt, label=Spieler 1 m\"ochte pausieren, inner ysep=5]	
+		
+		\begin{umlcall}[op=Pausierungsnachricht, dt = 13.0]{Spieler 1}{Server}
+		\end{umlcall}
+		
+		\umlfpart[Spieler 2 m\"ochte pausieren]
+		
+		
+		\begin{umlcall}[op=Pausierungsnachricht, dt=20]{Spieler 2}{Server}
+		\end{umlcall}
+		
+	\end{umlfragment}
+	
+	\begin{umlcall}[op=Pausierungsbest\"atigung, dt = -5]{Server}{Spieler 1}
+	\end{umlcall}
+	\begin{umlcall}[op=Pausierungsbest\"atigung, dt = -12]{Server}{Spieler 2}
+	\end{umlcall}
+	\begin{umlcall}[op=Pausierungsbest\"atigung, dt = -12]{Server}{Zuschauer/KI}
+	\end{umlcall}
+
+
+	\begin{umlfragment}[type=alt, label=Spieler 1 m\"ochte das Spiel fortsetzen, inner ysep=5]	
+		
+		\begin{umlcall}[op=Fortsetzungsnachricht, dt = 23]{Spieler 1}{Server}
+		\end{umlcall}
+		
+		\umlfpart[Spieler 2 m\"ochte das Spiel fortsetzen]
+		
+		
+		\begin{umlcall}[op=Fortsetzungsnachricht, dt = 26]{Spieler 2}{Server}
+		\end{umlcall}
+		
+	\end{umlfragment}
+
+
+	\begin{umlcall}[op=Fortsetzungsbest\"atigung, dt=-5]{Server}{Spieler 1}
+	\end{umlcall}
+	\begin{umlcall}[op=Fortsetzungsbest\"atigung, dt=-12]{Server}{Spieler 2}
+	\end{umlcall}
+	\begin{umlcall}[op=Fortsetzungsbest\"atigung, dt=-12]{Server}{Zuschauer/KI}
+	\end{umlcall}
+
+
+
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}	
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}
+%	\begin{umlcall}
+%	\end{umlcall}
+\end{umlseqdiag}
+
+\end{tikzpicture}
+
+\end{document}
