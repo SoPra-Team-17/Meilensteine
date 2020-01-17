@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper]{scrbook}
+
+
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage[ngerman]{babel}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\begin{umlseqdiag}
+
+	\umlactor[x = 0, class=Client]{Spieler 1}
+	\umlactor[x = 3.5, class=Client]{Spieler 2}
+	\umlobject[x = 8.5, no ddots]{Server}
+	\umlactor[x = 13.5, class=Client]{Zuschauer/KI}
+	
+	
+	\begin{umlfragment}[type=alt, label=Spieler 1 m\"ochte das Spiel verlassen, inner ysep=5]	
+		
+		\begin{umlcall}[op=Verlassensnachricht, dt = 13.0]{Spieler 1}{Server}
+		\end{umlcall}
+		
+		\umlfpart[Spieler 2 m\"ochte das Spiel verlassen]
+		
+		
+		\begin{umlcall}[op=Verlassensnachricht, dt=20]{Spieler 2}{Server}
+		\end{umlcall}
+		
+	\end{umlfragment}
+	
+	\begin{umlcall}[op=Verlassensbest\"atigung, dt = -5]{Server}{Spieler 1}
+	\end{umlcall}
+	\begin{umlcall}[op=Verlassensbest\"atigung, dt = -12]{Server}{Spieler 2}
+	\end{umlcall}
+	\begin{umlcall}[op=Verlassensbest\"atigung, dt = -12]{Server}{Zuschauer/KI}
+	\end{umlcall}
+
+\end{umlseqdiag}
+
+\end{tikzpicture}
+
+\end{document}

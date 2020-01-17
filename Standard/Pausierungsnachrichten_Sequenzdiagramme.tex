@@ -11,10 +11,10 @@
 
 \begin{umlseqdiag}
 
-	\umlactor[x = 3, class=Client]{Spieler 1}
-	\umlactor[class=Client]{Spieler 2}
-	\umlobject[x = 9, no ddots]{Server}
-	\umlactor[x = 14, class=Client]{Zuschauer/KI}
+	\umlactor[x = 0, class=Client]{Spieler 1}
+	\umlactor[x = 3.5, class=Client]{Spieler 2}
+	\umlobject[x = 8.5, no ddots]{Server}
+	\umlactor[x = 13.5, class=Client]{Zuschauer/KI}
 	
 	
 	\begin{umlfragment}[type=alt, label=Spieler 1 m\"ochte pausieren, inner ysep=5]	
@@ -51,7 +51,6 @@
 		
 	\end{umlfragment}
 
-
 	\begin{umlcall}[op=Fortsetzungsbest\"atigung, dt=-5]{Server}{Spieler 1}
 	\end{umlcall}
 	\begin{umlcall}[op=Fortsetzungsbest\"atigung, dt=-12]{Server}{Spieler 2}
@@ -59,26 +58,6 @@
 	\begin{umlcall}[op=Fortsetzungsbest\"atigung, dt=-12]{Server}{Zuschauer/KI}
 	\end{umlcall}
 
-
-
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}	
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}
-%	\begin{umlcall}
-%	\end{umlcall}
 \end{umlseqdiag}
 
 \end{tikzpicture}
