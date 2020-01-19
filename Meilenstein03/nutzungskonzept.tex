@@ -140,15 +140,32 @@ Dialog \glqq{}Charakter-Editor\grqq{}
 
 Dialog \glqq{}Partie-Editor\grqq{}
 
-Mit der Schaltfläche \glqq{}Abbrechen\grqq{} wechselt die Ansicht zu dem Dialog, aus welchem der Partie-Editor aufgerufen wurde. D.h. wenn er aus der Lobby-Konfiguration aufgerufen wurde, dann wechselt die Ansicht zurück zur Lobby-Konfiguration, wenn er aus der Editor-Übersicht geöffnet wurde, dann wechselt die Ansicht wieder dahin zurück.
-Mit der Schaltfläche \glqq{}Konfiguration speichern\grqq{} wird die Datei gespeichert und die Ansicht wechselt zu dem Dialog,  aus welchem der Partie-Editor aufgerufen wurde.
-Mit der Schaltfläche \glqq{}Editor-Übersicht\grqq{} wird die Ansicht zum Dialog \glqq{}Editor-Übersicht\grqq{} gewechselt, falls alle Änderungen schon gespeichert wurden. Falls noch ungespeicherte Änderungen vorliegen, wird ein Pop-Up-Fenster geöffnet, das abfragt, ob die Konfiguration noch gespeichert werden soll. Wenn in diesem Fenster die Schaltfläche \glqq{}Ja\grqq{} bzw.\glqq{}Nein\grqq{} angeklickt wird, dann wechselt die Ansicht zum Dialog \glqq{}Editor-Übersicht\grqq{} und die Konfiguration wird gespeichert bzw. nicht gespeichert. Mit der Schaltfläche \glqq{}Abbrechen\grqq{} schließt sich das Fenster wieder und der Dialog \glqq{}Partie-Editor\grqq{} wird wieder normal dargestellt.
-Mit direkter Eingabe in das Feld der Anzeige des Werts einer Wahrscheinlichkeit oder eines anderen Werts, dem Schieberegler daneben oder den Inkrement- und Dekrementschaltflächen kann der Wert einer Wahrscheinlichkeit in Prozent oder ein Schadens-, Reichweiten-, etc. -wert festgelegt und angepasst werden.
+Mit der Schaltfläche \glqq{}Abbrechen\grqq{} wechselt man zum Editor zurück. Mit der Schaltfläche \glqq{}Speichern\grqq{} wird die Datei gespeichert und die Ansicht wechselt zum Editor. Dabei öffnet sich ein Popup-Fenster, in welchem ein Name für die datei festgelegt werden muss. Über Abbrechen gelangt der Benutzer wieder zum Editor und alle Änderungen werden verworfen. Dabei öffnet sich ein Popup-Fenster, in welchem der benutzer bestätigen muss, dass er die datei nicht speichern möchte. Mit direkter Eingabe in das Feld der Anzeige des Werts einer Wahrscheinlichkeit oder eines anderen Werts, dem Schieberegler daneben oder den Inkrement- und Dekrementschaltflächen kann der Wert einer Wahrscheinlichkeit in Prozent oder ein Schadens-, Reichweiten-, etc. -wert festgelegt und angepasst werden.
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Meilenstein03/Partie-Editor_Mockup.png}
   \caption{Mockup für den Partie-Editor}
+\end{figure}
+
+Popup \glqq{}Speichern-Partie-Editor\grqq{}
+
+In diesem Popup muss der Benutzer einen Dateinamen für seine Konfiguration festlegen. Mit Speichern kommt er zurück zum Editor und über Abbrechen wird das Popup-Fenster geschlossen und er gelangt wieder zum Partie-Editor.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Meilenstein03/Speichern-Partie-Editor_Mockup.png}
+  \caption{Mockup für das Speichern-Partie-Editor-Popup}
+\end{figure}
+
+Popup \glqq{}Änderungen verwerfen-Partie-Editor\grqq{}
+
+Wenn der Benutzer die Partie-Konfiguration abbrechen möchte, muss er in diesem Popup bestätigen, dass er sich sicher ist, alle Änderungen zu verwerfen.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Meilenstein03/AenderungenVerwerfen-Partie-Editor_Mockup.png}
+  \caption{Mockup für das Änderungen verwerfen-Partie-Editor-Popup}
 \end{figure}
 
 Dialog \glqq{}KI-Konfiguration\grqq{}
