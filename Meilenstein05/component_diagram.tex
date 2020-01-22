@@ -1,0 +1,72 @@
+Sowohl der Server, als auch der Client müssen den aktuellen Spielstand halten und Daten validieren. Hierzu wird eine gemeinsam verwendete \glqq Spiellogik\grqq verwendet, die eine einheitliche Darstellung für User, Lobby und Game mit benötigten Validierungsfunktionen liefert.\\
+abgedeckte FA: TODO\\
+\begin{tikzpicture}
+
+    \begin{umlcomponent}[x=0,y=0]{Spiellogik}
+    	\umlbasiccomponent[x=0.5,y=5]{User}
+    		\umlprovidedinterface[interface=validate,distance=3cm]{User}
+    	\umlbasiccomponent[x=0.5,y=3]{Lobby}
+    		\umlprovidedinterface[interface=validate,distance=3cm]{Lobby}
+    	\umlbasiccomponent[x=0.5,y=1]{Game}
+    		\umlprovidedinterface[interface=validate,distance=3cm]{Game}
+    \end{umlcomponent}
+\end{tikzpicture}
+
+
+Der Server bietet den Clients über das \glqq Netzwerk\grqq die Funktion, sich mit ihm zu verbinden. Bei Erhalt einer JSON Nachricht wird diese decodiert und der Inhalt an den Controller Server weitergeleitet. Dieser validiert und aktualisiert die Spiellogik Server, welche Komponenten aus der obigen allgemeinen Spiellogik enthält. Anschließend leitet der Controller Server eine zu sendende Nachricht an den WebSocket Server, der diese JSON codiert und an die spezifizierten Clients sendet.\\ 
+abgedeckte FA: TODO\\
+\begin{tikzpicture}
+    \begin{umlcomponent}[x=0,y=0]{Server}
+	    \umlbasiccomponent[x=0.5,y=5]{WebSocket Server}
+		    \umlrequiredinterface[interface=forward,distance=3cm]{WebSocket Server} 
+		    \umlprovidedinterface[interface=Netzwerk \& send,distance=4cm, with port]{WebSocket Server}
+	    \umlbasiccomponent[x=0.5,y=3]{Controller Server}
+		    \umlprovidedinterface[interface=forward,distance=3cm]{Controller Server} 
+	    	\umlrequiredinterface[interface=validate \& update \& send,distance=5cm]{Controller Server} 
+	    \umlbasiccomponent[x=0.5,y=1]{Spiellogik Server}
+	    	\umlprovidedinterface[interface=update,distance=3cm]{Spiellogik Server}
+	\end{umlcomponent}
+\end{tikzpicture}
+
+\newpage
+Der Client verbindet sich über das Netzwerk-Interface mit dem Server. Über dieses erhält er JSON Nachrichten, die im WebSocket Client dekodiert und anschließend an den Controller Client weitergeleitet werden. Über die Interfaces move, Logik und turn kann der KI-Client oder Mensch-Client angebunden werden. Der Controller Client aktualisiert zudem die Spiellogik Client, welche Komponenten aus der allgemeinen Spiellogik enthält. Über die Spiellogik Client können Validierungsanfragen vorgenommen werden. An den Server zu sendende Nachrichten werden vom Controller Client an den WebSocket Client weitergegeben, der diese JSON codiert und über das Netzwerk versendet.\\
+abgedeckte FA: TODO\\
+\begin{tikzpicture}    
+    \begin{umlcomponent}[x=0,y=0]{Client}
+	    \umlbasiccomponent[x=0.5,y=5]{WebSocket Client}
+	    	\umlrequiredinterface[interface=Netzwerk \& forward,distance=4cm, with port]{WebSocket Client} 
+	    	\umlprovidedinterface[interface=send,distance=3cm]{WebSocket Client}
+	    \umlbasiccomponent[x=0.5,y=3]{Controller Client}
+	    	\umlrequiredinterface[interface=update \& send \& turn \& validate,distance=5cm]{Controller Client}
+	    	\umlprovidedinterface[interface=forward \& move \& Logik,distance=4cm]{Controller Client}
+	    \umlbasiccomponent[x=0.5,y=1]{Spiellogik Client}
+		    \umlprovidedinterface[interface=update,distance=3cm]{Spiellogik Client}
+    \end{umlcomponent}
+\end{tikzpicture}
+
+Der KI-Client wird über die turn-Schnittstelle im Controller-Client mit dem allgemeinen Client verbunden. Über diese erfährt er, dass Netzwerknachrichten eingegangen sind und die Komponenten in der Spiellogik Client jetzt aktuell sind. Ist der KI-Client am Zug berechnet er mit Hilfe des validate-Interface der Spiellogik Client einen validen Zug und gibt diesen über die move-Schnittstelle, an den Controller-Client weiter.\\
+Der Mensch-Client besitzt einen Controller Views, der ebenfalls über die turn-Schnittstelle mit dem Client verbunden wird und zusätzlich von extern Nutzereingaben erhält. Die Nutzereingaben werden über die event-Schnittstelle an die Views zur Detektierung gegeben. Der Controller Views kann über die Logik-Schnittstelle Daten validieren und Daten vom Controller Client anfragen, die über das display-Interface in den Views angezeigt werden. Der Editor wird über die edit-Schnittstelle im Controller Views angesprochen. Züge gibt der Controller-View über \glqq move\grqq an den Controller Client weiter.\\
+Die Struktur wurde so gewählt, da die Mensch-Client Komponente voraussichtlich als einzige Komponente in einer anderen Programmiersprache geschrieben wird. Dadurch muss man nur eine Schnittstelle wrappen (zwischen Controller Client und Controller Views). Eine Einbindung der KI in den Mensch-Client, kann indirekt über den Controller Client erfolgen.\\
+abgedeckte FA: TODO\\
+\begin{tikzpicture}
+	\begin{umlcomponent}[x=0,y=0]{KI-Client}
+	    \umlbasiccomponent[x=0.5,y=1]{KI}
+	    	\umlrequiredinterface[interface=move \& validate,distance=3cm]{KI}
+	    	\umlprovidedinterface[interface=turn,distance=3cm]{KI}
+   	\end{umlcomponent}  	
+    \begin{umlcomponent}[x=0,y=-5]{Mensch-Client}
+	    \umlbasiccomponent[x=0.5,y=3]{Controller Views}
+	    	\umlrequiredinterface[interface=edit \& move \& Logik \& display \& event,distance=6cm]{Controller Views}
+	    	\umlprovidedinterface[interface=turn \& UserInput,distance=3cm]{Controller Views}
+	    \umlbasiccomponent[x=0.5,y=1]{Views}
+	    	\umlprovidedinterface[interface=display \& event,distance=3cm]{Views}
+   	\end{umlcomponent}
+\end{tikzpicture}
+
+
+Der Editor ist als einzelne Komponente aufgeführt, aber nicht weiter spezifiziert, da diese auf der Messe eingekauft und somit nicht vom Team selbst implementiert wird.\\ 
+abgedeckte FA: TODO\\
+\begin{tikzpicture}    
+    \umlbasiccomponent[x=0,y=0]{Editor}
+    \umlprovidedinterface[interface=edit,distance=3cm]{Editor}
+\end{tikzpicture}
