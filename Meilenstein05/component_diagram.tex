@@ -1,12 +1,10 @@
-Sowohl der Server, als auch der Client müssen den aktuellen Spielstand halten und Daten validieren. Hierzu wird eine gemeinsam verwendete \glqq Spiellogik\grqq verwendet, die eine einheitliche Darstellung für User, Lobby und Game mit benötigten Validierungsfunktionen liefert.\\
+Sowohl der Server, als auch der Client müssen den aktuellen Spielstand halten und Daten validieren. Hierzu wird eine gemeinsam verwendete \glqq Spiellogik\grqq verwendet, die eine einheitliche Darstellung für User und Game mit benötigten Validierungsfunktionen liefert.\\
 abgedeckte FA: TODO\\
 \begin{tikzpicture}
 
     \begin{umlcomponent}[x=0,y=0]{Spiellogik}
-    	\umlbasiccomponent[x=0.5,y=5]{User}
+    	\umlbasiccomponent[x=0.5,y=3]{User}
     		\umlprovidedinterface[interface=validate,distance=3cm]{User}
-    	\umlbasiccomponent[x=0.5,y=3]{Lobby}
-    		\umlprovidedinterface[interface=validate,distance=3cm]{Lobby}
     	\umlbasiccomponent[x=0.5,y=1]{Game}
     		\umlprovidedinterface[interface=validate,distance=3cm]{Game}
     \end{umlcomponent}
