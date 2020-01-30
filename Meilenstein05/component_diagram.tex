@@ -1,5 +1,6 @@
 Sowohl der Server, als auch der Client müssen den aktuellen Spielstand halten und Daten validieren. Hierzu wird eine gemeinsam verwendete \glqq Spiellogik\grqq verwendet, die eine einheitliche Darstellung für User und Game mit benötigten Validierungsfunktionen liefert.\\
-abgedeckte FA: TODO\\
+abgedeckte FA durch User: FA-S\ref{s-zuschauer}, FA-C\ref{c-join-human}, FA-C\ref{c-username}, FA-KI\ref{ki-register}\\
+abgedeckte FA durch Game: FA-S\ref{s-partieinit}, FA-S\ref{s-rundeinit}, FA-S\ref{s-alternatives}, FA-S\ref{s-regeln}, FA-S\ref{s-gewinner}\\
 \begin{tikzpicture}
 
     \begin{umlcomponent}[x=0,y=0]{Spiellogik}
@@ -12,7 +13,9 @@ abgedeckte FA: TODO\\
 
 
 Der Server bietet den Clients über das \glqq Netzwerk\grqq die Funktion, sich mit ihm zu verbinden. Bei Erhalt einer JSON Nachricht wird diese decodiert und der Inhalt an den Controller Server weitergeleitet. Dieser validiert und aktualisiert die Spiellogik Server, welche Komponenten aus der obigen allgemeinen Spiellogik enthält. Anschließend leitet der Controller Server eine zu sendende Nachricht an den WebSocket Server, der diese JSON codiert und an die spezifizierten Clients sendet.\\ 
-abgedeckte FA: TODO\\
+abgedeckte FA durch WebSocket Server: FA-S\ref{s-clientconnection}, FA-S\ref{s-zuschauer},  FA-S\ref{s-json-encoding}, FA-S\ref{s-json-decoding}, FA-S\ref{s-websockets}\\
+abgedeckte FA durch Controller Server: FA-S\ref{s-partieconfig}, FA-S\ref{s-szenarioconfig}, FA-S\ref{s-charakterconfig}, FA-S\ref{s-timeout}, FA-S\ref{s-latemessage}, FA-S\ref{s-partieinit}, FA-S\ref{s-rundeinit} , FA-S\ref{s-spiel}, FA-S\ref{s-pause}, FA-S\ref{s-regeln}, FA-S\ref{s-state-senden}, FA-S\ref{s-gewinner},  FA-S\ref{s-replay}\\
+abgedeckte FA durch Spiellogik Server: wird benötigt, um Information zu speichern und für Controller Server bereitzustellen\\
 \begin{tikzpicture}
     \begin{umlcomponent}[x=0,y=0]{Server}
 	    \umlbasiccomponent[x=0.5,y=5]{WebSocket Server}
@@ -27,8 +30,10 @@ abgedeckte FA: TODO\\
 \end{tikzpicture}
 
 \newpage
-Der Client verbindet sich über das Netzwerk-Interface mit dem Server. Über dieses erhält er JSON Nachrichten, die im WebSocket Client dekodiert und anschließend an den Controller Client weitergeleitet werden. Über die Interfaces move, Logik und turn kann der KI-Client oder Mensch-Client angebunden werden. Der Controller Client aktualisiert zudem die Spiellogik Client, welche Komponenten aus der allgemeinen Spiellogik enthält. Über die Spiellogik Client können Validierungsanfragen vorgenommen werden. An den Server zu sendende Nachrichten werden vom Controller Client an den WebSocket Client weitergegeben, der diese JSON codiert und über das Netzwerk versendet.\\
-abgedeckte FA: TODO\\
+Der Client verbindet sich über das Netzwerk-Interface mit dem Server. Über dieses erhält er JSON Nachrichten, die im WebSocket Client dekodiert und anschließend an den Controller Client weitergeleitet werden. Über die Interfaces move, Logik und turn kann der KI-Client oder Mensch-Client angebunden werden. Der Controller Client aktualisiert zudem die Spiellogik Client, welche Komponenten aus der allgemeinen Spiellogik enthält. Über die Spiellogik Client können Validierungsanfragen vorgenommen werden. An den Server zu sendende Nachrichten werden vom Controller Client an den WebSocket Client weitergegeben, der diese JSON codiert und über das Netzwerk versendet.\\ 
+abgedeckte FA durch WebSocket Client: FA-C\ref{c-session}, FA-C\ref{c-persistentsession}, FA-KI\ref{ki-session}\\
+abgedeckte FA durch Controller Client: FA-C\ref{c-join}, FA-C\ref{c-join-spectator}, FA-C\ref{c-join-human}, FA-C\ref{c-username}, FA-C\ref{c-interaction}, FA-C\ref{c-pause}, FA-C\ref{c-unpause}, FA-C\ref{c-actions-send}, FA-C\ref{c-replay}, FA-KI\ref{ki-register}, FA-KI\ref{ki-api}\\
+abgedeckte FA durch Spiellogik Client: wird benötigt, um Information zu speichern und für Controller Client oder KI bereitzustellen\\
 \begin{tikzpicture}    
     \begin{umlcomponent}[x=0,y=0]{Client}
 	    \umlbasiccomponent[x=0.5,y=5]{WebSocket Client}
@@ -45,7 +50,9 @@ abgedeckte FA: TODO\\
 Der KI-Client wird über die turn-Schnittstelle im Controller-Client mit dem allgemeinen Client verbunden. Über diese erfährt er, dass Netzwerknachrichten eingegangen sind und die Komponenten in der Spiellogik Client jetzt aktuell sind. Ist der KI-Client am Zug berechnet er mit Hilfe des validate-Interface der Spiellogik Client einen validen Zug und gibt diesen über die move-Schnittstelle, an den Controller-Client weiter.\\
 Der Mensch-Client besitzt einen Controller Views, der ebenfalls über die turn-Schnittstelle mit dem Client verbunden wird und zusätzlich von extern Nutzereingaben erhält. Die Nutzereingaben werden über die event-Schnittstelle an die Views zur Detektierung gegeben. Der Controller Views kann über die Logik-Schnittstelle Daten validieren und Daten vom Controller Client anfragen, die über das display-Interface in den Views angezeigt werden. Der Editor wird über die edit-Schnittstelle im Controller Views angesprochen. Züge gibt der Controller-View über \glqq move\grqq an den Controller Client weiter.\\
 Die Struktur wurde so gewählt, da die Mensch-Client Komponente voraussichtlich als einzige Komponente in einer anderen Programmiersprache geschrieben wird. Dadurch muss man nur eine Schnittstelle wrappen (zwischen Controller Client und Controller Views). Eine Einbindung der KI in den Mensch-Client, kann indirekt über den Controller Client erfolgen.\\
-abgedeckte FA: TODO\\
+abgedeckte FA durch KI: FA-KI\ref{ki-cli}, FA-KI\ref{ki-config}, FA-KI\ref{ki-intelligenz}, FA-KI\ref{ki-actions}, FA-KI\ref{ki-api}\\
+abgedeckte FA durch Controller View: FA-C\ref{c-interaction}, FA-C\ref{c-help}, FA-C\ref{c-hotkeys}, FA-C\ref{c-pause}, FA-C\ref{c-unpause}, FA-C\ref{c-actions-send}, FA-C\ref{c-replay}\\
+abgedeckte FA durch Views: FA-C\ref{c-intro}, FA-C\ref{c-menu}, FA-C\ref{c-gui}, FA-C\ref{c-interaction}, FA-C\ref{c-animation}, FA-C\ref{c-pause}, FA-C\ref{c-unpause}, FA-C\ref{c-winnerdisplay}, FA-C\ref{c-stats}\\
 \begin{tikzpicture}
 	\begin{umlcomponent}[x=0,y=0]{KI-Client}
 	    \umlbasiccomponent[x=0.5,y=1]{KI}
@@ -63,7 +70,7 @@ abgedeckte FA: TODO\\
 
 
 Der Editor ist als einzelne Komponente aufgeführt, aber nicht weiter spezifiziert, da diese auf der Messe eingekauft und somit nicht vom Team selbst implementiert wird.\\ 
-abgedeckte FA: TODO\\
+abgedeckte FA durch Editor: FA-E\ref{e-json-encoding}, FA-E\ref{e-json-decoding}, FA-E\ref{e-gui}, FA-E\ref{e-szenarioedit}, FA-E\ref{e-partieedit}, FA-E\ref{e-charedit}\\
 \begin{tikzpicture}    
     \umlbasiccomponent[x=0,y=0]{Editor}
     \umlprovidedinterface[interface=edit,distance=3cm]{Editor}
