@@ -41,6 +41,8 @@ digraph G {
 	label = "Bar-Tisch"
     ]
     Tresor
+    Diamanthalsband
+
 
     // Inheritance
     FreiesFeld -> Feld
@@ -50,6 +52,7 @@ digraph G {
     RouletteTisch -> Feld
     BarTisch -> Feld
     Tresor -> Feld
+    Diamanthalsband -> Gadget
 
     // Aggregations
     edge [
@@ -72,13 +75,14 @@ digraph G {
         headlabel = "1"
     ]
     Geheimnis -> Tresor [
-        taillabel = "0..n"
+        taillabel = "1"
         headlabel = "1"
     ]
-    Gadget -> Tresor [
-        taillabel = "0..n"
-        headlabel = "1"
+    Diamanthalsband -> Tresor [
+	taillabel = "0..1"
+	headlabel = "1"
     ]
+    
 
     // Compositions
     edge [
