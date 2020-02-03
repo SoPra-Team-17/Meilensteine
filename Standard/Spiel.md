@@ -192,6 +192,16 @@ class roulette extends Action {
 ```
 Das Attribut `stake` gibt an, wie hoch der Einsatz des Spieler ist.
 
+Die Klasse `useGadget` implementiert eine Gadget-Aktion.
+
+
+```java
+class useGadget extends Action {
+}
+
+```
+
+
 **TODO**
 - Erstellung eines Datenmodells für die verschiedenen Aktionen: Spionage, Tresorknacken, Gadget-Aktion
 - Erinnerung: Cocktails sind Gadgets.
