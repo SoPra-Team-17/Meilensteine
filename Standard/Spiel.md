@@ -168,9 +168,35 @@ Die Attribute haben den folgenden Nutzen:
 - Das Attribut `target` gibt das Ziel der Aktion an.
 - Das Attribut `successful` gibt an, ob die Aktion erfolgreich war, wenn die Nachricht vom Server stammt.
 
+
+Die Klasse `peekSafe` implementiert eine Tresor-Aktion.
+
+```java
+class peekSafe extends Action {
+    Boolean flapsAndSeals;
+    Boolean knownSecret;
+}
+```
+Die Attribute haben den folgenden Nutzen:
+- Das Attribut `flapsAndSeals` gibt an, ob der ausführende Charakter die Eigenschaft 'Flaps and Seals' besitzt und deshalb im Abstand von zwei Feldern in den Tresor spicken kann. (Kommt das überhaupt hier rein oder wird das vorher in einer Validierung  überprüft?)
+- Das Attribut `knownSecret` gibt an, ob das Geheimnis, welches sich im Tresor befindet, schon von der Fraktion entdeckt wurde, zu der der ausführende Charakter gehört.
+
+Die Klasse `roulette` implementiert eine Roulette-Aktion.
+
+
+```java
+class roulette extends Action {
+    int stake;
+}
+
+```
+Das Attribut `stake` gibt an, wie hoch der Einsatz des Spieler ist.
+
 **TODO**
 - Erstellung eines Datenmodells für die verschiedenen Aktionen: Spionage, Tresorknacken, Gadget-Aktion
 - Erinnerung: Cocktails sind Gadgets.
+
+
 
 Die Klasse `Movement` implementiert eine Bewegung.
 
