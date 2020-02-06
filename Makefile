@@ -2,7 +2,7 @@ all: Pflichtenheft.pdf
 	$(info ARTIFACTS:Pflichtenheft.pdf)
 
 .PHONY: Pflichtenheft.pdf
-Pflichtenheft.pdf: Pflichtenheft.tex Meilenstein01/domainmodel.pdf Meilenstein01/fields.pdf Meilenstein01/gadgets.pdf tikz-uml.sty
+Pflichtenheft.pdf: Pflichtenheft.tex Meilenstein01/domainmodel.pdf Meilenstein01/fields.pdf Meilenstein01/gadgets.pdf tikz-uml.sty Meilenstein06/model_overview.pdf
 	latexmk -pdf Pflichtenheft.tex
 
 Meilenstein01/domainmodel.pdf: Meilenstein01/diagrams/domainmodel.dot
@@ -13,6 +13,9 @@ Meilenstein01/fields.pdf: Meilenstein01/diagrams/fields.dot
 
 Meilenstein01/gadgets.pdf: Meilenstein01/diagrams/gadgets.dot
 	unflatten -l 5 Meilenstein01/diagrams/gadgets.dot | dot -T pdf -o $@
+
+Meilenstein06/model_overview.pdf: Meilenstein06/model_overview.dot
+	dot -T pdf -o $@ Meilenstein06/model_overview.dot
 
 .PHONY: clean
 clean:

@@ -10,6 +10,7 @@
 \usepackage{tikz}
 \usepackage{tikz-uml}
 \usepackage[ngerman]{babel}
+\usepackage{pdfpages}
 \setboolean{showsolutions}{false}
 
 \ifthenelse{\boolean{showsolutions}}{
@@ -219,5 +220,9 @@ eine funktionale Anforderung mit der höchsten Priorität ist und -$\;$- eine fu
 \clearpage
 \section{Architekturentwurf}
 \input{Meilenstein05/component_diagram.tex}
+
+\clearpage
+\section{Implementierung}
+\input{ Meilenstein06/class_diagram_user_client.tex}
 
 \end{document}
