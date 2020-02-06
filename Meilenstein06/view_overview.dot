@@ -2,6 +2,7 @@ digraph G{
 
     /* sollte wieder mit flatten compiled werden, damit dass etwas besser aussieht */
     /* ToDo: sinnvolle Attribute und Funktionen für die Views */
+    /* wie wird das HUD dargestellt? */
 
     fontname = "Bitstream Vera Sans"
     fontsize = 8
@@ -73,6 +74,11 @@ digraph G{
     TextField [
         label = "{TextField||}"
     ]
+    
+    FloatSlider [
+        label = "{FloatSlider||}"
+    ]
+
 
 
     //Aggregations
