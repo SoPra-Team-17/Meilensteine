@@ -32,8 +32,8 @@ digraph G {
     Feld [
         label = "{Feld|+ Typ: Feldtyp\l|+ getGadgets(): []Gadget\l+ isFree(): bool\l+ placeGadget(Gadget)\l+ removeGadget(int)\l}"
     ]
-    Charakter [
-        label = "{Charakter|+ BP: ℕ\l+ AP: ℕ\l+ HP: ℕ\l+ IP: ℕ\l+ Chips: ℕ\l- properties: []PropertyEnum\l|+ getProperties(): []Property\l+ hasCocktail(): bool\l+ takeCocktail(Cocktail)\l}"
+    Character [
+        label = "{Character|+ BP: ℕ\l+ AP: ℕ\l+ HP: ℕ\l+ IP: ℕ\l+ Chips: ℕ\l- properties: []PropertyEnum\l- characterID: UUID\l- name: String\l- description: String\l- position: Point\l- safeCombinations\l|+ getProperties(): []Property\l+ hasCocktail(): bool\l+ takeCocktail(Cocktail)\l}"
     ]
     Agent [
         label = "{Agent|- gadgets: []Gadget\l|+ addGadget(Gadget)\l+ getGadgets(): []Gadget\l+ drink(Cocktail)\l+ useGadget(Gadget)\l}"
@@ -54,16 +54,17 @@ digraph G {
     ]
 
     // Inheritance
-    Agent -> Charakter
-    NPC -> Charakter
+    Agent -> Character
+    NPC -> Character
     KISpieler -> Spieler
     MenschlicherSpieler -> Spieler
+    Cocktail -> Gadget
 
     // Aggregations
     edge [
         arrowhead = "odiamond"
     ]
-    Gadget -> Agent [
+    Gadget -> Character [
         taillabel = "0..n"
         headlabel = "1"
 	labeldistance=1.5
@@ -73,14 +74,10 @@ digraph G {
         taillabel = "0..n"
         headlabel = "1"
     ]
-    PropertyEnum -> Charakter [
+    PropertyEnum -> Character [
         taillabel = "0..n"
         headlabel = "1"
 	labelangle=-35
-    ]
-    Cocktail -> Charakter [
-        taillabel = "0..1"
-        headlabel = "1"
     ]
 
     // Compositions
