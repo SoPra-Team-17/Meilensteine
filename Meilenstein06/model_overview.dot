@@ -27,26 +27,28 @@ digraph G {
         label = "{Menschlicher Spieler}"
     ]
     Spielfeld [
-        label = "{Spielfeld|+ Höhe: ℕ\l+ Breite: ℕ\l}"
+        label = "{Spielfeld|+ Höhe: ℕ\l+ Breite: ℕ\l|+ getFieldAt(int x, int y): Field\l+ getSize(): [int w, int h]\l}"
     ]
     Feld [
         label = "{Feld|+ Typ: Feldtyp\l|+ getGadgets(): []Gadget\l+ isFree(): bool\l+ placeGadget(Gadget)\l+ removeGadget(int)\l}"
     ]
     Charakter [
-        label = "{Charakter|+ BP: ℕ\l+ AP: ℕ\l+ HP: ℕ\l+ IP: ℕ\l+ Chips: ℕ\l}"
+        label = "{Charakter|+ BP: ℕ\l+ AP: ℕ\l+ HP: ℕ\l+ IP: ℕ\l+ Chips: ℕ\l- properties: []PropertyEnum\l|+ getProperties(): []Property\l+ hasCocktail(): bool\l+ takeCocktail(Cocktail)\l}"
     ]
     Agent [
         label = "{Agent|- gadgets: []Gadget\l|+ addGadget(Gadget)\l+ getGadgets(): []Gadget\l+ drink(Cocktail)\l+ useGadget(Gadget)\l}"
     ]
 
     NPC
-    Gadget
+    Gadget [
+        label = "{Gadget|+ gadgetID: GadgetEnum\l+ probability: double\l+ usagesLeft: int\l+ damage: int\l+ range: int\l}"
+    ]
     Fähigkeit
     Fraktion [
-        label = "{Fraktion|+ Members: []Agent\l- owner: Spieler\l|+ addAgent(Agent)\l+ getAgents(): []Agent\l}"
+        label = "{Fraktion|- agents: []Agent\l- owner: Spieler\l|+ addAgent(Agent)\l+ getAgents(): []Agent\l}"
     ]
 
-    Eigenschaft
+    PropertyEnum
     Cocktail [
         label = "{Cocktail|- vergiftet: bool\l|+ poison()\l}"
     ]
@@ -71,7 +73,7 @@ digraph G {
         taillabel = "0..n"
         headlabel = "1"
     ]
-    Eigenschaft -> Charakter [
+    PropertyEnum -> Charakter [
         taillabel = "0..n"
         headlabel = "1"
 	labelangle=-35
