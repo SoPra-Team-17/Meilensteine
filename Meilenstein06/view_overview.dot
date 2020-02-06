@@ -1,0 +1,126 @@
+digraph G{
+
+    /* sollte wieder mit flatten compiled werden, damit dass etwas besser aussieht */
+    /* ToDo: sinnvolle Attribute und Funktionen für die Views */
+
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+
+    node [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        shape = "record"
+    ]
+
+    edge [
+        fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        arrowhead = "onormal"
+        labeldistance = 1.5
+    ]
+
+
+    View [
+        label = "{View||+ handleView() : void}"
+    ]
+
+    MainMenuView [
+        label = "{MainMenuView||+ handleView() : void}"
+    ]
+
+    SettingsView [
+        label = "{SettingsView||+ handleView() : void}"
+    ]
+
+    LobbyView [
+        label = "{LobbyView||+ handleView() : void}"
+    ]
+
+    SelectionPhaseView [
+        label = "{SelectionPhaseView||+ handleView() : void}"
+    ]
+
+    EquipmentPhaseView [
+        label = "{EquipmentPhaseView||+ handleView() : void}"
+    ]
+
+    GameView [
+        label = "{GameView||+ handleView() : void}"
+    ]
+
+    GameOverView [
+        label = "{GameOverView||+ handleView() : void}"
+    ]
+
+    Popup [
+        label = "{Popup|
+            - text : string\l
+            - buttonList : Button[]\l
+            |
+            + setString(string) : void\l
+            + setPosition(vec2d) : void\l
+            }"
+    ]
+        
+    Component [
+        label = "{Component||}"
+    ]
+
+    Button [
+        label = "{Button||}"
+    ]
+
+    TextField [
+        label = "{TextField||}"
+    ]
+
+
+    //Aggregations
+    edge [
+        arrowhead = "odiamond"
+    ]
+
+    //Compositions
+    edge [
+        arrowhead = "diamond"
+        dir = "back"
+        arrowtail = "empty"
+    ]
+
+    View -> MainMenuView
+    View -> LobbyView
+    View -> GameOverView
+    View -> GameView
+    View -> SettingsView
+    View -> EquipmentPhaseView
+    View -> SelectionPhaseView
+
+    Component -> Button
+    Component -> TextField
+    //Normal arrows
+    edge [
+        arrowhead = "vee"
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
