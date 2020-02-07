@@ -2,6 +2,7 @@ digraph G{
 
     /* sollte wieder mit flatten compiled werden, damit dass etwas besser aussieht */
     /* ToDo: sinnvolle Attribute und Funktionen für die Views */
+    /* Popup sollten abstrakt sein! --> einzelnen abstracts erben einfach nur davon */
     /* wie wird das HUD dargestellt? */
 
     fontname = "Bitstream Vera Sans"
@@ -22,19 +23,49 @@ digraph G{
 
 
     View [
-        label = "{View||+ handleView() : void}"
+        label = "{View|
+            - properties : ViewProperties\l
+            | + handleView() : void\l
+            + handleEvent() : void\l 
+            }"
     ]
 
     MainMenuView [
-        label = "{MainMenuView||+ handleView() : void}"
+        label = "{MainMenuView|
+            - popupSettings : Popup\l
+            - popupHelp : Popup\l
+            - popupConnectionError : Popup\l
+            - buttonPlay : Button\l
+            - buttonSettings : Button\l
+            - buttonHelp : Button\l
+            - buttonEndGame : Button\l
+            
+            |
+            + handleView() : void}"
     ]
 
     SettingsView [
-        label = "{SettingsView||+ handleView() : void}"
+        label = "{SettingsView|
+        - sliderAudioBackground : FloatSlider\l
+        - sliderAudioEffect : FloatSlider\l
+        - buttonReturnToMain : Button\l
+        - buttonReturnToMain : Button\l
+        |
+        + handleView() : void}"
     ]
 
     LobbyView [
-        label = "{LobbyView||+ handleView() : void}"
+        label = "{LobbyView|
+            - popupChangeName : Popup\l
+            - popupLobbySettings : Popup\l
+            - popupChangeRole : Popup\l
+            - popupShowConfig : Popup\l
+            - buttonChangeName : Button\l
+            - buttonLobbySettings : Button\l
+            - buttonShowConfig : Button\l
+            - buttonChangeRole : Button\l
+            |
+            + handleView() : void}"
     ]
 
     SelectionPhaseView [
@@ -46,11 +77,23 @@ digraph G{
     ]
 
     GameView [
-        label = "{GameView||+ handleView() : void}"
+        label = "{GameView|
+            - popupOptions : Popup\l 
+            |
+            + handleView() : void\l
+            - drawField() : void\l
+            - drawObjects() : void\l
+            - animateAction() : void\l
+        }"
     ]
 
     GameOverView [
-        label = "{GameOverView||+ handleView() : void}"
+        label = "{GameOverView|
+        - returnToMain : Button\l
+        - showStatistics : Button\l
+        - popupStatistics : Popup\l
+        - labelWinner : Label\l
+        |+ handleView() : void}"
     ]
 
     Popup [
@@ -59,12 +102,16 @@ digraph G{
             - buttonList : Button[]\l
             |
             + setString(string) : void\l
-            + setPosition(vec2d) : void\l
+            + setPosition(vec2) : void\l
             }"
     ]
         
     Component [
-        label = "{Component||}"
+        label = "{Component|
+            - position : vec2\l
+            |
+            
+        }"
     ]
 
     Button [
@@ -72,14 +119,47 @@ digraph G{
     ]
 
     TextField [
-        label = "{TextField||}"
+        label = "{TextField|
+        - text : string\l
+        |
+        + getText() : string\l
+        + setText(text) : void\l
+    }"
     ]
     
-    FloatSlider [
-        label = "{FloatSlider||}"
+    Label [
+        label = "{Label|
+        - text : string\l
+        |
+        + setText(string) : void\l
+        + getText() : string\l
+        }"
     ]
 
+    FloatSlider [
+        label = "{FloatSlider|
+        - minVal : float\l
+        - maxVal : float\l
+        - stepSize : float\l
+        |
+        + getValue() : float\l
+    }"
+    ]
+    
+    ViewProperties [
+        label = "{ViewProperties|
+            + width : int\l
+            + height : int\l
+            |
+        }"
+    ]
+    
+    
 
+    edge [
+        arrowhead = none
+    ]
+    ViewProperties -> View
 
     //Aggregations
     edge [
@@ -103,30 +183,9 @@ digraph G{
 
     Component -> Button
     Component -> TextField
+    Component -> FloatSlider
     //Normal arrows
     edge [
         arrowhead = "vee"
     ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
