@@ -1,4 +1,12 @@
-\includepdf[fitpaper]{Meilenstein06/model_overview.pdf}
+\subsection{Model-View-Controller}
+\subsubsection{Controller}
+In unsrer Implementierung werden wir das MVC-Pattern implementieren. Weiter unten ist der Aufbau des Models und der Views durch Klassendiagrame beschrieben.
+Dabei wird der Controller nicht explizit aufgeführt, da es sich bei diesem nur um eine einzelne Klasse handelt, welche die Schnittstelle zwischen den
+verschiedenen Kommponenten darstellt.\\
+Die einzelnen Komponenten kommunizieren über Events miteinander. Dafür implementiert jede Komponente ein klar definiertes Interface (vgl. Architekturentwurf).
+Dadurch ist es möglich eine der Komponenten auszutauschen, ohne dass das gesamte System überarbeitet werden muss.
 
+\subsubsection{Model und View}
+\includepdf[fitpaper]{Meilenstein06/model_overview.pdf}
 
 \includepdf[fitpaper]{Meilenstein06/view_overview.pdf}
