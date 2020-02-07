@@ -25,23 +25,27 @@ digraph G{
     View [
         label = "{View|
             - properties : ViewProperties\l
-            | + handleView() : void\l
-            + handleEvent() : void\l 
+            |
+            + handleView() : void\l
+            + handleEvent(Event) : void\l
+            + sendEvent() : Event\l
             }"
     ]
 
     MainMenuView [
         label = "{MainMenuView|
-            - popupSettings : Popup\l
             - popupHelp : Popup\l
             - popupConnectionError : Popup\l
             - buttonPlay : Button\l
             - buttonSettings : Button\l
             - buttonHelp : Button\l
             - buttonEndGame : Button\l
-            
             |
-            + handleView() : void}"
+            - buttonPressedPlay() : void\l
+            - buttonPressedSettings() : void\l
+            - buttonPressedHelp() : void\l
+            - buttonPressedEnd() : void\l
+            }"
     ]
 
     SettingsView [
@@ -51,7 +55,9 @@ digraph G{
         - buttonReturnToMain : Button\l
         - buttonReturnToMain : Button\l
         |
-        + handleView() : void}"
+        - updateSliderValue() : void\l
+        - buttonPressedReturnToMain() : void\l
+        }"
     ]
 
     LobbyView [
@@ -60,30 +66,59 @@ digraph G{
             - popupLobbySettings : Popup\l
             - popupChangeRole : Popup\l
             - popupShowConfig : Popup\l
+            - popupAddAI : Popup\l
             - buttonChangeName : Button\l
             - buttonLobbySettings : Button\l
             - buttonShowConfig : Button\l
             - buttonChangeRole : Button\l
+            - buttonAddAI : Button\l
+            - buttonLeaveLobby : Button\l
+            - buttonStartGame : Button\l
             |
-            + handleView() : void}"
+            - buttonPressedChangeName() : void\l
+            - buttonPressedLobbySettings() : void\l
+            - buttonPressedShowConfig() : void\l
+            - buttonPressedChangeRole() : void\l
+            - buttonPressedAddAI() : void\l
+            - buttonPressedLeaveLobby() : void\l
+            - buttonPressedStartGame() : void\l
+            }"
     ]
 
     SelectionPhaseView [
-        label = "{SelectionPhaseView||+ handleView() : void}"
+        label = "{SelectionPhaseView|
+            - selectables : []Button\l
+            - chosen : []Labels\l
+            - buttonConfirmChoice : Button\l
+        |
+        - buttonPressed() : void\l
+        - buttonPressedSelectable() : void\l
+        }"
     ]
 
     EquipmentPhaseView [
-        label = "{EquipmentPhaseView||+ handleView() : void}"
+        label = "{EquipmentPhaseView|
+            - gadgets : []Sprite\l
+            - character : []Sprite\l 
+            - buttonConfirmChoice : Button\l
+            |
+            - movedGadgetToChar() : void\l
+            - buttonPressedConfirmChoice() : void\l 
+            }"
     ]
 
     GameView [
         label = "{GameView|
             - popupOptions : Popup\l 
+            - charactersHUD : []labels\l
+            - buttonOptions : Button\l
+            - 
             |
-            + handleView() : void\l
             - drawField() : void\l
             - drawObjects() : void\l
             - animateAction() : void\l
+            - buttonPressedOptions() : void\l
+            - madeMove() : void\l
         }"
     ]
 
@@ -93,7 +128,12 @@ digraph G{
         - showStatistics : Button\l
         - popupStatistics : Popup\l
         - labelWinner : Label\l
-        |+ handleView() : void}"
+        - buttonSaveReplay : Button\l
+        |
+        - buttonPressedReturnToMain() : void\l
+        - buttonPressedShowStatistics() : void\l
+        - buttonPressedSaveReplay() : void\l
+        }"
     ]
 
     Popup [
@@ -102,13 +142,13 @@ digraph G{
             - buttonList : Button[]\l
             |
             + setString(string) : void\l
-            + setPosition(vec2) : void\l
+            + setPosition(Point) : void\l
             }"
     ]
         
     Component [
         label = "{Component|
-            - position : vec2\l
+            - position : Point\l
             |
             
         }"
@@ -146,6 +186,16 @@ digraph G{
     }"
     ]
     
+    ComboBox [
+        label = "{ComboBox|
+        - list : []Buttons\l
+        - selectedElement : Button\l
+        |
+        - dropdownList() : void\l
+        - elementSelected() : void\l
+    }"
+    ]
+
     ViewProperties [
         label = "{ViewProperties|
             + width : int\l
@@ -181,9 +231,11 @@ digraph G{
     View -> EquipmentPhaseView
     View -> SelectionPhaseView
 
-    Component -> Button
     Component -> TextField
     Component -> FloatSlider
+    Component -> Label
+    Label -> Button
+    Component -> ComboBox
     //Normal arrows
     edge [
         arrowhead = "vee"
