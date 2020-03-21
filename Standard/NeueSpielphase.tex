@@ -4,7 +4,8 @@
 \usepackage[ngerman]{babel}
 
 \begin{document}
-
+\pagenumbering{gobble}
+\centering
 
 \begin{tikzpicture}
 	\begin{umlseqdiag}
@@ -24,7 +25,7 @@
 		
 		\begin{umlfragment}[type=alt, label=Spieler ist am Zug, inner ysep=7.5]
 		
-			\begin{umlfragment}[type=loop, label=n\"achste Operation, inner xsep = 7.5]
+			\begin{umlfragment}[type=loop, label=n\"achste Operation, inner xsep = 2.5]
                 \begin{umlcall}[op=RequestOperationMessage,dt=22.5]{Server}{Spieler}
 				\end{umlcall}
 
@@ -61,6 +62,5 @@
 	
 	\end{umlseqdiag}
 \end{tikzpicture}
-
 
 \end{document}
