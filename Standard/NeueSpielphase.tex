@@ -26,7 +26,7 @@
 		\begin{umlfragment}[type=alt, label=Spieler ist am Zug, inner ysep=7.5]
 		
 			\begin{umlfragment}[type=loop, label=n\"achste Operation, inner xsep = 2.5]
-                \begin{umlcall}[op=RequestOperationMessage,dt=22.5]{Server}{Spieler}
+                \begin{umlcall}[op=RequestOperationMessage,dt=15.0]{Server}{Spieler}
 				\end{umlcall}
 
 				\begin{umlcall}[op=OperationMessage, dt=5]{Spieler}{Server}
@@ -44,8 +44,8 @@
 				\begin{umlcall}[op=GameStatusMessage]{Server}{Zuschauer}
 				\end{umlcall}
 
-                \begin{umlfragment}[type=opt, label=Fraktions\"anderung, inner ysep=5, inner xsep=7.5]
-                    \begin{umlcall}[op=SpectatorRevealMessage, dt=10]{Server}{Zuschauer}
+                \begin{umlfragment}[type=opt, label=Fraktions\"anderung, inner ysep=7.5, inner xsep=7.5]
+                    \begin{umlcall}[op=SpectatorRevealMessage, dt=12.5]{Server}{Zuschauer}
                     \end{umlcall}
                 \end{umlfragment}
 			\end{umlfragment}
