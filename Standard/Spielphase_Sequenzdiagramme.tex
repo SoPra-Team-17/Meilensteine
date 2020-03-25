@@ -4,7 +4,8 @@
 \usepackage[ngerman]{babel}
 
 \begin{document}
-
+\pagenumbering{gobble}
+\centering
 
 \begin{tikzpicture}
 	\begin{umlseqdiag}
@@ -13,19 +14,22 @@
 	\umlactor[class=Client]{Zuschauer}
 	
 	
-	\begin{umlfragment}[type=loop, label=nächster Charakter]
+	\begin{umlfragment}[type=loop, label=n\"achster Charakter]
 		
 		\begin{umlcallself}[op=Vorbereitung, dt=7.5]{Server}
 		\end{umlcallself}
-		\begin{umlcall}[op=Spielstatusnachricht]{Server}{Spieler}
+		\begin{umlcall}[op=GameStatusMessage]{Server}{Spieler}
 		\end{umlcall}
-		\begin{umlcall}[op=Spielstatusnachricht]{Server}{Zuschauer}
+		\begin{umlcall}[op=GameStatusMessage]{Server}{Zuschauer}
 		\end{umlcall}
 		
 		\begin{umlfragment}[type=alt, label=Spieler ist am Zug, inner ysep=7.5]
 		
-			\begin{umlfragment}[type=loop, label=nächste Aktion, inner xsep = 7.5]
-				\begin{umlcall}[op=Aktionsnachricht, dt=22.5]{Spieler}{Server}
+			\begin{umlfragment}[type=loop, label=n\"achste Operation, inner xsep = 2.5]
+                \begin{umlcall}[op=RequestOperationMessage,dt=15.0]{Server}{Spieler}
+				\end{umlcall}
+
+				\begin{umlcall}[op=OperationMessage, dt=5]{Spieler}{Server}
 				\end{umlcall}
 				\begin{umlcallself}[op=Validierung]{Server}
 				\end{umlcallself}
@@ -35,25 +39,28 @@
 					\end{umlcall}
 				\end{umlfragment}
 				
+				\begin{umlcall}[op=GameStatusMessage, dt=7.5]{Server}{Spieler}
+				\end{umlcall}
+				\begin{umlcall}[op=GameStatusMessage]{Server}{Zuschauer}
+				\end{umlcall}
+
+                \begin{umlfragment}[type=opt, label=Fraktions\"anderung, inner ysep=7.5, inner xsep=7.5]
+                    \begin{umlcall}[op=SpectatorRevealMessage, dt=12.5]{Server}{Zuschauer}
+                    \end{umlcall}
+                \end{umlfragment}
 			\end{umlfragment}
 			
 						
 			\umlfpart[Spieler ist nicht am Zug]
 		
-			\begin{umlcallself}[op=wait, dt = 7.5]{Spieler}
+			\begin{umlcallself}[op=wait, dt = 17.5]{Spieler}
 			\end{umlcallself}
 		\end{umlfragment}
-		
-		\begin{umlcall}[op=Spielstatusnachricht, dt=30]{Server}{Spieler}
-		\end{umlcall}
-		\begin{umlcall}[op=Spielstatusnachricht]{Server}{Zuschauer}
-		\end{umlcall}
 		
 	\end{umlfragment}
 	
 	
 	\end{umlseqdiag}
 \end{tikzpicture}
-
 
 \end{document}
